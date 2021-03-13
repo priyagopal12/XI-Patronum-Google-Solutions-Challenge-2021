@@ -1,0 +1,206 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* navbar */
+    .navbar ul{
+        padding: 0 !important;
+    }
+    .navbar-nav{
+        margin: 0 auto !important;
+    }
+    .navbar-nav .nav-link{        
+        border-bottom: none !important;
+        font-size: 0.9em !important;
+        text-align: right;
+        font-weight: 600;
+    }
+    .navbar-nav li{
+        padding: 5px 10px;
+        margin: 2px 0 !important;
+        width: 100% !important;
+        background-color: #0095c738;
+        border-radius: 5px;
+        border-bottom: 1px solid #888585;
+    }
+    .navbar-nav li:hover{
+        background-color: #0095c7;
+    }
+    .navbar .collapse button{
+        width: 100% !important;
+        font-size: 0.9em !important;
+        font-weight: 600;
+        border-radius: 0 !important;
+        text-align: right !important;
+        width: 100% !important;
+        background-color: #0095c738 ;
+        border-radius: 5px !important;
+        border-bottom: 1px solid #888585 !important;
+        transition: none !important;
+    }
+    .navbar .collapse .border{
+        border-left: 0px !important;
+        border-right: 0px !important;
+        border-top: 0px !important;
+    }
+    .navbar .collapse .btn{
+        display: inline-block;
+        width: 100% !important;
+        font-weight: 600 !important;
+        line-height: 0 !important;
+        color: #212529;
+        text-align: right !important;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 0 !important;
+        padding: 0px !important;
+        font-size: 0.9em !important;
+        border-radius: 0 !important;
+        transition: none !important;
+    }
+    .sign-in{
+        transition: none !important;
+        margin-top: 2px !important;
+        padding: 9px 9px !important;
+    }
+    .sign-in:hover{
+        background-color: #0095c7 !important;
+        transform: none !important;
+    }
+    /* navbar end */
+
+    /* search bar */
+    .search-bar input{
+        width: 85% !important;
+    } 
+    /* search bar end */
+
+    /* footer */
+    footer .col-4{
+        display: block;
+        width: 100% !important; 
+    }
+    /* footer end */
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 991px){
+    /* navbar */
+    .navbar ul{
+        padding: 0 !important;
+    }
+    .navbar-nav{
+        margin: 0 auto !important;
+    }
+    .navbar-nav .nav-link{        
+        border-bottom: none !important;
+        font-size: 0.9em !important;
+        text-align: right;
+        font-weight: 600;
+    }
+    .navbar-nav li{
+        padding: 5px 10px;
+        margin: 2px 0 !important;
+        width: 100% !important;
+        background-color: #0095c738;
+        border-radius: 5px;
+        border-bottom: 1px solid #888585;
+    }
+    .navbar-nav li:hover{
+        background-color: #0095c7;
+    }
+    .navbar .collapse button{
+        width: 100% !important;
+        font-size: 0.9em !important;
+        font-weight: 600;
+        border-radius: 0 !important;
+        text-align: right !important;
+        width: 100% !important;
+        background-color: #0095c738 ;
+        border-radius: 5px !important;
+        border-bottom: 1px solid #888585 !important;
+        transition: none !important;
+    }
+    .navbar .collapse .border{
+        border-left: 0px !important;
+        border-right: 0px !important;
+        border-top: 0px !important;
+    }
+    .navbar .collapse .btn{
+        display: inline-block;
+        width: 100% !important;
+        font-weight: 600 !important;
+        line-height: 0 !important;
+        color: #212529;
+        text-align: right !important;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 0 !important;
+        padding: 0px !important;
+        font-size: 0.9em !important;
+        border-radius: 0 !important;
+        transition: none !important;
+    }
+    .sign-in{
+        transition: none !important;
+        margin-top: 2px !important;
+        padding: 9px 9px !important;
+    }
+    .sign-in:hover{
+        background-color: #0095c7 !important;
+        transform: none !important;
+    }
+    /* navbar end */
+
+    /* search bar */
+    .search-bar .col-md-6{
+        width: 75% !important;
+    }
+    .search-bar .offset-md-3{
+        margin: 0 auto !important;
+    }
+    .search-bar input{
+        width: 85% !important;
+    } 
+    /* search bar end */
+
+    /* footer */
+    footer .col-4{
+        display: block;
+        width: 100% !important; 
+    }
+    /* footer end */
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* navbar */
+    .navbar .collapse button{
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    /* navbar end */
+
+    /* search bar */
+    .search-bar input{
+        width: 90% !important;
+    } 
+    /* search bar end */
+} 
