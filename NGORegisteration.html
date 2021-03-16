@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Partner With Us</title>
+    <meta name="viewport" content="width = device-width,initial-scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/NGORegisterationStyle.css">
+    <!-- modal jquery-->
+    <script type="text/javascript">
+        $(function() {
+            $('#ULogLink').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#ULog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
+                e.preventDefault();
+                $('#form-sign').css('display', 'inline');
+                $('.SignUpForm').css('display', 'flex');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+            });
+        });
+        $(function() {
+            $('#NLog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+    </script>
+    <!--modal jquery end-->
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
+        <div class="container-fluid navi">
+            <a class="navbar-brand nameNGO" href="#">Name of NGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item lst">
+                        <a class="nav-link active lstlink l11" aria-current="page" href="#">NGOs</a>
+                    </li>
+                    <li class="nav-item lst">
+                        <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
+                    </li>
+                </ul>
+                <form class="d-flex searchclass">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="secondul">
+
+                    <li class="nav-item log">
+                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
+                    </li>
+                    <li class="nav-item log">
+                        <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--nav bar end-->
+    <!--modal start-->
+    <div class="modal fade" id="loginform">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button type="button" id="ULog" class="login1 btn">User</button>
+                        <button type="button" id="NLog" class="login2 btn">NGO</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="SignUpForm form-div">
+                        <form id="form-sign">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign">Password: </label>
+                                <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign2"> Reenter Password: </label>
+                                <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="SignInForm form-div">
+                        <form id="form-logU">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="NForm form-div">
+                        <form id="form-logN">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a class="MemberBtn" href="NGOReg.html" id="SignUpUser">Partner With Us</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginform2">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button class="NGOLog btn" type="button" disabled="disabled">NGO Login</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="login3Form form-div">
+                        <form id="form-log3">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal end-->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <figure class="titleFigure">
+                <img src="images/titleImg4.jpg">
+                <figcaption>
+                    <h1>Partner with Us</h1>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <h1 class="Goals">Our Goals</h1>
+        </div>
+    </div>
+    <hr class="line" color="yellow" size="2px">
+
+
+    <div class="row goalfigs">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <ul>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/nopoverty.jpg">
+                        <figcaption class="figCap">
+                            <h1>No Poverty</h1>
+                            <p>End poverty in all its forms everywhere.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/ZeroHunger.jpeg">
+                        <figcaption>
+                            <h1>Zero Hunger</h1>
+                            <p>Improve nutrition and promote sustainable agriculture.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/Health.jpg">
+                        <figcaption>
+                            <h1>Good Health & Wellbeing</h1>
+                            <p>Ensure healthy lives and promote well-being.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="fig">
+                        <img src="images/Education.jpg">
+                        <figcaption>
+                            <h1>Quality Education</h1>
+                            <p>Ensure inclusive and equitable quality education.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <ul class="centerList">
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/GenderEquality.png">
+                        <figcaption>
+                            <h1>Gender Equality & Women's Empowerment</h1>
+                            <p>Achieve gender equality and empower all women.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/CleanWater.jpg">
+                        <figcaption>
+                            <h1>Clean Water & Sanitation</h1>
+                            <p>Ensure availability and sustainable management of water.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/ReducedIneq.jpg">
+                        <figcaption>
+                            <h1>Reduced Inequalities</h1>
+                            <p>Reduce inequality within and among countries.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <ul>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/ResponsibleConsum.jpg">
+                        <figcaption>
+                            <h1>Responsible Consumption & Production</h1>
+                            <p>Ensure sustainable consumption and production.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/Climate.jpg">
+                        <figcaption>
+                            <h1>Climate Action</h1>
+                            <p>Combat climate change and its impacts.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/LifeWater.jpg">
+                        <figcaption>
+                            <h1>Life Below Water</h1>
+                            <p>Conserve and sustainably use marine resources for development.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li name="ite">
+                    <figure class="fig">
+                        <img src="images/LifeLand.jpeg">
+                        <figcaption>
+                            <h1>Life on Land</h1>
+                            <p>Protect, restore, and promote sustainable use of terrestrial ecosystems.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <h1 class="Benefits">Partnership Benefits:</h1>
+            <hr class="line" color="yellow" size="2px">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <ul class="BenefitsList">
+                <li class="bl">Quicker and faster mode of connecting your employees and customers.</li>
+                <li class="bl">Recognition of your organization on social media and our website.</li>
+                <li class="bl">Support of your public relations efforts.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  center">
+            <h1 class="FormTitle">Register To Partner With Us</h1>
+            <hr class="line" color="yellow" size="2px">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 offset-md-2 form-div">
+                <form id="form-reg" action="#">
+                    <div class="form-group">
+                        <label for="NGOName">Name of your NGO: </label>
+                        <input type="text" name="NGOName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location:</label>
+                        <input type="text" name="Location" class="form-control form-control-lg" placeholder="Eg. Pune, Maharashtra" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="URL">Link of NGO's Website:</label>
+                        <input type="text" name="URL" class="form-control form-control-lg" placeholder="Eg. www.umang.com" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Olinks">Other Links:</label>
+                        <textarea rows="2" name="Olinks" class="form-control form-control-lg" placeholder="Eg. Instagram: https://www.instagram.com/umang/                                                                      Facebook: https://www.facebook.com/umang" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputGroupFile04" class="UploadPic">Profile Image:</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="NameCP">Name of Contact Person:</label>
+                        <input type="text" name="NameCP" class="form-control form-control-lg" placeholder="Eg. Mr.Reyansh Singhania" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ContactCP">Contact Information:</label>
+                        <textarea rows="2" name="NameCP" class="form-control form-control-lg" placeholder="Eg. Email ID: reysinghania321@gmail.com                                                                      Mobile no.: 12345678" required="required"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ID">NGO ID:</label>
+                        <input type="text" name="ID" class="form-control form-control-lg" placeholder="Eg. " required="required" />
+                    </div>
+                    <div class="form-group">
+                        <h1 class="GoalsCheck">Goals the NGO works towards: </h1>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="1st" id="1st" />
+                            <label class="form-check-label" for="1st">No Poverty</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Zero Hunger</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Good Health & Wellbeing</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Quality Education</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Gender Equality & Women’s Empowerment</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Clean Water & Sanitation</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Reduced Inequalities</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Responsible Consumption & Production</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Climate Action</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Life Below Water</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="2nd" id="2nd" />
+                            <label class="form-check-label" for="2nd">Life on Land</label>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input type="password" name="Password" class="form-control form-control-lg" placeholder="Should contain atleast one special character(!,@,#,etc.)" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="RePassword">Reenter the password:</label>
+                        <input type="password" name="RePassword" class="form-control form-control-lg" placeholder="Should match above password" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Descr">Short Description of the NGO: </label>
+                        <input type="textbox" name="Descr" class="form-control form-control-lg" placeholder="Short description of the work and goals of the NGO" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="Register" form="form-reg" value="Register" class="btn-primary btn btn-block" required="required" />
+                    </div>
+                    <p class="text-center">Already Registered?
+                        <a id="NSignIn" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row justify-content-between foot">
+            <div class="about-us col-4">
+                <h3>NGO Connect</h3>
+                <h5></h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
+                </p>
+                <div class="loc-ema-pho">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
+                </div>
+            </div>
+            <div class="contact-us col-4">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <h5></h5>
+                    <form action="">
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea name="message" id="" placeholder="Message"></textarea>
+                        <input class="contact-form-submit btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+</html>
