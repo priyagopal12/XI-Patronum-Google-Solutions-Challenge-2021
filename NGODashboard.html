@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NGO Dashboard</title>
+    <meta name="viewport" content="width = device-width,initial-scale = 1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/NGODashboardStyle.css">
+    <!-- modal jquery-->
+    <script type="text/javascript">
+        $(function() {
+            $('#ULogLink').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#ULog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
+                e.preventDefault();
+                $('#form-sign').css('display', 'inline');
+                $('.SignUpForm').css('display', 'flex');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+            });
+        });
+        $(function() {
+            $('#NLog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+    </script>
+    <!--modal jquery end-->
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+
+        console.log(img01);
+    </script>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
+        <div class="container-fluid navi">
+            <a class="navbar-brand nameNGO" href="#">Name of NGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item lst">
+                        <a class="nav-link active lstlink l11" aria-current="page" href="#">NGOs</a>
+                    </li>
+                    <li class="nav-item lst">
+                        <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
+                    </li>
+                </ul>
+                <form class="d-flex searchclass">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item log">
+                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
+                    </li>
+                    <li class="nav-item log">
+                        <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--nav bar end-->
+    <!--modal start-->
+    <div class="modal fade" id="loginform">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button type="button" id="ULog" class="login1 btn">User</button>
+                        <button type="button" id="NLog" class="login2 btn">NGO</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="SignUpForm form-div">
+                        <form id="form-sign">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign">Password: </label>
+                                <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign2"> Reenter Password: </label>
+                                <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="SignInForm form-div">
+                        <form id="form-logU">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="NForm form-div">
+                        <form id="form-logN">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a class="MemberBtn" href="NGOReg.html" id="SignUpUser">Partner With Us</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginform2">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button class="NGOLog btn" type="button" disabled="disabled">NGO Login</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="login3Form form-div">
+                        <form id="form-log3">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal end-->
+    <!--Main Body-->
+    <main>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-event" type="button" role="tab" aria-controls="nav-event" aria-selected="true">Events</button>
+                <button class="nav-link" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about" aria-selected="false">About</button>
+
+            </div>
+        </nav>
+
+
+        <div class="tab-content " id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
+
+                <div class="SecondPart " id="SecondPart ">
+                    <div class="SecondPartChild ">
+                        <div class="event1 ">
+                            <a class="events " href="#event1 ">
+
+                                <img src="/images/event1.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
+
+                                <p class="time ">SAT, FEB 28, 11:00 AM</p>
+                                <p class="location ">Mg Road, Opp. Ranka, Pune</p>
+                                <p class="topic ">Donation for Children</p>
+                                <p class="by">Charity House</p>
+                                <br>
+                                <button class="register">Register</button>
+
+                            </a>
+
+                        </div>
+
+                        <div class="event2 ">
+                            <a href="#event2 ">
+                                <img src="/images/event2.png " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
+
+                                <p class="time ">TUE, MAR 02, 5:00 PM</p>
+                                <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
+                                <p class="topic ">Young Volunteers Needed</p>
+                                <p class="by">Room To Read</p>
+                                <br>
+                                <button class="register">Register</button>
+                            </a>
+
+                        </div>
+
+                        <div class="event3 ">
+
+                            <a href="#event3 ">
+                                <img src="/images/event3.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
+
+                                <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                <p class="location ">YCM Hospital, Pimri</p>
+                                <p class="topic ">Blood Donation Drive</p>
+                                <p class="by">Hope Country </p>
+                                <br>
+
+                                <button class="register">Register</button>
+                            </a>
+
+                        </div>
+
+                        <div class="event4 ">
+                            <a href="#event4 ">
+                                <img src="/images/event4.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
+
+                                <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                <p class="topic ">Covid-19 Relief Fund</p>
+                                <p class="by">Helpers Hand</p>
+                                <br>
+                                <button class="register">Register</button>
+                            </a>
+
+                        </div>
+
+                        <div id="modal01" class="modal" onclick="this.style.display='none'">
+                            <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <div class="modal-content">
+                                <img id="img01">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                    <div class="About_Section ">
+                        <p id="NGO_Member_Name ">Geeta Phogat</p>
+                        <p id="NGO_ID ">AHBDT7382452</p>
+                        <p id="NGO_Bio ">NGOs exist for a variety of purposes, usually to further the political or social goals of their members. Examples include improving the state of the natural environment, encouraging the observance of human rights, improving the
+                            welfare of the disadvantaged, or representing a corporate agenda.</p>
+                        <p id="NGO_Goals ">No Poverty , Clean Waters , Women Empowerment</p>
+                        <p id="NGO_Links ">https://www.giveindia.org/?utm_source=Sem&utm_campaign=DCNad2&utm_medium=Google&utm_term=DCNad2&utm_content=ad2&gclid=CjwKCAiAhbeCBhBcEiwAkv2cY43bbysIz5tKn2I_Psnuddp1i8PCLcrfIDskQLtGydeMNFTqU8qY_BoClMkQAvD_BwE</p>
+                        <p id="NGO_Location ">Pune</p>
+                        <p id="NGO_Email ">geetaPhoghat12@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--End of Main Body-->
+</body>
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row justify-content-between foot">
+            <div class="about-us col-4">
+                <h3>NGO Connect</h3>
+                <h5></h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
+                </p>
+                <div class="loc-ema-pho">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
+                </div>
+            </div>
+            <div class="contact-us col-4">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <h5></h5>
+                    <form action="">
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea name="message" id="" placeholder="Message"></textarea>
+                        <input class="contact-form-submit btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+</html>
+
+</html>
