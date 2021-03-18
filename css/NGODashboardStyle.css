@@ -71,6 +71,71 @@
 
 
 /*modal end*/
+/* form extra*/
+.form-div {
+    margin: 5% auto;
+    border: 15px groove #017fb5;
+    padding: 30px;
+}
+
+.form-div label {
+    font-size: 19px;
+    color: rgb(50, 130, 205);
+    font-weight: 500;
+    margin: 2% 0;
+}
+
+.UploadPic {
+    font-size: 29px;
+    color: rgb(50, 130, 205);
+    font-weight: 500;
+    margin: 2% 0;
+}
+
+.form-div input[type="text"],
+.form-div input[type="password"],
+.form-div input[type="textbox"],
+input[type="file"] {
+    -webkit-appearance: none !important;
+    border: none;
+    border-bottom: 1px solid #017fb5;
+}
+
+.form-div textarea {
+    border: none;
+    border-bottom: 1px solid #017fb5;
+    resize: none;
+    overflow: scroll;
+}
+
+input[type="file"] {
+    padding-bottom: 2%;
+}
+
+.form-div textarea:focus {
+    box-shadow: none;
+    border-bottom-color: black;
+    overflow: scroll;
+}
+
+.form-div input[type="text"]:focus,
+.form-div input[type="password"]:focus,
+input[type="file"]:focus,
+.form-div input[type="textbox"]:focus {
+    box-shadow: none;
+    border-bottom-color: black;
+}
+
+.form-div input[type="submit"] {
+    margin-top: 7%;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.form-div p {
+    font-size: 14px;
+}
+/* form extra end*/
 
 @media (min-width: 992px) {
     body {
@@ -202,7 +267,7 @@
         padding-top: 20px;
         padding-left: 40px;
     }
-    .modal {
+    .modalclass {
         z-index: 1;
         display: none;
         padding-top: 10px;
@@ -215,7 +280,7 @@
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.8)
     }
-    .modal-content {
+    #ImgModalContent {
         display: block;
         position: absolute;
         width: 540px;

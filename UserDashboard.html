@@ -4,12 +4,105 @@
 <meta name=”viewport” content="width=device-width, initial-scale=1.0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/UserDashboardStyle.css">
 
+
+ <!-- modal jquery-->
+ <script type="text/javascript">
+  $(function() {
+      $('#ULogLink').on('click', function(e) {
+          $('#form-sign').css('display', 'none');
+          $('.SignUpForm').css('display', 'none');
+          $('#form-logN').css('display', 'none');
+          $('.NForm').css('display', 'none');
+          $('#form-logU').css('display', 'inline');
+          $('.SignInForm').css('display', 'flex');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+          e.preventDefault();
+      });
+  });
+
+  $(function() {
+      $('#LoginUser').on('click', function(e) {
+          $('#form-sign').css('display', 'none');
+          $('.SignUpForm').css('display', 'none');
+          $('#form-logN').css('display', 'none');
+          $('.NForm').css('display', 'none');
+          $('#form-logU').css('display', 'inline');
+          $('.SignInForm').css('display', 'flex');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+          e.preventDefault();
+      });
+  });
+  $(function() {
+      $('#ULog').on('click', function(e) {
+          $('#form-sign').css('display', 'none');
+          $('.SignUpForm').css('display', 'none');
+          $('#form-logN').css('display', 'none');
+          $('.NForm').css('display', 'none');
+          $('#form-logU').css('display', 'inline');
+          $('.SignInForm').css('display', 'flex');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+          e.preventDefault();
+      });
+  });
+  $(function() {
+      $('#SignUpUser').on('click', function(e) {
+          e.preventDefault();
+          $('#form-sign').css('display', 'inline');
+          $('.SignUpForm').css('display', 'flex');
+          $('#form-logN').css('display', 'none');
+          $('.NForm').css('display', 'none');
+          $('#form-logU').css('display', 'none');
+          $('.SignInForm').css('display', 'none');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+      });
+  });
+  $(function() {
+      $('#NLog').on('click', function(e) {
+          $('#form-sign').css('display', 'none');
+          $('.SignUpForm').css('display', 'none');
+          $('#form-logN').css('display', 'inline');
+          $('.NForm').css('display', 'flex');
+          $('#form-logU').css('display', 'none');
+          $('.SignInForm').css('display', 'none');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+          e.preventDefault();
+      });
+  });
+  $(function() {
+      $('#NSignIn').on('click', function(e) {
+          $('#form-sign').css('display', 'none');
+          $('.SignUpForm').css('display', 'none');
+          $('#form-logN').css('display', 'inline');
+          $('.NForm').css('display', 'flex');
+          $('#form-logU').css('display', 'none');
+          $('.SignInForm').css('display', 'none');
+          $('.NForm').css('border', 'none');
+          $('.SignInForm').css('border', 'none');
+          $('.SignUpForm').css('border', 'none');
+          e.preventDefault();
+      });
+  });
+</script>
+<!--modal jquery end-->
 <style>
   #explore .container{
    
@@ -71,7 +164,115 @@ integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOn
 </nav>
   </section>
 
- 
+  <!--modal start-->
+  <div class="modal fade" id="loginform">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content Cont">
+            <div class="modal-header modhead">
+                <div class="buttons">
+                    <button type="button" id="ULog" class="login1 btn" style="color:white">User</button>
+                    <button type="button" id="NLog" class="login2 btn" style="color:white">NGO</button>
+                    <button type="button" id="close" class="close" data-dismiss="modal" style="background:none !important;box-shadow: none !important;"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="form1">
+                <div class="SignUpForm form-div">
+                    <form id="form-sign">
+                        <div class="form-group">
+                            <label for="UName">Username: </label>
+                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PassSign">Password: </label>
+                            <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PassSign2"> Reenter Password: </label>
+                            <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="SignInForm form-div">
+                    <form id="form-logU">
+                        <div class="form-group">
+                            <label for="UName">Username: </label>
+                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PassLog">Password: </label>
+                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="NForm form-div">
+                    <form id="form-logN">
+                        <div class="form-group">
+                            <label for="UName">Name of NGO: </label>
+                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PassLog">Password: </label>
+                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="loginform2">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content Cont">
+            <div class="modal-header modhead">
+                <div class="buttons">
+                    <button class="NGOLog btn" type="button" disabled="disabled">NGO Login</button>
+                    <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                </div>
+            </div>
+            <div class="form1">
+                <div class="login3Form form-div">
+                    <form id="form-log3">
+                        <div class="form-group">
+                            <label for="UName">Name of NGO: </label>
+                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PassLog">Password: </label>
+                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--modal end-->
+
 <!---profile-->
   <div class="row py-5 px-4" >
     <div class="col-md-5 mx-auto" style="width: 100%;">
