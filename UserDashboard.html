@@ -1,648 +1,716 @@
 <html>
+
 <head>
-<title>Ngo Website</title>
-<meta name=”viewport” content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/UserDashboardStyle.css">
+    <title>Ngo Website</title>
+    <meta name=”viewport” content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/UserDashboardStyle.css">
 
 
- <!-- modal jquery-->
- <script type="text/javascript">
-  $(function() {
-      $('#ULogLink').on('click', function(e) {
-          $('#form-sign').css('display', 'none');
-          $('.SignUpForm').css('display', 'none');
-          $('#form-logN').css('display', 'none');
-          $('.NForm').css('display', 'none');
-          $('#form-logU').css('display', 'inline');
-          $('.SignInForm').css('display', 'flex');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-          e.preventDefault();
-      });
-  });
+    <!-- modal jquery-->
+    <script type="text/javascript">
+        $(function() {
+            $('#ULogLink').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
 
-  $(function() {
-      $('#LoginUser').on('click', function(e) {
-          $('#form-sign').css('display', 'none');
-          $('.SignUpForm').css('display', 'none');
-          $('#form-logN').css('display', 'none');
-          $('.NForm').css('display', 'none');
-          $('#form-logU').css('display', 'inline');
-          $('.SignInForm').css('display', 'flex');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-          e.preventDefault();
-      });
-  });
-  $(function() {
-      $('#ULog').on('click', function(e) {
-          $('#form-sign').css('display', 'none');
-          $('.SignUpForm').css('display', 'none');
-          $('#form-logN').css('display', 'none');
-          $('.NForm').css('display', 'none');
-          $('#form-logU').css('display', 'inline');
-          $('.SignInForm').css('display', 'flex');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-          e.preventDefault();
-      });
-  });
-  $(function() {
-      $('#SignUpUser').on('click', function(e) {
-          e.preventDefault();
-          $('#form-sign').css('display', 'inline');
-          $('.SignUpForm').css('display', 'flex');
-          $('#form-logN').css('display', 'none');
-          $('.NForm').css('display', 'none');
-          $('#form-logU').css('display', 'none');
-          $('.SignInForm').css('display', 'none');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-      });
-  });
-  $(function() {
-      $('#NLog').on('click', function(e) {
-          $('#form-sign').css('display', 'none');
-          $('.SignUpForm').css('display', 'none');
-          $('#form-logN').css('display', 'inline');
-          $('.NForm').css('display', 'flex');
-          $('#form-logU').css('display', 'none');
-          $('.SignInForm').css('display', 'none');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-          e.preventDefault();
-      });
-  });
-  $(function() {
-      $('#NSignIn').on('click', function(e) {
-          $('#form-sign').css('display', 'none');
-          $('.SignUpForm').css('display', 'none');
-          $('#form-logN').css('display', 'inline');
-          $('.NForm').css('display', 'flex');
-          $('#form-logU').css('display', 'none');
-          $('.SignInForm').css('display', 'none');
-          $('.NForm').css('border', 'none');
-          $('.SignInForm').css('border', 'none');
-          $('.SignUpForm').css('border', 'none');
-          e.preventDefault();
-      });
-  });
-</script>
-<!--modal jquery end-->
-<style>
-  #explore .container{
-   
-    padding: 20px;
-  }
-  #more {display: none;}
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#ULog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
+                e.preventDefault();
+                $('#form-sign').css('display', 'inline');
+                $('.SignUpForm').css('display', 'flex');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+            });
+        });
+        $(function() {
+            $('#NLog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+    </script>
+    <!--modal jquery end-->
+    <style>
+        #explore .container {
+            padding: 20px;
+        }
+        
+        #more {
+            display: none;
+        }
+        
+        #more1 {
+            display: none;
+        }
+        
+        #more2 {
+            display: none;
+        }
+        
+        #buttn {
+            padding-left: 600px;
+        }
+    </style>
 
-#more1{
-  display: none;
-}
-
-#more2{
-  display: none;
-}
-#buttn{
-  padding-left: 600px;
-}
-</style>
 
 
-
-<link rel="stylesheet" href="css\MainPageResponsive.css">
+    <link rel="stylesheet" href="css\MainPageResponsive.css">
 </head>
+
 <body style="background-repeat: no-repeat; background-size: cover;">
 
-<!----navbar-->
-  <section id="navbar">
-  <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
-    <div class="container-fluid navi">
-        <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!----navbar-->
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
+            <div class="container-fluid navi">
+                <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item lst">
-                    <a class="nav-link active lstlink l11" aria-current="page" href="#">NGOs</a>
-                </li>
-                <li class="nav-item lst">
-                    <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
-                </li>
-            </ul>
-            <form class="d-flex searchclass">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item lst menu-large">
 
-                <li class="nav-item log">
-                    <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
-                </li>
-                <li class="nav-item log">
-                    <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
-                </li>
+                            <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
+                            <div class="dropdown-menu  " aria-labelledby="servicesDropdown">
+                                <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
 
-            </ul>
-        </div>
-    </div>
-</nav>
-  </section>
+                                <div class="dropdown-divider"></div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>PUNE</text></div>
+                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
+                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
+                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
+                                        <a class="dropdown-item" href="#">Children’s Future India</a>
+                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
+                                        <a class="dropdown-item" href="#">Helpage India</a>
+                                        <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
+                                        <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
+                                        <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
+                                        <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
+                                        <a class="dropdown-item" href="#">Initiatives in Development and Education for All</a>
+                                    </div>
+                                    <br>
 
-  <!--modal start-->
-  <div class="modal fade" id="loginform">
-    <div class="modal-dialog modal-dialog-centered ">
-        <div class="modal-content Cont">
-            <div class="modal-header modhead">
-                <div class="buttons">
-                    <button type="button" id="ULog" class="login1 btn" style="color:white">User</button>
-                    <button type="button" id="NLog" class="login2 btn" style="color:white">NGO</button>
-                    <button type="button" id="close" class="close" data-dismiss="modal" style="background:none !important;box-shadow: none !important;"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+                                </div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
+                                        <a class="dropdown-item" href="#">Amulya Jyoti</a>
+                                        <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
+                                        <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
+                                        <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
+                                        <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
+                                        <a class="dropdown-item" href="#">National Human Rights Association</a>
+                                        <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
+                                        <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
+                                        <a class="dropdown-item" href="#">United World Against Diabetes</a>
+                                        <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>SOLAPUR</text></div>
+                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
+                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
+                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
+                                        <a class="dropdown-item" href="#">Children’s Future India</a>
+                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </li>
+                        <li class="nav-item lst">
+                            <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex searchclass">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
+                        </li>
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
-            <div class="form1">
-                <div class="SignUpForm form-div">
-                    <form id="form-sign">
-                        <div class="form-group">
-                            <label for="UName">Username: </label>
-                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PassSign">Password: </label>
-                            <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PassSign2"> Reenter Password: </label>
-                            <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
-                        </div>
-                    </form>
-                </div>
+        </nav>
+    </section>
 
-                <div class="SignInForm form-div">
-                    <form id="form-logU">
-                        <div class="form-group">
-                            <label for="UName">Username: </label>
-                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PassLog">Password: </label>
-                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
-                        </div>
-                    </form>
-                </div>
-                <div class="NForm form-div">
-                    <form id="form-logN">
-                        <div class="form-group">
-                            <label for="UName">Name of NGO: </label>
-                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PassLog">Password: </label>
-                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="loginform2">
-    <div class="modal-dialog modal-dialog-centered ">
-        <div class="modal-content Cont">
-            <div class="modal-header modhead">
-                <div class="buttons">
-                    <button class="NGOLog btn" type="button" disabled="disabled">NGO Login</button>
-                    <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
-                </div>
-            </div>
-            <div class="form1">
-                <div class="login3Form form-div">
-                    <form id="form-log3">
-                        <div class="form-group">
-                            <label for="UName">Name of NGO: </label>
-                            <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="PassLog">Password: </label>
-                            <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!--modal end-->
-
-<!---profile-->
-  <div class="row py-5 px-4" >
-    <div class="col-md-5 mx-auto" style="width: 100%;">
-        <!-- Profile widget -->
-        <div class="bg-white shadow rounded overflow-hidden" style="width: 100%;" style="background-color: aliceblue;">
-            <div class="px-4 pt-0 pb-4 cover">
-                <div class="media align-items-end profile-head">
-                    <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail">&nbsp; &nbsp;<a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
-                    <div class="media-body mb-5 ">
-                        <h4 class="mt-0 mb-0">Mark Williams</h4>
-                        <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>New York</p>
+    <!--modal start-->
+    <div class="modal fade" id="loginform">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button type="button" id="ULog" class="login1 btn" style="color:white">User</button>
+                        <button type="button" id="NLog" class="login2 btn" style="color:white">NGO</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal" style="background:none !important;box-shadow: none !important;"><i class="fa fa-times" aria-hidden="true"></i></button>
                     </div>
                 </div>
-            </div>
+                <div class="form1">
+                    <div class="SignUpForm form-div">
+                        <form id="form-sign">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign">Password: </label>
+                                <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassSign2"> Reenter Password: </label>
+                                <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
 
-            
-            <div class="bg-light p-4 d-flex justify-content-center text-center" style="align-items: center;">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">215</h5><small class="text-muted"> Events Attended</small>
-                    </li>
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted">NGOs Following</small>
-                    </li>
-                </ul>
-            </div>
-            <div class="px-4 py-3">
-                <h5 class="mb-0">About</h5>
-                <div class="p-4 rounded shadow-sm bg-light">
-                    <p class="font-italic mb-0">Web Developer</p>
-                    <p class="font-italic mb-0">Lives in New York</p>
-                    <p class="font-italic mb-0">Photographer</p>
+                    <div class="SignInForm form-div">
+                        <form id="form-logU">
+                            <div class="form-group">
+                                <label for="UName">Username: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="NForm form-div">
+                        <form id="form-logN">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
+        </div>
+    </div>
 
-            <!---events-->
-            <div class="py-4 px-4">
+    <div class="modal fade" id="loginform2">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content Cont">
+                <div class="modal-header modhead">
+                    <div class="buttons">
+                        <button class="NGOLog btn" type="button" disabled="disabled">NGO Login</button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
+                    </div>
+                </div>
+                <div class="form1">
+                    <div class="login3Form form-div">
+                        <form id="form-log3">
+                            <div class="form-group">
+                                <label for="UName">Name of NGO: </label>
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="PassLog">Password: </label>
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-            
+            </div>
+        </div>
+    </div>
+    <!--modal end-->
 
-           <section id="explore">
-           <div class="container">
-      <h1> Explore</h1>
+    <!---profile-->
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto" style="width: 100%;">
+            <!-- Profile widget -->
+            <div class="bg-white shadow rounded overflow-hidden" style="width: 100%;" style="background-color: aliceblue;">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail">&nbsp; &nbsp;<a href="#"
+                                class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+                        <div class="media-body mb-5 ">
+                            <h4 class="mt-0 mb-0">Mark Williams</h4>
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>New York</p>
+                        </div>
+                    </div>
+                </div>
 
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+
+                <div class="bg-light p-4 d-flex justify-content-center text-center" style="align-items: center;">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <h5 class="font-weight-bold mb-0 d-block">215</h5><small class="text-muted"> Events Attended</small>
+                        </li>
+                        <li class="list-inline-item">
+                            <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted">NGOs Following</small>
+                        </li>
+                    </ul>
+                </div>
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">About</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-italic mb-0">Web Developer</p>
+                        <p class="font-italic mb-0">Lives in New York</p>
+                        <p class="font-italic mb-0">Photographer</p>
+                    </div>
+                </div>
+
+                <!---events-->
+                <div class="py-4 px-4">
+
+
+
+                    <section id="explore">
+                        <div class="container">
+                            <h1> Explore</h1>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
             <p style="text-align: center; color: brown; font-size: 20px;">Upcoming Events</p>
           </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
             <p style="text-align: center; color: brown; font-size: 20px;">Registered Events</p>
           </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
             <p style="text-align: center; color: brown; font-size: 20px;">Saved Events</p>
           </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-          <div class="row" >
-        
-            <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">FRI, MAR 05, 9:00 AM</p>
-                <p class="location ">YCM Hospital, Pimri</p>
-                <p class="topic ">Blood Donation Drive</p>
-                <p class="by">Hope Country </p>
-                <br>
+                                    <div class="row">
 
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div> 
-   
-      
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                                    <p class="location ">YCM Hospital, Pimri</p>
+                                                    <p class="topic ">Blood Donation Drive</p>
+                                                    <p class="by">Hope Country </p>
+                                                    <br>
 
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
-               <div class="card-body">
-                <p class="time ">SAT, FEB 28, 11:00 AM</p>
-                <p class="location ">Mg Road, Opp. Ranka, Pune</p>
-                <p class="topic ">Donation for Children</p>
-                <p class="by">Charity House</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">TUE, MAR 02, 5:00 PM</p>
-                <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
-                <p class="topic ">Volunteers Needed</p>
-                <p class="by">Room To Read</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventBlood.jpg" class="card-img-top" width="100%" height="200px"  alt="...">
-               <div class="card-body">
-                <p class="time ">SUN, MAR 07, 12:00 PM</p>
-                <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-                <p class="topic ">Covid-19 Relief Fund</p>
-                <p class="by">Helpers Hand</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-       </div>
-       <!-- <span id="dots">...</span>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
+                                                <div class="card-body">
+                                                    <p class="time ">SAT, FEB 28, 11:00 AM</p>
+                                                    <p class="location ">Mg Road, Opp. Ranka, Pune</p>
+                                                    <p class="topic ">Donation for Children</p>
+                                                    <p class="by">Charity House</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">TUE, MAR 02, 5:00 PM</p>
+                                                    <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
+                                                    <p class="topic ">Volunteers Needed</p>
+                                                    <p class="by">Room To Read</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventBlood.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                                    <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                                    <p class="topic ">Covid-19 Relief Fund</p>
+                                                    <p class="by">Helpers Hand</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- <span id="dots">...</span>
        <span id="more"> -->
-       <div class="row collapse" id="collapseExample-5">
-         <div class="col-sm-3 subject text-start">
- 
-           <div class="card" style="width: 18rem;">
-             <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-             <div class="card-body">
-              <p class="time ">TUE, MAR 02, 5:00 PM</p>
-              <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
-              <p class="topic ">Volunteers Needed</p>
-              <p class="by">Room To Read</p>
-              <br>
-              <button class="register">Register</button>
-             </div>
-           </div>
-         </div>
- 
-         <div class="col-sm-3 subject text-start">
- 
-           <div class="card" style="width: 18rem;">
-             <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-             <div class="card-body">
-              <p class="time ">SUN, MAR 07, 12:00 PM</p>
-              <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-              <p class="topic ">Covid-19 Relief Fund</p>
-              <p class="by">Helpers Hand</p>
-              <br>
-              <button class="register">Register</button>
-             </div>
-           </div>
-         </div>
- 
-         <div class="col-sm-3 subject text-start">
- 
-           <div class="card" style="width: 18rem;">
-             <img src="images/user/event2.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-             <div class="card-body">
-              <p class="time ">FRI, MAR 05, 9:00 AM</p>
-              <p class="location ">YCM Hospital, Pimri</p>
-              <p class="topic ">Blood Donation Drive</p>
-              <p class="by">Hope Country </p>
-              <br>
+                                    <div class="row collapse" id="collapseExample-5">
+                                        <div class="col-sm-3 subject text-start">
 
-              <button class="register">Register</button>
-             </div>
-           </div>
-         </div>
-       </div>
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">TUE, MAR 02, 5:00 PM</p>
+                                                    <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
+                                                    <p class="topic ">Volunteers Needed</p>
+                                                    <p class="by">Room To Read</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-       <br>
-     <!-- </span>
+                                        <div class="col-sm-3 subject text-start">
+
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                                    <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                                    <p class="topic ">Covid-19 Relief Fund</p>
+                                                    <p class="by">Helpers Hand</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event2.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                                    <p class="location ">YCM Hospital, Pimri</p>
+                                                    <p class="topic ">Blood Donation Drive</p>
+                                                    <p class="by">Hope Country </p>
+                                                    <br>
+
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <!-- </span>
      
  <div class="buttn">
      <button onclick="myFunction()" id="myBtn" class="btn btn-primary" width="100%" ><img src="arrow.png" height="10px" width="100%"></button>
    </div> -->
 
-   <div class="card-see-more">
-    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-5" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
-</div>
-     </div>
+                                    <div class="card-see-more">
+                                        <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-5" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
+                                    </div>
+                                </div>
 
 
-       
 
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-          <div class="row" >
-        
-            <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">SUN, MAR 07, 12:00 PM</p>
-                <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-                <p class="topic ">Covid-19 Relief Fund</p>
-                <p class="by">Helpers Hand</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div> 
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
-               <div class="card-body">
-                <p class="time ">SAT, FEB 28, 11:00 AM</p>
-                <p class="location ">Mg Road, Opp. Ranka, Pune</p>
-                <p class="topic ">Donation for Children</p>
-                <p class="by">Charity House</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">TUE, MAR 02, 5:00 PM</p>
-                <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
-                <p class="topic ">Volunteers Needed</p>
-                <p class="by">Room To Read</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventBlood.jpg" class="card-img-top" width="100%" height="200px"  alt="...">
-               <div class="card-body">
-                <p class="time ">FRI, MAR 05, 9:00 AM</p>
-                <p class="location ">YCM Hospital, Pimri</p>
-                <p class="topic ">Blood Donation Drive</p>
-                <p class="by">Hope Country </p>
-                <br>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-       </div>
-       <!-- <span id="dots1">...</span>
+                                    <div class="row">
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                                    <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                                    <p class="topic ">Covid-19 Relief Fund</p>
+                                                    <p class="by">Helpers Hand</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
+                                                <div class="card-body">
+                                                    <p class="time ">SAT, FEB 28, 11:00 AM</p>
+                                                    <p class="location ">Mg Road, Opp. Ranka, Pune</p>
+                                                    <p class="topic ">Donation for Children</p>
+                                                    <p class="by">Charity House</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">TUE, MAR 02, 5:00 PM</p>
+                                                    <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
+                                                    <p class="topic ">Volunteers Needed</p>
+                                                    <p class="by">Room To Read</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventBlood.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                                    <p class="location ">YCM Hospital, Pimri</p>
+                                                    <p class="topic ">Blood Donation Drive</p>
+                                                    <p class="by">Hope Country </p>
+                                                    <br>
+
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- <span id="dots1">...</span>
        <span id="more1"> -->
-       <div class="row collapse" id="collapseExample-4">
-         <div class="col-sm-3 subject text-start">
- 
-           <div class="card" style="width: 18rem;">
-             <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-             <div class="card-body">
-              <p class="time ">SUN, MAR 07, 12:00 PM</p>
-              <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-              <p class="topic ">Covid-19 Relief Fund</p>
-              <p class="by">Helpers Hand</p>
-              <br>
-              <button class="register">Register</button>
-             </div>
-           </div>
-         </div>
- 
-         <div class="col-sm-3 subject text-start">
- 
-           <div class="card" style="width: 18rem;">
-             <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-             <div class="card-body">
-              <p class="time ">FRI, MAR 05, 9:00 AM</p>
-                            <p class="location ">YCM Hospital, Pimri</p>
-                            <p class="topic ">Blood Donation Drive</p>
-                            <p class="by">Hope Country </p>
-                            <br>
+                                    <div class="row collapse" id="collapseExample-4">
+                                        <div class="col-sm-3 subject text-start">
 
-                            <button class="register">Register</button>
-             </div>
-           </div>
-         </div>
- 
-         
-       </div>
-   <br>
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                                    <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                                    <p class="topic ">Covid-19 Relief Fund</p>
+                                                    <p class="by">Helpers Hand</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
-   <div class="card-see-more">
-    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-4" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
-</div>
-     </div>
-       
+                                        <div class="col-sm-3 subject text-start">
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          <div class="row" >
-        
-            <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">TUE, MAR 02, 5:00 PM</p>
-                <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
-                <p class="topic ">Volunteers Needed</p>
-                <p class="by">Room To Read</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div> 
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
-               <div class="card-body">
-                <p class="time ">SUN, MAR 07, 12:00 PM</p>
-                <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-                <p class="topic ">Covid-19 Relief Fund</p>
-                <p class="by">Helpers Hand</p>
-                <br>
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-           <div class="col-sm-3 subject text-start">
-             <div class="card" style="width: 18rem;">
-               <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
-               <div class="card-body">
-                <p class="time ">FRI, MAR 05, 9:00 AM</p>
-                <p class="location ">YCM Hospital, Pimri</p>
-                <p class="topic ">Blood Donation Drive</p>
-                <p class="by">Hope Country </p>
-                <br>
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                                    <p class="location ">YCM Hospital, Pimri</p>
+                                                    <p class="topic ">Blood Donation Drive</p>
+                                                    <p class="by">Hope Country </p>
+                                                    <br>
 
-                <button class="register">Register</button>
-               </div>
-             </div>
-           </div>
-   
-         
-   
-       </div>
-      
-
-     <div class="row collapse" id="collapseExample-3">
-
-     </div>
-<br>
-     <div class="card-see-more">
-      <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-3" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
-  </div>
-     </div>
-        </div>
-      </div>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-      
-     
-   
-  
-  </section>
+                                    </div>
+                                    <br>
+
+                                    <div class="card-see-more">
+                                        <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-4" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="row">
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/event.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">TUE, MAR 02, 5:00 PM</p>
+                                                    <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
+                                                    <p class="topic ">Volunteers Needed</p>
+                                                    <p class="by">Room To Read</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventDonate.jpg" class="card-img-top" width="100%" height="200px" alt="..">
+                                                <div class="card-body">
+                                                    <p class="time ">SUN, MAR 07, 12:00 PM</p>
+                                                    <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
+                                                    <p class="topic ">Covid-19 Relief Fund</p>
+                                                    <p class="by">Helpers Hand</p>
+                                                    <br>
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3 subject text-start">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/user/eventTree.jpg" class="card-img-top" width="100%" height="200px" alt="...">
+                                                <div class="card-body">
+                                                    <p class="time ">FRI, MAR 05, 9:00 AM</p>
+                                                    <p class="location ">YCM Hospital, Pimri</p>
+                                                    <p class="topic ">Blood Donation Drive</p>
+                                                    <p class="by">Hope Country </p>
+                                                    <br>
+
+                                                    <button class="register">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="row collapse" id="collapseExample-3">
+
+                                    </div>
+                                    <br>
+                                    <div class="card-see-more">
+                                        <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-3" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </section>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
@@ -650,8 +718,8 @@ integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOn
 
 
 
-<section id="footer">
-  <!-- <footer id="footer" class="footer solid-bg" style="background-color: #023e8a;; padding: 50px;">
+    <section id="footer">
+        <!-- <footer id="footer" class="footer solid-bg" style="background-color: #023e8a;; padding: 50px;">
 
     <section id="contact">
 
@@ -710,40 +778,39 @@ integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOn
     
 </footer> -->
 
- <!-- Footer -->
- <footer>
-  <div class="container">
-      <div class="row justify-content-between foot">
-          <div class="about-us col-4">
-              <a class="navbar-brand" href="#">NGO Connect</a>
-              <h5></h5>
-              <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! 
-                  Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! 
-                  Quasi pariatur repudiandae exercitationem culpa!
-              </p>
-              <div class="loc-ema-pho">
-                  <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
-                  <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
-                  <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>                        
-              </div>
-          </div>
-          <div class="contact-us col-4">
-              <div class="contact-form">
-                  <h3>Contact Us</h3>
-                  <h5></h5>
-                  <form action="">
-                      <input type="text" placeholder="Enter your name" required>
-                      <input type="text" placeholder="Enter your email" required>
-                      <input type="text" placeholder="Subject">
-                      <textarea name="message" id="" placeholder="Message"></textarea>
-                      <input class="contact-form-submit btn" type="submit" value="Submit">
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer>
-  </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row justify-content-between foot">
+                    <div class="about-us col-4">
+                        <a class="navbar-brand" href="#">NGO Connect</a>
+                        <h5></h5>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
+                        </p>
+                        <div class="loc-ema-pho">
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
+                        </div>
+                    </div>
+                    <div class="contact-us col-4">
+                        <div class="contact-form">
+                            <h3>Contact Us</h3>
+                            <h5></h5>
+                            <form action="">
+                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" placeholder="Enter your email" required>
+                                <input type="text" placeholder="Subject">
+                                <textarea name="message" id="" placeholder="Message"></textarea>
+                                <input class="contact-form-submit btn" type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
 </body>
+
 </html>

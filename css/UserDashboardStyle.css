@@ -1,8 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-/* 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 
 
 #nav-bar{
     position: sticky;
@@ -65,9 +65,7 @@
 .nav-link{
     color:aqua;
 }    */
-
-
-/* .navbar{
+        /* .navbar{
     background-color: rgba(2, 62, 138) !important;
 }
 .navbar ul li{
@@ -107,355 +105,355 @@
 .navbar ul{
     padding-left: 70px;
 } */
-
-
-
-#navbarNav ul {
-    margin-left: 150px;
-}
-.lst {
-    padding-right: 10px;
-    margin-top: -15px;
-    padding-left: 10px;
-}
-.lstlink {
-    font-size: 20px;
-    color: white;
-}
-.nameNGO {
-    font-size: 28px;
-    color: white;
-}
-.log {
-    margin-right: 10px;
-    margin-top: -15px;
-}
-.loglink {
-    font-size: 20px;
-    color: white;
-}
-.navi {
-    padding: 10px;
-}
-.searchclass {
-    margin-left: 90px;
-}
-.l11 {
-    margin-left: -70px;
-}
-.l21 {
-    margin-left: -2%;
-    background: none !important;
-    border: none;
-    padding: 0 !important;
-}
-.l22 {
-    margin-left: -40%;
-    background: none !important;
-    border: none;
-    padding: 0 !important;
-}
-
-/*modal*/
-
-.form1 {
-    margin: 2% 2%;
-    opacity: 1;
-    color: black;
-}
-
-.login1Form {
-    padding: 30px;
-    border: none;
-    height: 100%;
-}
-
-.login2Form {
-    border: none;
-    padding: 30px;
-    height: 100%;
-}
-
-.Cont {
-    background: rgba(255, 255, 255, 0.75);
-    border: #222;
-}
-
-.login1 {
-    width: 40%;
-    color: white;
-}
-
-.login2 {
-    width: 40%;
-    color: white;
-}
-
-.close {
-    width: 10%;
-    color: white;
-    box-shadow:none !important;
-}
-
-.buttons {
-    width: 100%;
-}
-
-.modhead {
-    background: rgba(2, 62, 138, 1);
-}
-
-.login1:focus {
-    border: none !important;
-    background: none !important;
-}
-
-.login2:focus {
-    border: none !important;
-    background: none !important;
-}
-
-.NGOLog {
-    width: 60%;
-    margin-left: 10%;
-    margin-right: 10%;
-    color: white;
-}
-
-
-/*modal end*/
-/* form extra*/
-.form-div {
-    margin: 5% auto;
-    border: 15px groove #017fb5;
-    padding: 30px;
-}
-
-.form-div label {
-    font-size: 19px;
-    color: rgb(50, 130, 205);
-    font-weight: 500;
-    margin: 2% 0;
-}
-
-.UploadPic {
-    font-size: 29px;
-    color: rgb(50, 130, 205);
-    font-weight: 500;
-    margin: 2% 0;
-}
-
-.form-div input[type="text"],
-.form-div input[type="password"],
-.form-div input[type="textbox"],
-input[type="file"] {
-    -webkit-appearance: none !important;
-    border: none;
-    border-bottom: 1px solid #017fb5;
-}
-
-.form-div textarea {
-    border: none;
-    border-bottom: 1px solid #017fb5;
-    resize: none;
-    overflow: scroll;
-}
-
-input[type="file"] {
-    padding-bottom: 2%;
-}
-
-.form-div textarea:focus {
-    box-shadow: none;
-    border-bottom-color: black;
-    overflow: scroll;
-}
-
-.form-div input[type="text"]:focus,
-.form-div input[type="password"]:focus,
-input[type="file"]:focus,
-.form-div input[type="textbox"]:focus {
-    box-shadow: none;
-    border-bottom-color: black;
-}
-
-.form-div input[type="submit"] {
-    margin-top: 7%;
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.form-div p {
-    font-size: 14px;
-}
-/* form extra end*/
-
-#about{
-   
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-   
-    
-}
-
-#about .btn{
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-}
-
-#about-content{
-    padding-top: 20px;
-}
-
-@keyframes example {
-    0%   {background-color:white; color:#ccc; left:-50%; top:0px;}
-    100%  { left:0px; top:0px;}
-  
-  }
-  
-  #home{
-      padding-top:20px
-  }
-  
-.anime {
-    width: 100%;
-    height: 400px;
-    position: relative;
-    background-color: rgb(235, 184, 184);
-    background-image:url("images/innovate.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation-name: example;
-    animation-duration: 4s;
-  }
-     
-  
-  #about h1{
-
-    text-align: center;
-    /**color: aqua;**/
-    font-size: 45px;
-    padding-bottom: 10px;
-
-  }
-
-    #about h1::after{
-        content: '';
-        background: #efefef;
-        display: block;
-        height:3px;
-        width: 150px;
-        margin: 20px auto 5px;
-    }
-  /****explore***/
-
-  #explore h1{
-    text-align: center;
-    color: rgb(18, 59, 23);
-    font-size: 40px;
-    padding-bottom: 10px;
-  }
-
-  #explore h1::after{
-      content: '';
-      background: #201f1f;
-      display: block;
-      height:3px;
-      width: 130px;
-      margin: 20px auto 5px;
-    }
-   
-#explore{
-    background-image: url(images/thought-catalog-505eectW54k-unsplash.jpg);
-    background-repeat: no-repeat;
-padding: 30px;
-
-}
-
-    
-.subject{
-    margin-top:25px;
-    
-    align-content: center;
-}
-
-.subject .img-box{
-    background-color: rgb(97, 105, 22);
-    width:70%;
-    margin-left: 100px;
-    
-}
-.subject .img-box img
-{
-    width:100%;
-    height:350px;
-    /*  padding: 10px;*/
-      display:block;
-      opacity: 1;
-      position:relative;
-      
-}
-.subject .img-box img:hover
-{
-  -moz-box-shadow: 0 0 10px #ccc;
-  -webkit-box-shadow: 0 0 10px #ccc;
-  box-shadow: 0 0 10px #ccc;
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-
-.subject h2{
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #abc3db;
-    padding-bottom: 10px;
-    
-}
-
-
-
-.time {
-    padding-left: 10px;
-    color: #85e5e5;
-    text-decoration: none;
-    font-size: 16px;
-}
-.location {
-    font-size: 16px;
-    padding-left: 10px;
-    color: #79c4c4;
-    text-decoration: none;
-}
-.topic {
-    padding-left: 2px;
-    color: black;
-    font-size: 28px;
-    font-family: 'Niccone';
-}
-.by {
-    padding-left: 10px;
-    color: rgb(77, 73, 73);
-    font-size: 20px;
-    font-family: 'Niccone';
-}
-.register {
-    border-color: #023e8a;
-    color: #f1f1f1;
-    background-color: #023e8a;
-    margin-left: 65px;
-    width: 120px;
-    height: 35px;
-    margin-bottom: 20px;
-}
-
-
-/***contact us****/
-
-/* * {
+        
+        @media (min-width: 992px) {
+            /*navbar*/
+            #navbarNav ul {
+                margin-left: 150px;
+            }
+            .lst {
+                padding-right: 10px;
+                margin-top: -15px;
+                padding-left: 10px;
+            }
+            .lstlink {
+                font-size: 20px;
+                color: white;
+            }
+            .nameNGO {
+                font-size: 28px;
+                color: white;
+            }
+            .log {
+                margin-right: 10px;
+                margin-top: -15px;
+            }
+            .loglink {
+                font-size: 20px;
+                color: white;
+            }
+            .navi {
+                padding: 10px;
+            }
+            .searchclass {
+                margin-left: 90px;
+            }
+            .l11 {
+                margin-left: -70px;
+            }
+            .l21 {
+                margin-left: -2%;
+                background: none !important;
+                border: none;
+                padding: 0 !important;
+            }
+            .l22 {
+                margin-left: -40%;
+                background: none !important;
+                border: none;
+                padding: 0 !important;
+            }
+            /*navbar end*/
+            /*HEADERS MEGA MENU*/
+            .meagamenuheader {
+                font-size: 20px;
+            }
+            .megamenuplaces text {
+                color: rgb(41, 40, 40);
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+        /*modal*/
+        
+        .form1 {
+            margin: 2% 2%;
+            opacity: 1;
+            color: black;
+        }
+        
+        .login1Form {
+            padding: 30px;
+            border: none;
+            height: 100%;
+        }
+        
+        .login2Form {
+            border: none;
+            padding: 30px;
+            height: 100%;
+        }
+        
+        .Cont {
+            background: rgba(255, 255, 255, 0.75);
+            border: #222;
+        }
+        
+        .login1 {
+            width: 40%;
+            color: white;
+        }
+        
+        .login2 {
+            width: 40%;
+            color: white;
+        }
+        
+        .close {
+            width: 10%;
+            color: white;
+            box-shadow: none !important;
+        }
+        
+        .buttons {
+            width: 100%;
+        }
+        
+        .modhead {
+            background: rgba(2, 62, 138, 1);
+        }
+        
+        .login1:focus {
+            border: none !important;
+            background: none !important;
+        }
+        
+        .login2:focus {
+            border: none !important;
+            background: none !important;
+        }
+        
+        .NGOLog {
+            width: 60%;
+            margin-left: 10%;
+            margin-right: 10%;
+            color: white;
+        }
+        /*modal end*/
+        /* form extra*/
+        
+        .form-div {
+            margin: 5% auto;
+            border: 15px groove #017fb5;
+            padding: 30px;
+        }
+        
+        .form-div label {
+            font-size: 19px;
+            color: rgb(50, 130, 205);
+            font-weight: 500;
+            margin: 2% 0;
+        }
+        
+        .UploadPic {
+            font-size: 29px;
+            color: rgb(50, 130, 205);
+            font-weight: 500;
+            margin: 2% 0;
+        }
+        
+        .form-div input[type="text"],
+        .form-div input[type="password"],
+        .form-div input[type="textbox"],
+        input[type="file"] {
+            -webkit-appearance: none !important;
+            border: none;
+            border-bottom: 1px solid #017fb5;
+        }
+        
+        .form-div textarea {
+            border: none;
+            border-bottom: 1px solid #017fb5;
+            resize: none;
+            overflow: scroll;
+        }
+        
+        input[type="file"] {
+            padding-bottom: 2%;
+        }
+        
+        .form-div textarea:focus {
+            box-shadow: none;
+            border-bottom-color: black;
+            overflow: scroll;
+        }
+        
+        .form-div input[type="text"]:focus,
+        .form-div input[type="password"]:focus,
+        input[type="file"]:focus,
+        .form-div input[type="textbox"]:focus {
+            box-shadow: none;
+            border-bottom-color: black;
+        }
+        
+        .form-div input[type="submit"] {
+            margin-top: 7%;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        .form-div p {
+            font-size: 14px;
+        }
+        /* form extra end*/
+        
+        #about {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        #about .btn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+        #about-content {
+            padding-top: 20px;
+        }
+        
+        @keyframes example {
+            0% {
+                background-color: white;
+                color: #ccc;
+                left: -50%;
+                top: 0px;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+        #home {
+            padding-top: 20px
+        }
+        
+        .anime {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            background-color: rgb(235, 184, 184);
+            background-image: url("images/innovate.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        
+        #about h1 {
+            text-align: center;
+            /**color: aqua;**/
+            font-size: 45px;
+            padding-bottom: 10px;
+        }
+        
+        #about h1::after {
+            content: '';
+            background: #efefef;
+            display: block;
+            height: 3px;
+            width: 150px;
+            margin: 20px auto 5px;
+        }
+        /****explore***/
+        
+        #explore h1 {
+            text-align: center;
+            color: rgb(18, 59, 23);
+            font-size: 40px;
+            padding-bottom: 10px;
+        }
+        
+        #explore h1::after {
+            content: '';
+            background: #201f1f;
+            display: block;
+            height: 3px;
+            width: 130px;
+            margin: 20px auto 5px;
+        }
+        
+        #explore {
+            background-image: url(images/thought-catalog-505eectW54k-unsplash.jpg);
+            background-repeat: no-repeat;
+            padding: 30px;
+        }
+        
+        .subject {
+            margin-top: 25px;
+            align-content: center;
+        }
+        
+        .subject .img-box {
+            background-color: rgb(97, 105, 22);
+            width: 70%;
+            margin-left: 100px;
+        }
+        
+        .subject .img-box img {
+            width: 100%;
+            height: 350px;
+            /*  padding: 10px;*/
+            display: block;
+            opacity: 1;
+            position: relative;
+        }
+        
+        .subject .img-box img:hover {
+            -moz-box-shadow: 0 0 10px #ccc;
+            -webkit-box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 0 10px #ccc;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        .subject h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #abc3db;
+            padding-bottom: 10px;
+        }
+        
+        .time {
+            padding-left: 10px;
+            color: #85e5e5;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .location {
+            font-size: 16px;
+            padding-left: 10px;
+            color: #79c4c4;
+            text-decoration: none;
+        }
+        
+        .topic {
+            padding-left: 2px;
+            color: black;
+            font-size: 28px;
+            font-family: 'Niccone';
+        }
+        
+        .by {
+            padding-left: 10px;
+            color: rgb(77, 73, 73);
+            font-size: 20px;
+            font-family: 'Niccone';
+        }
+        
+        .register {
+            border-color: #023e8a;
+            color: #f1f1f1;
+            background-color: #023e8a;
+            margin-left: 65px;
+            width: 120px;
+            height: 35px;
+            margin-bottom: 20px;
+        }
+        /***contact us****/
+        /* * {
     box-sizing: border-box;
   }
   
@@ -506,94 +504,110 @@ padding: 30px;
       margin-top: 0;
     }
   } */
-
-
-
-
-/***profile**/
-
-.profile-head {
-    transform: translateY(5rem)
-}
-
-.cover {
-   
-    background-size: cover;
-    background-repeat: no-repeat
-}
-
-body {
-  
-    min-height: 100vh
-}
-
-/***footer***/
-
-footer {
-    padding: 10px 0;
-    background-color: rgba(2, 62, 138);
-    color: #fff;
-}
-footer h5::after{
-    content: "";
-    width: 25%;
-    height: 1px;
-    display: block;
-    background-color: #fd9042;
-}
-.about-us a{
-    margin-bottom: 30px;
-}
-.about-us p{
-    font-size: 0.85em;
-}
-.loc-ema-pho{
-    margin: 20px;
-}
-.loc-ema-pho i{
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-.contact-us{
-    margin-bottom: 10px;
-}
-.contact-form input, .contact-form textarea{
-    display: block;
-    font-size: 0.9em;
-    background-color: #03045e;
-    border: 0;
-    color: #fff;
-    resize: none;
-    width: 90%;
-    padding: 3px;
-    margin: 15px 0;
-}
-.contact-form-submit{
-    color: #000 !important;
-    background-color: #caf0f8 !important;
-}
-.contact-form-submit:hover{
-    color: #fff !important;
-    background-color: rgba(2, 62, 138) !important;
-    border: 1px solid #caf0f8;
-}
-
-/*****see-more****/
-
-.card-see-more{
-    height: 35px;
-}
-.card-see-more:hover{
-    background-color: #ececec;
-    
-}
-.card-see-more i{
-    width: 100%;
-    text-align: center;
-    font-size: 1.3em;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.card-see-more i:hover{
-    transform: translateY(5px);
-}
+        /***profile**/
+        
+        .profile-head {
+            transform: translateY(5rem)
+        }
+        
+        .cover {
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+        
+        body {
+            min-height: 100vh
+        }
+        /***footer***/
+        
+        footer {
+            padding: 10px 0;
+            background-color: rgba(2, 62, 138);
+            color: #fff;
+        }
+        
+        footer h5::after {
+            content: "";
+            width: 25%;
+            height: 1px;
+            display: block;
+            background-color: #fd9042;
+        }
+        
+        .about-us a {
+            margin-bottom: 30px;
+        }
+        
+        .about-us p {
+            font-size: 0.85em;
+        }
+        
+        .loc-ema-pho {
+            margin: 20px;
+        }
+        
+        .loc-ema-pho i {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        
+        .contact-us {
+            margin-bottom: 10px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            display: block;
+            font-size: 0.9em;
+            background-color: #03045e;
+            border: 0;
+            color: #fff;
+            resize: none;
+            width: 90%;
+            padding: 3px;
+            margin: 15px 0;
+        }
+        
+        .contact-form-submit {
+            color: #000 !important;
+            background-color: #caf0f8 !important;
+        }
+        
+        .contact-form-submit:hover {
+            color: #fff !important;
+            background-color: rgba(2, 62, 138) !important;
+            border: 1px solid #caf0f8;
+        }
+        /*****see-more****/
+        
+        .card-see-more {
+            height: 35px;
+        }
+        
+        .card-see-more:hover {
+            background-color: #ececec;
+        }
+        
+        .card-see-more i {
+            width: 100%;
+            text-align: center;
+            font-size: 1.3em;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        .card-see-more i:hover {
+            transform: translateY(5px);
+        }
+        
+        @media (max-width: 600px) {
+            /*HEADERS MEGA MENU*/
+            .meagamenuheader {
+                font-size: 20px;
+            }
+            .megamenuplaces text {
+                color: rgb(41, 40, 40);
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
