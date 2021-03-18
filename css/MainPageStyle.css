@@ -103,7 +103,139 @@
 
 /* Sign-in End */
 /* Navbar End */
+/*modal*/
 
+.form1 {
+    margin: 2% 2%;
+    opacity: 1;
+    color: black;
+}
+
+.login1Form {
+    padding: 30px;
+    border: none;
+    height: 100%;
+}
+
+.login2Form {
+    border: none;
+    padding: 30px;
+    height: 100%;
+}
+
+.Cont {
+    background: rgba(255, 255, 255, 0.75);
+    border: #222;
+}
+
+.login1 {
+    width: 40%;
+    color: white;
+}
+
+.login2 {
+    width: 40%;
+    color: white;
+}
+
+.close {
+    background: none !important;
+    color:white;
+    box-shadow:none !important;
+}
+
+.buttons {
+    width: 100%;
+}
+
+.modhead {
+    background: rgba(2, 62, 138, 1);
+}
+
+.login1:focus {
+    border: none !important;
+    background: none !important;
+}
+
+.login2:focus {
+    border: none !important;
+    background: none !important;
+}
+
+.NGOLog {
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+}
+
+
+/*modal end*/
+/* form extra*/
+.form-div {
+    margin: 5% auto;
+    border: 15px groove #017fb5;
+    padding: 30px;
+}
+
+.form-div label {
+    font-size: 19px;
+    color: rgb(50, 130, 205);
+    font-weight: 500;
+    margin: 2% 0;
+}
+
+.UploadPic {
+    font-size: 29px;
+    color: rgb(50, 130, 205);
+    font-weight: 500;
+    margin: 2% 0;
+}
+
+.form-div input[type="text"],
+.form-div input[type="password"],
+.form-div input[type="textbox"],
+input[type="file"] {
+    -webkit-appearance: none !important;
+    border: none;
+    border-bottom: 1px solid #017fb5;
+}
+
+.form-div textarea {
+    border: none;
+    border-bottom: 1px solid #017fb5;
+    resize: none;
+    overflow: scroll;
+}
+
+input[type="file"] {
+    padding-bottom: 2%;
+}
+
+.form-div textarea:focus {
+    box-shadow: none;
+    border-bottom-color: black;
+    overflow: scroll;
+}
+
+.form-div input[type="text"]:focus,
+.form-div input[type="password"]:focus,
+input[type="file"]:focus,
+.form-div input[type="textbox"]:focus {
+    box-shadow: none;
+    border-bottom-color: black;
+}
+
+.form-div input[type="submit"] {
+    margin-top: 7%;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.form-div p {
+    font-size: 14px;
+}
+/* form extra end*/
 /* Search bar */
 .search-bar{
     position: absolute;
