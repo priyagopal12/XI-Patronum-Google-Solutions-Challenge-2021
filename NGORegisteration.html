@@ -11,6 +11,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/NGORegisterationStyle.css">
+    <link rel="stylesheet" href="css\MainPageResponsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/UserDashboardStyle.css">
     <!-- modal jquery-->
     <script type="text/javascript">
         $(function() {
@@ -104,38 +110,103 @@
 
 <body>
     <!--nav bar-->
-    <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
-        <div class="container-fluid navi">
-            <a class="navbar-brand nameNGO" href="#">Name of NGO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item lst">
-                        <a class="nav-link active lstlink l11" aria-current="page" href="#">NGOs</a>
-                    </li>
-                    <li class="nav-item lst">
-                        <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
-                    </li>
-                </ul>
-                <form class="d-flex searchclass">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="secondul">
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a;">
+            <div class="container-fluid navi">
+                <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item lst">
+                            <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
+                            <div class="dropdown-menu " aria-labelledby="servicesDropdown">
+                                <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
 
-                    <li class="nav-item log">
-                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
-                    </li>
-                    <li class="nav-item log">
-                        <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
-                    </li>
+                                <div class="dropdown-divider"></div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>PUNE</text></div>
+                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
+                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
+                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
+                                        <a class="dropdown-item" href="#">Children’s Future India</a>
+                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
+                                        <a class="dropdown-item" href="#">Helpage India</a>
+                                        <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
+                                        <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
+                                        <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
+                                        <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
+                                        <a class="dropdown-item" href="#">Initiatives in Development and Education for All</a>
+                                    </div>
+                                    <br>
 
-                </ul>
+
+                                </div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
+                                        <a class="dropdown-item" href="#">Amulya Jyoti</a>
+                                        <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
+                                        <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
+                                        <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
+                                        <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
+                                        <a class="dropdown-item" href="#">National Human Rights Association</a>
+                                        <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
+                                        <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
+                                        <a class="dropdown-item" href="#">United World Against Diabetes</a>
+                                        <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>SOLAPUR</text></div>
+                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
+                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
+                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
+                                        <a class="dropdown-item" href="#">Children’s Future India</a>
+                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </li>
+                        <li class="nav-item lst">
+                            <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex searchclass">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
+                        </li>
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </section>
     <!--nav bar end-->
     <!--modal start-->
     <div class="modal fade" id="loginform">
@@ -143,8 +214,8 @@
             <div class="modal-content Cont">
                 <div class="modal-header modhead">
                     <div class="buttons">
-                        <button type="button" id="ULog" class="login1 btn">User</button>
-                        <button type="button" id="NLog" class="login2 btn">NGO</button>
+                        <button type="button" id="ULog" class="login1 btn" style="color:white">User</button>
+                        <button type="button" id="NLog" class="login2 btn" style="color:white">NGO</button>
                         <button type="button" id="close" class="close" data-dismiss="modal">&times; </button>
                     </div>
                 </div>
@@ -204,7 +275,7 @@
                                 <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                             <div class="form-group">
-                                <p class="Member">Not a member?<a class="MemberBtn" href="NGOReg.html" id="SignUpUser">Partner With Us</a></p>
+                                <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
                             </div>
                         </form>
                     </div>
