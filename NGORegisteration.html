@@ -17,95 +17,113 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/UserDashboardStyle.css">
-    <!-- modal jquery-->
-    <script type="text/javascript">
-        $(function() {
-            $('#ULogLink').on('click', function(e) {
-                $('#form-sign').css('display', 'none');
-                $('.SignUpForm').css('display', 'none');
-                $('#form-logN').css('display', 'none');
-                $('.NForm').css('display', 'none');
-                $('#form-logU').css('display', 'inline');
-                $('.SignInForm').css('display', 'flex');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-                e.preventDefault();
-            });
-        });
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
-        $(function() {
-            $('#LoginUser').on('click', function(e) {
-                $('#form-sign').css('display', 'none');
-                $('.SignUpForm').css('display', 'none');
-                $('#form-logN').css('display', 'none');
-                $('.NForm').css('display', 'none');
-                $('#form-logU').css('display', 'inline');
-                $('.SignInForm').css('display', 'flex');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-                e.preventDefault();
-            });
+   <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+</script>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="Registration.js"></script>
+
+<script type="text/javascript">
+    
+    $(function() {
+        
+        $('#ULogLink').on('click', function(e) {
+            $('#form-sign').css('display', 'none');
+            $('.SignUpForm').css('display', 'none');
+            $('#form-logN').css('display', 'none');
+            $('.NForm').css('display', 'none');
+            $('#form-logU').css('display', 'inline');
+            $('.SignInForm').css('display', 'flex');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
+            e.preventDefault();
         });
-        $(function() {
-            $('#ULog').on('click', function(e) {
-                $('#form-sign').css('display', 'none');
-                $('.SignUpForm').css('display', 'none');
-                $('#form-logN').css('display', 'none');
-                $('.NForm').css('display', 'none');
-                $('#form-logU').css('display', 'inline');
-                $('.SignInForm').css('display', 'flex');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-                e.preventDefault();
-            });
+    });
+
+    $(function() {
+        $('#LoginUser').on('click', function(e) {
+            $('#form-sign').css('display', 'none');
+            $('.SignUpForm').css('display', 'none');
+            $('#form-logN').css('display', 'none');
+            $('.NForm').css('display', 'none');
+            $('#form-logU').css('display', 'inline');
+            $('.SignInForm').css('display', 'flex');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
+            e.preventDefault();
         });
-        $(function() {
-            $('#SignUpUser').on('click', function(e) {
-                e.preventDefault();
-                $('#form-sign').css('display', 'inline');
-                $('.SignUpForm').css('display', 'flex');
-                $('#form-logN').css('display', 'none');
-                $('.NForm').css('display', 'none');
-                $('#form-logU').css('display', 'none');
-                $('.SignInForm').css('display', 'none');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-            });
+    });
+    $(function() {
+        $('#ULog').on('click', function(e) {
+            $('#form-sign').css('display', 'none');
+            $('.SignUpForm').css('display', 'none');
+            $('#form-logN').css('display', 'none');
+            $('.NForm').css('display', 'none');
+            $('#form-logU').css('display', 'inline');
+            $('.SignInForm').css('display', 'flex');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
+            e.preventDefault();
         });
-        $(function() {
-            $('#NLog').on('click', function(e) {
-                $('#form-sign').css('display', 'none');
-                $('.SignUpForm').css('display', 'none');
-                $('#form-logN').css('display', 'inline');
-                $('.NForm').css('display', 'flex');
-                $('#form-logU').css('display', 'none');
-                $('.SignInForm').css('display', 'none');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-                e.preventDefault();
-            });
+    });
+    $(function() {
+        $('#SignUpUser').on('click', function(e) {
+            e.preventDefault();
+            $('#form-sign').css('display', 'inline');
+            $('.SignUpForm').css('display', 'flex');
+            $('#form-logN').css('display', 'none');
+            $('.NForm').css('display', 'none');
+            $('#form-logU').css('display', 'none');
+            $('.SignInForm').css('display', 'none');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
         });
-        $(function() {
-            $('#NSignIn').on('click', function(e) {
-                $('#form-sign').css('display', 'none');
-                $('.SignUpForm').css('display', 'none');
-                $('#form-logN').css('display', 'inline');
-                $('.NForm').css('display', 'flex');
-                $('#form-logU').css('display', 'none');
-                $('.SignInForm').css('display', 'none');
-                $('.NForm').css('border', 'none');
-                $('.SignInForm').css('border', 'none');
-                $('.SignUpForm').css('border', 'none');
-                e.preventDefault();
-            });
+    });
+    $(function() {
+        $('#NLog').on('click', function(e) {
+            $('#form-sign').css('display', 'none');
+            $('.SignUpForm').css('display', 'none');
+            $('#form-logN').css('display', 'inline');
+            $('.NForm').css('display', 'flex');
+            $('#form-logU').css('display', 'none');
+            $('.SignInForm').css('display', 'none');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
+            e.preventDefault();
         });
-    </script>
-    <!--modal jquery end-->
+    });
+    $(function() {
+        $('#NSignIn').on('click', function(e) {
+            $('#form-sign').css('display', 'none');
+            $('.SignUpForm').css('display', 'none');
+            $('#form-logN').css('display', 'inline');
+            $('.NForm').css('display', 'flex');
+            $('#form-logU').css('display', 'none');
+            $('.SignInForm').css('display', 'none');
+            $('.NForm').css('border', 'none');
+            $('.SignInForm').css('border', 'none');
+            $('.SignUpForm').css('border', 'none');
+            e.preventDefault();
+        });
+    });
+    
+
+</script>
+<!--modal jquery end-->
+    <!-- modal jquery-->
+    
 </head>
 
 <body>
@@ -201,6 +219,12 @@
                         <li class="nav-item log">
                             <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
                         </li>
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l24 " id="Dashboard" href="#" hidden>Dashboard</a>
+                        </li>
+                        <li class="nav-item log">
+                            <a class="nav-link active loglink l23 " id="logOut" href="#" onclick="SignOut()" hidden >Sign Out</a>
+                        </li>
 
                     </ul>
                 </div>
@@ -223,19 +247,23 @@
                     <div class="SignUpForm form-div">
                         <form id="form-sign">
                             <div class="form-group">
-                                <label for="UName">Username: </label>
-                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                                <label for="SUName">Email ID: </label>
+                                <input type="text" name="UName" id="EmailSign" class="form-control form-control-lg" placeholder="Eg. reysinghania321@gmail.com" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <label for="SUserName">Username: </label>
+                                <input type="text" name="UserName" id="UsernameSign" class="form-control form-control-lg" placeholder="Eg. Reyansh" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassSign">Password: </label>
-                                <input type="password" name="PassSign" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                                <input type="password" name="PassSign" id="PassSign1" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassSign2"> Reenter Password: </label>
-                                <input type="password" name="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                                <input type="password" name="PassSign2" id="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                                <input type="button" name="LoginBtn" id="SignUp" form="form-log1" onclick="signUp()" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required"></input>
                             </div>
                             <div class="form-group">
                                 <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
@@ -246,15 +274,15 @@
                     <div class="SignInForm form-div">
                         <form id="form-logU">
                             <div class="form-group">
-                                <label for="UName">Username: </label>
-                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                                <label for="LUName">Email ID: </label>
+                                <input type="text" name="UName" id="EmailLog" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassLog">Password: </label>
-                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                                <input type="password" name="PassLog" id="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                                <input type="submit" name="LoginBtn" id="SignIn" onclick="signInWithEmailPassword()" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                             <div class="form-group">
                                 <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
@@ -264,15 +292,15 @@
                     <div class="NForm form-div">
                         <form id="form-logN">
                             <div class="form-group">
-                                <label for="UName">Name of NGO: </label>
-                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
+                                <label for="NUName">Registered Email ID: </label>
+                                <input type="text" name="UName" id="NEmID" class="form-control form-control-lg" placeholder="Eg. reysingh@gmail.com" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassLog">Password: </label>
-                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
+                                <input type="password" name="NPassLog" id="NPass" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                                <input type="submit" name="LoginBtn" onclick="NSignIn()" form="form-log1" id="NSignIn" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                             <div class="form-group">
                                 <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
@@ -472,22 +500,26 @@
                 <form id="form-reg" action="#">
                     <div class="form-group">
                         <label for="NGOName">Name of your NGO: </label>
-                        <input type="text" name="NGOName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                        <input type="text" name="NGOName" id="NGOName" class="form-control form-control-lg" placeholder="Eg. Umang" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="NGOName">Email ID of NGO/Contact Person(For Login): </label>
+                        <input type="text" name="NGOName" id="NGOUsername" class="form-control form-control-lg" placeholder="Eg. umang@gmail.com" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="Location">Location:</label>
-                        <input type="text" name="Location" class="form-control form-control-lg" placeholder="Eg. Pune, Maharashtra" required="required" />
+                        <input type="text" name="Location" id="NGOLoc" class="form-control form-control-lg" placeholder="Eg. Pune, Maharashtra" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="URL">Link of NGO's Website:</label>
-                        <input type="text" name="URL" class="form-control form-control-lg" placeholder="Eg. www.umang.com" required="required" />
+                        <input type="text" name="URL" id="NGOLink" class="form-control form-control-lg" placeholder="Eg. www.umang.com" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="Olinks">Other Links:</label>
-                        <textarea rows="2" name="Olinks" class="form-control form-control-lg" placeholder="Eg. Instagram: https://www.instagram.com/umang/                                                                      Facebook: https://www.facebook.com/umang" required="required"></textarea>
+                        <textarea rows="2" name="Olinks" id="NGOOLinks" class="form-control form-control-lg" placeholder="Eg. Instagram: https://www.instagram.com/umang/                                                                      Facebook: https://www.facebook.com/umang" required="required"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="inputGroupFile04" class="UploadPic">Profile Image:</label>
+                        <label for="inputGroupFile04"  class="UploadPic">Profile Image:</label>
                     </div>
 
                     <div class="input-group">
@@ -496,15 +528,15 @@
                     </div>
                     <div class="form-group">
                         <label for="NameCP">Name of Contact Person:</label>
-                        <input type="text" name="NameCP" class="form-control form-control-lg" placeholder="Eg. Mr.Reyansh Singhania" required="required" />
+                        <input type="text" name="NameCP" id="NGOCPName" class="form-control form-control-lg" placeholder="Eg. Mr.Reyansh Singhania" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="ContactCP">Contact Information:</label>
-                        <textarea rows="2" name="NameCP" class="form-control form-control-lg" placeholder="Eg. Email ID: reysinghania321@gmail.com                                                                      Mobile no.: 12345678" required="required"></textarea>
+                        <textarea rows="2" name="NameCP" id="NGOCPCont" class="form-control form-control-lg" placeholder="Eg. Email ID: reysinghania321@gmail.com                                                                      Mobile no.: 12345678" required="required"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="ID">NGO ID:</label>
-                        <input type="text" name="ID" class="form-control form-control-lg" placeholder="Eg. " required="required" />
+                        <input type="text" name="ID" id="NGOID" class="form-control form-control-lg" placeholder="Eg. " required="required" />
                     </div>
                     <div class="form-group">
                         <h1 class="GoalsCheck">Goals the NGO works towards: </h1>
@@ -566,7 +598,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Password">Password:</label>
-                        <input type="password" name="Password" class="form-control form-control-lg" placeholder="Should contain atleast one special character(!,@,#,etc.)" required="required" />
+                        <input type="password" name="Password" id="NGOPassword" class="form-control form-control-lg" placeholder="Should contain atleast one special character(!,@,#,etc.)" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="RePassword">Reenter the password:</label>
@@ -574,10 +606,10 @@
                     </div>
                     <div class="form-group">
                         <label for="Descr">Short Description of the NGO: </label>
-                        <input type="textbox" name="Descr" class="form-control form-control-lg" placeholder="Short description of the work and goals of the NGO" required="required" />
+                        <input type="textbox" name="Descr" id="NGODescr" class="form-control form-control-lg" placeholder="Short description of the work and goals of the NGO" required="required" />
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="Register" form="form-reg" value="Register" class="btn-primary btn btn-block" required="required" />
+                        <input type="button" name="Register" onclick="NSignUp()" form="form-reg" value="Register" class="btn-primary btn btn-block" required="required" />
                     </div>
                     <p class="text-center">Already Registered?
                         <a id="NSignIn" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
@@ -586,6 +618,7 @@
             </div>
         </div>
     </div>
+     
 </body>
 <!--footer-->
 <footer id="footer">
