@@ -269,6 +269,20 @@ function NSignUp() {
                     NGOID: NID,
                     Descr: NDescr
                 });
+                firebase.database().ref().child("NGO").child(NName).set({
+                    username: NName,
+                    email: NEmID,
+                    type: type,
+                    Name: NName,
+                    Location: NLoc,
+                    URL: NLink,
+                    OtherLinks: NOLinks,
+                    ProfilePic: ProPic,
+                    ContactName: CPName,
+                    Contacts: CPContact,
+                    NGOID: NID,
+                    Descr: NDescr
+                });
 
                 // ...
                 document.getElementById("logOut").removeAttribute("hidden");
