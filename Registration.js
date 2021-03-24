@@ -70,6 +70,8 @@
                      var uid = user.uid;
                      
                      // ...
+                     
+                     
                      document.getElementById("logOut").removeAttribute("hidden");
                      document.getElementById("Dashboard").removeAttribute("hidden");
                      document.getElementById("ULogLink").style.display="none";
@@ -97,10 +99,12 @@
                     var uid = user.uid;
                     
                     // ...
-                   /* document.getElementById("logOut").removeAttribute("hidden");
+                    
+                    
+                    document.getElementById("logOut").removeAttribute("hidden");
                     document.getElementById("Dashboard").removeAttribute("hidden");
                     document.getElementById("ULogLink").style.display="none";
-                    document.getElementById("NLogLink").style.display="none";*/
+                    document.getElementById("NLogLink").style.display="none";
                     document.getElementById("Dashboard").setAttribute("href","NGODashboard.html");
                     alert("Signed in!");
                 })
@@ -123,7 +127,7 @@
   .then(() => {
                  firebase.auth().createUserWithEmailAndPassword(email, password1).then((userCredential)=>{
                      // Signed in 
-                     alert("Signed up!");
+                     
                      var user = firebase.auth().currentUser;
                      
                     var username, email, type, uid;
@@ -140,11 +144,13 @@
                             type : type
                           });
                      // ...
-                     /*document.getElementById("logOut").removeAttribute("hidden");
+                     document.getElementById("logOut").removeAttribute("hidden");
                      document.getElementById("Dashboard").removeAttribute("hidden");
                      document.getElementById("ULogLink").style.display="none";
-                     document.getElementById("NLogLink").style.display="none";*/
+                     document.getElementById("NLogLink").style.display="none";
                      document.getElementById("Dashboard").setAttribute("href","UserDashboard.html");
+                     alert("Signed up!");
+                     //alert("Set");
                  })
                  .catch((error) => {
                      var errorCode = error.code;
@@ -186,26 +192,40 @@ function signUp(){
       });
  }
  function NSignUp(){
+     
      var NName= document.getElementById('NGOName').value;
      var NEmID= document.getElementById('NGOUsername').value;
      var NLoc= document.getElementById('NGOLoc').value;
      var NLink= document.getElementById('NGOLink').value;
      var NOLinks= document.getElementById('NGOOLinks').value;
-     //var ProPic= document.getElementById('inputGroupFile04');
+     var ProPic= document.getElementById('NGOPic').value;
      var CPName= document.getElementById('NGOCPName').value;
      var CPContact= document.getElementById('NGOCPCont').value;
      var NID= document.getElementById('NGOID').value;
      var NPass= document.getElementById('NGOPassword').value;
      var NDescr= document.getElementById('NGODescr').value;
+     
+    var cboxes = document.getElementsByClassName('goalsInput');
+   
+    var goals ="";
+    
+    for (var i=0; i<11; i++) {
+        if(cboxes[i].checked){
+            //alert(cboxes[i].value);
+            goals = goals+"\n"+ cboxes[i].value;
+            //alert("Goals"+goals);
+        }
+        else{continue;}
+    }
      firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
   .then(() => {
      firebase.auth().createUserWithEmailAndPassword(NEmID, NPass).then((userCredential)=>{
         // Signed in 
-        alert("Signed up!");
+        
         var user = firebase.auth().currentUser;
         
        var username, email, type, uid;
-
+       
        
        email = user.email;
        
@@ -219,8 +239,9 @@ function signUp(){
                Name: NName,
                Location: NLoc,
                URL: NLink,
+               Goals: goals,
                OtherLinks: NOLinks,
-               //ProfilePic: ProPic,
+               ProfilePic: ProPic,
                ContactName: CPName,
                Contacts: CPContact,
                NGOID: NID,
@@ -228,11 +249,13 @@ function signUp(){
              });
 
         // ...
-        /*document.getElementById("logOut").removeAttribute("hidden");
+        document.getElementById("logOut").removeAttribute("hidden");
         document.getElementById("Dashboard").removeAttribute("hidden");
         document.getElementById("ULogLink").style.display="none";
-        document.getElementById("NLogLink").style.display="none";*/
+        document.getElementById("NLogLink").style.display="none";
         document.getElementById("Dashboard").setAttribute("href","NGODashboard.html");
+        alert("Signed up!");
+        //alert("Set");
     })
     .catch((error) => {
         var errorCode = error.code;
