@@ -301,3 +301,18 @@ function NSignUp() {
                 });
         });
 }
+
+
+function ContactQuery(){
+    var name = document.getElementById('ConatctQueryName').value;
+    var email = document.getElementById('ContactQueryEmail').value;
+    //var subject = document.getElementById('ContactQuerySubject');
+    var message = document.getElementById('ConatctQueryMessage').value;
+
+    firebase.database().ref().child("Query").child(name).set({
+        name:name,
+        email:email,
+        message:message
+    });
+    alert("data added");
+}
