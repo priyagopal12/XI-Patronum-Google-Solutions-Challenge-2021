@@ -38,6 +38,11 @@
                             //alert(type);
                         if(type=="User"){
                             document.getElementById("Dashboard").setAttribute("href","UserDashboard.html");
+                            document.getElementById("nameOfUser").innerHTML= snapshot.val().username;
+                            document.getElementById("events").innerHTML= snapshot.val().EventsAttended;
+                            document.getElementById("ngos").innerHTML= snapshot.val().NGOsFollowing;
+                            document.getElementById("location").innerHTML= snapshot.val().location;
+                            document.getElementById("about").innerHTML= snapshot.val().About;
                          }
                          else if(type=="NGO"){
                             document.getElementById("Dashboard").setAttribute("href","NGODashboard.html");
@@ -46,7 +51,17 @@
                         
                     });
                      // ...
-                     
+                 
+//                      var user = firebase.auth().currentUser;
+//   uid = user.uid;
+//   var email = document.getElementById("uName").value;
+//   firebase.database().ref("User").child(uid).on('value',function(snapshot){
+//     document.getElementById("nameOfUser").innerHTML= snapshot.val().username;
+//     document.getElementById("events").innerHTML= snapshot.val().EventsAttended;
+//     document.getElementById("ngos").innerHTML= snapshot.val().NGOsFollowing;
+//     document.getElementById("about").innerHTML= snapshot.val().About;
+
+//   });
                      
                      
     } else {
@@ -136,12 +151,17 @@
                     email = user.email;
                     username = document.getElementById('UsernameSign').value;
                     type = "User";
+
                     uid = user.uid;  
                     //function writeUserData(uid, username, email, type) {
                         firebase.database().ref().child("User").child(uid).set({
                             username: username,
                             email: email,
-                            type : type
+                            type : type,
+                            About:"addYourAbout",
+                            EventsAttended: 0,
+                            NGOsFollowing: 0,
+                            location: "addYourLocation"
                           });
                      // ...
                      document.getElementById("logOut").removeAttribute("hidden");
