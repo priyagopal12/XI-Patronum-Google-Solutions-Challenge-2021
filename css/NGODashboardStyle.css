@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Nanum Gothic', sans-serif;
     box-sizing: border-box;
 }
+
+
 /*modal*/
 
 .form1 {
@@ -74,7 +75,11 @@
     margin-right: 10%;
     color: white;
 }
+
+
 /*modal end*/
+
+
 /* form extra*/
 
 .form-div {
@@ -140,6 +145,8 @@ input[type="file"]:focus,
 .form-div p {
     font-size: 14px;
 }
+
+
 /* form extra end*/
 
 @media (min-width: 992px) {
@@ -196,11 +203,30 @@ input[type="file"]:focus,
     /*HEADERS MEGA MENU*/
     .meagamenuheader {
         font-size: 20px;
+        font-family: sans-serif;
     }
     .megamenuplaces text {
         color: rgb(41, 40, 40);
         font-weight: bold;
         font-size: 16px;
+        font-family: sans-serif;
+    }
+    .dropdown-menu {
+        width: 100%;
+        height: 100vh;
+    }
+    .menuheaderpadding1 {
+        padding-left: 400px;
+        padding-bottom: 70px;
+    }
+    .menuheaderpadding3 {
+        padding-left: 470px;
+    }
+    .menuheaderpadding2 {
+        padding-left: 350px;
+    }
+    .menuheaderpadding4 {
+        padding-left: 418px;
     }
     /* Events */
     .SecondPart {
@@ -354,19 +380,92 @@ input[type="file"]:focus,
             transform: scale(1)
         }
     }
+    /*About Tab*/
+    .SecondPart h3 {
+        padding-left: 40px;
+        margin-bottom: -20px;
+    }
+    .tab {
+        padding-left: 45%;
+    }
+    .About_Section {
+        background-color: rgba(245, 241, 241, 0.671);
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    .NGO_Owner_Name {
+        padding-top: 10px;
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_Owner_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_ID {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_ID_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Bio {
+        padding-top: 10px;
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Bio_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Goals {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Goals_Are {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Contact {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_Links {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Links_Are {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Email {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Email_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .NGO_Location {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Location_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
+
+
 /*Mobile View*/
 
 @media (max-width: 600px) {
     /*HEADERS MEGA MENU*/
-    .ngomegamenu {
-        padding-left: 90%;
-        color: white;
-        text-decoration: none;
-    }
-    .ngomegamenu:hover {
-        color: white;
-        text-decoration: none;
+    .dropdown-menu {
+        overflow-y: scroll;
     }
     .meagamenuheader {
         font-size: 20px;
@@ -536,7 +635,86 @@ input[type="file"]:focus,
             transform: scale(1)
         }
     }
+    /*About Tab*/
+    .SecondPart h3 {
+        padding-left: 40px;
+        margin-bottom: -20px;
+        padding-top: 10px;
+    }
+    .tab {
+        padding-left: 30%;
+    }
+    .About_Section {
+        background-color: rgba(245, 241, 241, 0.671);
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+    .NGO_Owner_Name {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_Owner_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_ID {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_ID_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Bio {
+        padding-top: 10px;
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Bio_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Goals {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Goals_Are {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Contact {
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #NGO_Links {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Links_Are {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #NGO_Email {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Email_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .NGO_Location {
+        font-size: 22px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .NGO_Location_IS {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
+
+
 /*footer*/
 
 footer {
@@ -599,7 +777,11 @@ footer h5::after {
     background-color: rgba(2, 62, 138) !important;
     border: 1px solid #caf0f8;
 }
+
+
 /*footer end*/
+
+
 /****tabs**/
 
 .tab {
@@ -607,6 +789,8 @@ footer h5::after {
     border-bottom: 1px solid #ccc;
     background-color: #f1f1f1;
 }
+
+
 /* Style the buttons inside the tab */
 
 .tab button {
@@ -619,16 +803,22 @@ footer h5::after {
     transition: 0.3s;
     font-size: 17px;
 }
+
+
 /* Change background color of buttons on hover */
 
 .tab button:hover {
     background-color: #ddd;
 }
+
+
 /* Create an active/current tablink class */
 
 .tab button.active {
     background-color: #ccc;
 }
+
+
 /* Style the tab content */
 
 .tabcontent {
@@ -638,7 +828,10 @@ footer h5::after {
     border-top: none;
 }
 
-.event1, .event2, .event3, .event4{
+.event1,
+.event2,
+.event3,
+.event4 {
     border: 1px solid rgb(201, 201, 201);
 }
 
@@ -651,9 +844,10 @@ footer h5::after {
     margin-bottom: 50px;
 }
 
+
 /* prfile pic */
 
-.ngo-profile-image img{
+.ngo-profile-image img {
     width: 100px;
     height: 100px;
     margin: 0 50px;
@@ -661,31 +855,44 @@ footer h5::after {
     border-radius: 50%;
 }
 
+
 /* profile pic end */
 
+
 /* profile name */
-#ngo_profile_name{
+
+#ngo_profile_name {
     margin-bottom: 20px;
 }
+
+
 /* profile name end */
 
+
 /* create event */
-.create-event-body input{
+
+.create-event-body input {
     display: block;
     padding: 5px;
 }
-.create-event-body label{
+
+.create-event-body label {
     font-size: 1.2em;
     font-weight: 900;
     margin-top: 20px;
 }
-.create-event-body input[type="text"]{
+
+.create-event-body input[type="text"] {
     width: 100%;
 }
-.create-event-body input[type="submit"]{
+
+.create-event-body input[type="submit"] {
     margin: 10px 0;
     padding: 5px 10px;
 }
+
+
 /* create event end */
+
 
 /* NGO Profile end */

@@ -458,11 +458,30 @@ footer h5::after {
     /*HEADERS MEGA MENU*/
     .meagamenuheader {
         font-size: 20px;
+        font-family: sans-serif;
     }
     .megamenuplaces text {
         color: rgb(41, 40, 40);
         font-weight: bold;
         font-size: 16px;
+        font-family: sans-serif;
+    }
+    .dropdown-menu {
+        width: 100%;
+        height: 100vh;
+    }
+    .menuheaderpadding1 {
+        padding-left: 400px;
+        padding-bottom: 70px;
+    }
+    .menuheaderpadding3 {
+        padding-left: 470px;
+    }
+    .menuheaderpadding2 {
+        padding-left: 350px;
+    }
+    .menuheaderpadding4 {
+        padding-left: 418px;
     }
 }
 
