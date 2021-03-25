@@ -1,8 +1,10 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     /* navbar */
+    
     .navbar ul{
         padding: 0 !important;
+        
     }
     .navbar-nav{
         margin: 0 auto !important;
@@ -10,8 +12,9 @@
     .navbar-nav .nav-link{        
         border-bottom: none !important;
         font-size: 0.9em !important;
-        text-align: right;
+        text-align: right !important;
         font-weight: 600;
+        
     }
     .navbar-nav li{
         padding: 5px 10px;
@@ -20,7 +23,9 @@
         background-color: #0095c738;
         border-radius: 5px;
         border-bottom: 1px solid #888585;
+        
     }
+    
     .navbar-nav li:hover{
         background-color: #0095c7;
     }
@@ -88,6 +93,7 @@
     /* navbar */
     .navbar ul{
         padding: 0 !important;
+        justify-content: right !important;
     }
     .navbar-nav{
         margin: 0 auto !important;
@@ -95,7 +101,7 @@
     .navbar-nav .nav-link{        
         border-bottom: none !important;
         font-size: 0.9em !important;
-        text-align: right;
+        text-align: right !important;
         font-weight: 600;
     }
     .navbar-nav li{
@@ -105,6 +111,12 @@
         background-color: #0095c738;
         border-radius: 5px;
         border-bottom: 1px solid #888585;
+    }
+    .navbar #ULogLink{
+        margin-left: 92%;
+    }
+    .navbar #NLogLink{
+        margin-left: 78%;
     }
     .navbar-nav li:hover{
         background-color: #0095c7;

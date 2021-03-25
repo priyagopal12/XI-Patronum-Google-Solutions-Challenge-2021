@@ -24,6 +24,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         // User is signed in.var user = userCredential.user;
         //alert("User exists");
+        document.getElementById("SignInLI").style.display = "none";
+        document.getElementById("PartnerLI").style.display = "none";
+        document.getElementById("DashLI").removeAttribute("hidden");
+        document.getElementById("LogLI").removeAttribute("hidden");
         document.getElementById("logOut").removeAttribute('hidden');
 
         document.getElementById("Dashboard").removeAttribute('hidden');
@@ -66,6 +70,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
     } else {
         // No user is signed in.
+        document.getElementById("SignInLI").style.display = "inline";
+        document.getElementById("PartnerLI").style.display = "inline";
+        document.getElementById("DashLI").style.display = "none";
+        document.getElementById("LogLI").style.display = "none";
         document.getElementById("logOut").setAttribute("hidden", true);
         document.getElementById("Dashboard").setAttribute("hidden", true);
         document.getElementById("ULogLink").style.display = "inline";
@@ -85,6 +93,10 @@ function signInWithEmailPassword() {
                 var uid = user.uid;
 
                 // ...
+                document.getElementById("SignInLI").style.display = "none";
+        document.getElementById("PartnerLI").style.display = "none";
+        document.getElementById("DashLI").removeAttribute("hidden");
+        document.getElementById("LogLI").removeAttribute("hidden");
                 document.getElementById("logOut").removeAttribute("hidden");
                 document.getElementById("Dashboard").removeAttribute("hidden");
                 document.getElementById("ULogLink").style.display = "none";
@@ -113,6 +125,10 @@ function NSignIn() {
                 var uid = user.uid;
 
                 // ...
+                document.getElementById("SignInLI").style.display = "none";
+        document.getElementById("PartnerLI").style.display = "none";
+        document.getElementById("DashLI").removeAttribute("hidden");
+        document.getElementById("LogLI").removeAttribute("hidden");
                 document.getElementById("logOut").removeAttribute("hidden");
                 document.getElementById("Dashboard").removeAttribute("hidden");
                 document.getElementById("ULogLink").style.display = "none";
@@ -162,6 +178,10 @@ function signUp() {
                     location: "addYourLocation"
                 });
                 // ...
+                document.getElementById("SignInLI").style.display = "none";
+        document.getElementById("PartnerLI").style.display = "none";
+        document.getElementById("DashLI").removeAttribute("hidden");
+        document.getElementById("LogLI").removeAttribute("hidden");
                 document.getElementById("logOut").removeAttribute("hidden");
                 document.getElementById("Dashboard").removeAttribute("hidden");
                 document.getElementById("ULogLink").style.display = "none";
@@ -200,8 +220,13 @@ function SignOut() {
         // Sign-out successful.
         document.getElementById("logOut").style.display = "none";
         document.getElementById("Dashboard").style.display = "none";
+        document.getElementById("SignInLI").style.display = "inline";
+        document.getElementById("PartnerLI").style.display = "inline";
+        document.getElementById("DashLI").style.display = "none";
+        document.getElementById("LogLI").style.display = "none";
         document.getElementById("ULogLink").style.display = "inline";
         document.getElementById("NLogLink").style.display = "inline";
+        
         alert("Signed Out");
 
     }).catch((error) => {
@@ -285,6 +310,10 @@ function NSignUp() {
                 });
 
                 // ...
+                document.getElementById("SignInLI").style.display = "none";
+        document.getElementById("PartnerLI").style.display = "none";
+        document.getElementById("DashLI").removeAttribute("hidden");
+        document.getElementById("LogLI").removeAttribute("hidden");
                 document.getElementById("logOut").removeAttribute("hidden");
                 document.getElementById("Dashboard").removeAttribute("hidden");
                 document.getElementById("ULogLink").style.display = "none";

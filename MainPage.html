@@ -207,14 +207,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Contacts</a>
                     </li>
-                    <li class=" nav-item ">
-                        <a class="nav-link " id="NLogLink" href="NGORegisteration.html">Partner with us</a>
+                    <li class="nav-item log" id="PartnerLI">
+                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
                     </li>
-                    <li class="nav-item log">
+                    
+                    <li class="nav-item log" id="DashLI" hidden>
                         <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                     </li>
-                    <li class="nav-item log">
-                        <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
+                    <li class="nav-item log" id="LogLI" hidden>
+                        <a class="nav-link active loglink l23" id="logOut"  href="#" onclick="SignOut()" hidden >Sign Out</a>
                     </li>
                 </ul>
                 <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page" data-target="#loginform" data-toggle="modal">
@@ -1107,38 +1108,38 @@
         </div>
     </section> -->
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row justify-content-between foot">
-                <div class="about-us col-4">
-                    <a class="navbar-brand" href="#">NGO Connect</a>
-                    <h5></h5>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
-                    </p>
-                    <div class="loc-ema-pho">
-                        <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
-                    </div>
+    
+</body>
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row justify-content-between foot">
+            <div class="about-us col-4">
+                <h3>NGO Connect</h3>
+                <h5></h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
+                </p>
+                <div class="loc-ema-pho">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
                 </div>
-                <div class="contact-us col-4">
-                    <div class="contact-form">
-                        <h3>Contact Us</h3>
-                        <h5></h5>
-                        <form action="">
-                            <input type="text" placeholder="Enter your name" required>
-                            <input type="text" placeholder="Enter your email" required>
-                            <input type="text" placeholder="Subject">
-                            <textarea name="message" id="" placeholder="Message"></textarea>
-                            <input class="contact-form-submit btn" type="submit" value="Submit">
-                        </form>
-                    </div>
+            </div>
+            <div class="contact-us col-4">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <h5></h5>
+                    <form action="">
+                        <input type="text" id="ConatctQueryName" placeholder="Enter your name" required>
+                        <input type="text" id="ContactQueryEmail" placeholder="Enter your email" required>
+                        <textarea name="message" id="ConatctQueryMessage" placeholder="Message"></textarea>
+                        <input class="contact-form-submit btn" id="ContactQuerySubmit" type="button" value="Submit" onclick="ContactQuery()">
+                    </form>
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-
+    </div>
+</footer>
+<!--footer end-->
 </html>
