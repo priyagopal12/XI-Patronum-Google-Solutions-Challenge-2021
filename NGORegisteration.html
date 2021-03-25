@@ -17,113 +17,113 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/UserDashboardStyle.css">
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <link rel="stylesheet" href="css/NGODashboardStyle.css">
 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-</script>
-<script src="jquery-3.5.1.min.js"></script>
-<script src="Registration.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-<script type="text/javascript">
-    
-    $(function() {
-        
-        $('#ULogLink').on('click', function(e) {
-            $('#form-sign').css('display', 'none');
-            $('.SignUpForm').css('display', 'none');
-            $('#form-logN').css('display', 'none');
-            $('.NForm').css('display', 'none');
-            $('#form-logU').css('display', 'inline');
-            $('.SignInForm').css('display', 'flex');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-            e.preventDefault();
-        });
-    });
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="Registration.js"></script>
+    <script src="mega_menu.js"></script>
 
-    $(function() {
-        $('#LoginUser').on('click', function(e) {
-            $('#form-sign').css('display', 'none');
-            $('.SignUpForm').css('display', 'none');
-            $('#form-logN').css('display', 'none');
-            $('.NForm').css('display', 'none');
-            $('#form-logU').css('display', 'inline');
-            $('.SignInForm').css('display', 'flex');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-            e.preventDefault();
-        });
-    });
-    $(function() {
-        $('#ULog').on('click', function(e) {
-            $('#form-sign').css('display', 'none');
-            $('.SignUpForm').css('display', 'none');
-            $('#form-logN').css('display', 'none');
-            $('.NForm').css('display', 'none');
-            $('#form-logU').css('display', 'inline');
-            $('.SignInForm').css('display', 'flex');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-            e.preventDefault();
-        });
-    });
-    $(function() {
-        $('#SignUpUser').on('click', function(e) {
-            e.preventDefault();
-            $('#form-sign').css('display', 'inline');
-            $('.SignUpForm').css('display', 'flex');
-            $('#form-logN').css('display', 'none');
-            $('.NForm').css('display', 'none');
-            $('#form-logU').css('display', 'none');
-            $('.SignInForm').css('display', 'none');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-        });
-    });
-    $(function() {
-        $('#NLog').on('click', function(e) {
-            $('#form-sign').css('display', 'none');
-            $('.SignUpForm').css('display', 'none');
-            $('#form-logN').css('display', 'inline');
-            $('.NForm').css('display', 'flex');
-            $('#form-logU').css('display', 'none');
-            $('.SignInForm').css('display', 'none');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-            e.preventDefault();
-        });
-    });
-    $(function() {
-        $('#NSignIn').on('click', function(e) {
-            $('#form-sign').css('display', 'none');
-            $('.SignUpForm').css('display', 'none');
-            $('#form-logN').css('display', 'inline');
-            $('.NForm').css('display', 'flex');
-            $('#form-logU').css('display', 'none');
-            $('.SignInForm').css('display', 'none');
-            $('.NForm').css('border', 'none');
-            $('.SignInForm').css('border', 'none');
-            $('.SignUpForm').css('border', 'none');
-            e.preventDefault();
-        });
-    });
-    
+    <script type="text/javascript">
+        $(function() {
 
-</script>
-<!--modal jquery end-->
+            $('#ULogLink').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#ULog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'inline');
+                $('.SignInForm').css('display', 'flex');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
+                e.preventDefault();
+                $('#form-sign').css('display', 'inline');
+                $('.SignUpForm').css('display', 'flex');
+                $('#form-logN').css('display', 'none');
+                $('.NForm').css('display', 'none');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+            });
+        });
+        $(function() {
+            $('#NLog').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
+                $('#form-sign').css('display', 'none');
+                $('.SignUpForm').css('display', 'none');
+                $('#form-logN').css('display', 'inline');
+                $('.NForm').css('display', 'flex');
+                $('#form-logU').css('display', 'none');
+                $('.SignInForm').css('display', 'none');
+                $('.NForm').css('border', 'none');
+                $('.SignInForm').css('border', 'none');
+                $('.SignUpForm').css('border', 'none');
+                e.preventDefault();
+            });
+        });
+    </script>
+    <!--modal jquery end-->
     <!-- modal jquery-->
-    
+
 </head>
 
 <body>
@@ -144,60 +144,42 @@
 
                                 <div class="dropdown-divider"></div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header">
-                                            <text>PUNE</text></div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                            <text>PUNE</text>
+                                        </div>
+                                        <table id="table_body_pune" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding1">
                                         <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
-                                        <a class="dropdown-item" href="#">Helpage India</a>
-                                        <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
-                                        <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                        <table id="table_body_pimpri" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding2">
                                         <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
-                                        <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
-                                        <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
-                                        <a class="dropdown-item" href="#">Initiatives in Development and Education for All</a>
+                                        <table id="table_body_thane" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
 
 
                                 </div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
-                                        <a class="dropdown-item" href="#">Amulya Jyoti</a>
-                                        <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
-                                        <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
-                                        <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
-                                        <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
-                                        <a class="dropdown-item" href="#">National Human Rights Association</a>
-                                        <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                        <table id="table_body_nagar" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding3">
                                         <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
-                                        <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
-                                        <a class="dropdown-item" href="#">United World Against Diabetes</a>
-                                        <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                        <table id="table_body_amravati" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding4">
                                         <div class="megamenuplaces dropdown-header">
-                                            <text>SOLAPUR</text></div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                            <text>SOLAPUR</text>
+                                        </div>
+                                        <table id="table_body_solapur" style="margin-left: 14px"></table>
                                     </div>
                                 </div>
                                 <br>
@@ -223,7 +205,7 @@
                             <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                         </li>
                         <li class="nav-item log" id="LogLI" hidden>
-                            <a class="nav-link active loglink l23" id="logOut"  href="#" onclick="SignOut()" hidden >Sign Out</a>
+                            <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
                         </li>
 
                     </ul>
@@ -516,10 +498,11 @@
                     </div>
                     <div class="form-group">
                         <label for="Olinks">Other Links:</label>
-                        <textarea rows="2" name="Olinks" id="NGOOLinks" class="form-control form-control-lg" placeholder="Eg. Instagram: https://www.instagram.com/umang/                                                                      Facebook: https://www.facebook.com/umang" required="required"></textarea>
+                        <textarea rows="2" name="Olinks" id="NGOOLinks" class="form-control form-control-lg" placeholder="Eg. Instagram: https://www.instagram.com/umang/                                                                      Facebook: https://www.facebook.com/umang"
+                            required="required"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="NGOPic"  class="UploadPic">Profile Image URL:</label>
+                        <label for="NGOPic" class="UploadPic">Profile Image URL:</label>
                         <input type="text" name="NGOPic" id="NGOPic" class="form-control form-control-lg" placeholder="Eg. https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" />
 
                     </div>
@@ -538,57 +521,57 @@
                     <div class="form-group">
                         <h1 class="GoalsCheck">Goals the NGO works towards: </h1>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="1st" id="1st" value="No Poverty"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="1st" id="1st" value="No Poverty" />
                             <label class="form-check-label goalsLabel" for="1st">No Poverty</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="2nd" id="2nd" value="Zero Hunger"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="2nd" id="2nd" value="Zero Hunger" />
                             <label class="form-check-label goalsLabel" for="2nd">Zero Hunger</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="3rd" id="3rd" value="Good Health & Wellbeing"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="3rd" id="3rd" value="Good Health & Wellbeing" />
                             <label class="form-check-label goalsLabel" for="3rd">Good Health & Wellbeing</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="4th" id="4th" value="Quality Education"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="4th" id="4th" value="Quality Education" />
                             <label class="form-check-label goalsLabel" for="4th">Quality Education</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="5th" id="5th" value="Gender Equality & Women’s Empowerment"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="5th" id="5th" value="Gender Equality & Women’s Empowerment" />
                             <label class="form-check-label goalsLabel" for="5th">Gender Equality & Women’s Empowerment</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="6th" id="6th" value="Clean Water & Sanitation"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="6th" id="6th" value="Clean Water & Sanitation" />
                             <label class="form-check-label goalsLabel" for="6th">Clean Water & Sanitation</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="7th" id="7th" value="Reduced Inequalities"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="7th" id="7th" value="Reduced Inequalities" />
                             <label class="form-check-label goalsLabel" for="7th">Reduced Inequalities</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="8th" id="8th" value="Responsible Consumption & Production"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="8th" id="8th" value="Responsible Consumption & Production" />
                             <label class="form-check-label goalsLabel" for="8th">Responsible Consumption & Production</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="9th" id="9th" value="Climate Action"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="9th" id="9th" value="Climate Action" />
                             <label class="form-check-label goalsLabel" for="9th">Climate Action</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="10th" id="10th" value="Life Below Water"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="10th" id="10th" value="Life Below Water" />
                             <label class="form-check-label goalsLabel" for="10th">Life Below Water</label>
                         </div>
                         <br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input goalsInput" type="checkbox" name="11th" id="11th" value="Life on Land"/>
+                            <input class="form-check-input goalsInput" type="checkbox" name="11th" id="11th" value="Life on Land" />
                             <label class="form-check-label goalsLabel" for="11th">Life on Land</label>
                         </div>
 
@@ -615,7 +598,7 @@
             </div>
         </div>
     </div>
-     
+
 </body>
 <!--footer-->
 <footer id="footer">

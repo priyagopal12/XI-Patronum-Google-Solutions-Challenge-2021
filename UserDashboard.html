@@ -11,23 +11,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/UserDashboardStyle.css">
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <link rel="stylesheet" href="css/NGODashboardStyle.css">
 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-</script>
-<script src="jquery-3.5.1.min.js"></script>
-<script src="Registration.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    </script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="Registration.js"></script>
+    <script src="mega_menu.js"></script>
 
 
     <!-- modal jquery-->
     <script type="text/javascript">
-    
         $(function() {
             $('#ULogLink').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
@@ -162,60 +164,42 @@
 
                                 <div class="dropdown-divider"></div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header">
-                                            <text>PUNE</text></div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                            <text>PUNE</text>
+                                        </div>
+                                        <table id="table_body_pune" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding1">
                                         <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
-                                        <a class="dropdown-item" href="#">Helpage India</a>
-                                        <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
-                                        <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                        <table id="table_body_pimpri" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding2">
                                         <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
-                                        <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
-                                        <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
-                                        <a class="dropdown-item" href="#">Initiatives in Development and Education for All</a>
+                                        <table id="table_body_thane" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
 
 
                                 </div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
-                                        <a class="dropdown-item" href="#">Amulya Jyoti</a>
-                                        <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
-                                        <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
-                                        <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
-                                        <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
-                                        <a class="dropdown-item" href="#">National Human Rights Association</a>
-                                        <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                        <table id="table_body_nagar" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding3">
                                         <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
-                                        <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
-                                        <a class="dropdown-item" href="#">United World Against Diabetes</a>
-                                        <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                        <table id="table_body_amravati" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding4">
                                         <div class="megamenuplaces dropdown-header">
-                                            <text>SOLAPUR</text></div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                            <text>SOLAPUR</text>
+                                        </div>
+                                        <table id="table_body_solapur" style="margin-left: 14px"></table>
                                     </div>
                                 </div>
                                 <br>
@@ -241,7 +225,7 @@
                             <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                         </li>
                         <li class="nav-item log" id="LogLI" hidden>
-                            <a class="nav-link active loglink l23" id="logOut"  href="#" onclick="SignOut()" hidden >Sign Out</a>
+                            <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
                         </li>
                     </ul>
                 </div>
@@ -373,7 +357,7 @@
                                 class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
                         <div class="media-body mb-5 ">
                             <h4 class="mt-0 mb-0" id="nameOfUser">Mark Williams</h4>
-                            <p class="small mb-4" id="location"> <i class="fas fa-map-marker-alt mr-2" ></i>New York</p>
+                            <p class="small mb-4" id="location"> <i class="fas fa-map-marker-alt mr-2"></i>New York</p>
                         </div>
                     </div>
                 </div>
@@ -800,7 +784,7 @@
     
 </footer> -->
 
-        <!-- Footer 
+    <!-- Footer 
         <footer>
             <div class="container">
                 <div class="row justify-content-between foot">
@@ -866,4 +850,5 @@
     </div>
 </footer>
 <!--footer end-->
+
 </html>
