@@ -21,58 +21,77 @@ firebase.auth.Auth.Persistence.LOCAL;
 var firebaseRef = firebase.database().ref();
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        // User is signed in.var user = userCredential.user;
-        //alert("User exists");
-        document.getElementById("logOut").removeAttribute('hidden');
+        if (firebaseUser) {
+            // User is signed in.var user = userCredential.user;
+            //alert("User exists");
+            document.getElementById("SignInLI").style.display = "none";
+            document.getElementById("PartnerLI").style.display = "none";
+            document.getElementById("DashLI").removeAttribute("hidden");
+            document.getElementById("LogLI").removeAttribute("hidden");
+            document.getElementById("logOut").removeAttribute('hidden');
 
-        document.getElementById("Dashboard").removeAttribute('hidden');
-        document.getElementById("ULogLink").style.display = "none";
-        document.getElementById("NLogLink").style.display = "none";
-        var uid = firebaseUser.uid;
-        userID = uid;
-        //alert(uid);
-        var refKey = firebaseRef.child("User").child(uid);
-        refKey.once('value', function (snapshot) {
+            document.getElementById("Dashboard").removeAttribute('hidden');
+            document.getElementById("ULogLink").style.display = "none";
+            document.getElementById("NLogLink").style.display = "none";
+            var uid = firebaseUser.uid;
+            userID = uid;
+            //alert(uid);
+            var refKey = firebaseRef.child("User").child(uid);
+            refKey.once('value', function(snapshot) {
 
-            var type = snapshot.val().type;
-            //alert(type);
-            if (type == "User") {
-                document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
-                document.getElementById("nameOfUser").innerHTML = snapshot.val().username;
-                document.getElementById("events").innerHTML = snapshot.val().EventsAttended;
-                document.getElementById("ngos").innerHTML = snapshot.val().NGOsFollowing;
-                document.getElementById("location").innerHTML = snapshot.val().location;
-                document.getElementById("about").innerHTML = snapshot.val().About;
-            }
-            else if (type == "NGO") {
-                document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
-            }
-
-
-        });
-        // ...
-        //                      var user = firebase.auth().currentUser;
-        //   uid = user.uid;
-        //   var email = document.getElementById("uName").value;
-        //   firebase.database().ref("User").child(uid).on('value',function(snapshot){
-        //     document.getElementById("nameOfUser").innerHTML= snapshot.val().username;
-        //     document.getElementById("events").innerHTML= snapshot.val().EventsAttended;
-        //     document.getElementById("ngos").innerHTML= snapshot.val().NGOsFollowing;
-        //     document.getElementById("about").innerHTML= snapshot.val().About;
-
-        //   });
+                var type = snapshot.val().type;
+                //alert(type);
+                if (type == "User") {
+                    document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
+                    document.getElementById("nameOfUser").innerHTML = snapshot.val().username;
+                    document.getElementById("events").innerHTML = snapshot.val().EventsAttended;
+                    document.getElementById("ngos").innerHTML = snapshot.val().NGOsFollowing;
+                    document.getElementById("location").innerHTML = snapshot.val().location;
+                    document.getElementById("about").innerHTML = snapshot.val().About;
+                } else if (type == "NGO") {
+                    document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
 
 
-    } else {
-        // No user is signed in.
-        document.getElementById("logOut").setAttribute("hidden", true);
-        document.getElementById("Dashboard").setAttribute("hidden", true);
-        document.getElementById("ULogLink").style.display = "inline";
-        document.getElementById("NLogLink").style.display = "inline";
-    }
-})
-//}*/
+
+                    document.getElementById("ngo_dashboard_name").innerHTML = snapshot.val().Name;
+                    document.getElementById("NGO_Owner_IS").innerHTML = snapshot.val().ContactName;
+                    document.getElementById("NGO_ID_IS").innerHTML = snapshot.val().NGOID;
+                    document.getElementById("NGO_Bio_IS").innerHTML = snapshot.val().Descr;
+                    document.getElementById("NGO_Goals_Are").innerHTML = snapshot.val().goals;
+                    document.getElementById("NGO_Links_Are").innerHTML = snapshot.val().URL;
+                    document.getElementById("NGO_Email_IS").innerHTML = snapshot.val().Contacts;
+                    document.getElementById("NGO_Location_IS").innerHTML = snapshot.val().Location;
+
+                }
+
+
+            });
+            // ...
+            //                      var user = firebase.auth().currentUser;
+            //   uid = user.uid;
+            //   var email = document.getElementById("uName").value;
+            //   firebase.database().ref("User").child(uid).on('value',function(snapshot){
+            //     document.getElementById("nameOfUser").innerHTML= snapshot.val().username;
+            //     document.getElementById("events").innerHTML= snapshot.val().EventsAttended;
+            //     document.getElementById("ngos").innerHTML= snapshot.val().NGOsFollowing;
+            //     document.getElementById("about").innerHTML= snapshot.val().About;
+
+            //   });
+
+
+        } else {
+            // No user is signed in.
+            document.getElementById("SignInLI").style.display = "inline";
+            document.getElementById("PartnerLI").style.display = "inline";
+            document.getElementById("DashLI").style.display = "none";
+            document.getElementById("LogLI").style.display = "none";
+            document.getElementById("logOut").setAttribute("hidden", true);
+            document.getElementById("Dashboard").setAttribute("hidden", true);
+            document.getElementById("ULogLink").style.display = "inline";
+            document.getElementById("NLogLink").style.display = "inline";
+        }
+    })
+    //}*/
 function signInWithEmailPassword() {
     var email = document.getElementById('EmailLog').value;
     var password = document.getElementById('PassLog').value;
@@ -80,18 +99,22 @@ function signInWithEmailPassword() {
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
         .then(() => {
             firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-                // Signed in
-                var user = userCredential.user;
-                var uid = user.uid;
+                    // Signed in
+                    var user = userCredential.user;
+                    var uid = user.uid;
 
-                // ...
-                document.getElementById("logOut").removeAttribute("hidden");
-                document.getElementById("Dashboard").removeAttribute("hidden");
-                document.getElementById("ULogLink").style.display = "none";
-                document.getElementById("NLogLink").style.display = "none";
-                document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
-                alert("Signed in!");
-            })
+                    // ...
+                    document.getElementById("SignInLI").style.display = "none";
+                    document.getElementById("PartnerLI").style.display = "none";
+                    document.getElementById("DashLI").removeAttribute("hidden");
+                    document.getElementById("LogLI").removeAttribute("hidden");
+                    document.getElementById("logOut").removeAttribute("hidden");
+                    document.getElementById("Dashboard").removeAttribute("hidden");
+                    document.getElementById("ULogLink").style.display = "none";
+                    document.getElementById("NLogLink").style.display = "none";
+                    document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
+                    alert("Signed in!");
+                })
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
@@ -108,18 +131,22 @@ function NSignIn() {
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
         .then(() => {
             firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-                // Signed in
-                var user = userCredential.user;
-                var uid = user.uid;
+                    // Signed in
+                    var user = userCredential.user;
+                    var uid = user.uid;
 
-                // ...
-                document.getElementById("logOut").removeAttribute("hidden");
-                document.getElementById("Dashboard").removeAttribute("hidden");
-                document.getElementById("ULogLink").style.display = "none";
-                document.getElementById("NLogLink").style.display = "none";
-                document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
-                alert("Signed in!");
-            })
+                    // ...
+                    document.getElementById("SignInLI").style.display = "none";
+                    document.getElementById("PartnerLI").style.display = "none";
+                    document.getElementById("DashLI").removeAttribute("hidden");
+                    document.getElementById("LogLI").removeAttribute("hidden");
+                    document.getElementById("logOut").removeAttribute("hidden");
+                    document.getElementById("Dashboard").removeAttribute("hidden");
+                    document.getElementById("ULogLink").style.display = "none";
+                    document.getElementById("NLogLink").style.display = "none";
+                    document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
+                    alert("Signed in!");
+                })
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
@@ -128,6 +155,7 @@ function NSignIn() {
         });
     // [END auth_signin_password]
 }
+
 function signUp() {
 
     var email = document.getElementById('EmailSign').value;
@@ -139,36 +167,40 @@ function signUp() {
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
         .then(() => {
             firebase.auth().createUserWithEmailAndPassword(email, password1).then((userCredential) => {
-                // Signed in 
-                alert("Signed up!");
-                var user = firebase.auth().currentUser;
+                    // Signed in 
+                    alert("Signed up!");
+                    var user = firebase.auth().currentUser;
 
-                var username, email, type, uid;
+                    var username, email, type, uid;
 
 
-                email = user.email;
-                username = document.getElementById('UsernameSign').value;
-                type = "User";
-                uid = user.uid;
-                globalID = uid;
-                //function writeUserData(uid, username, email, type) {
-                firebase.database().ref().child("User").child(uid).set({
-                    username: username,
-                    email: email,
-                    type: type,
-                    About: "addYourAbout",
-                    EventsAttended: 0,
-                    NGOsFollowing: 0,
-                    location: "addYourLocation"
-                });
-                // ...
-                document.getElementById("logOut").removeAttribute("hidden");
-                document.getElementById("Dashboard").removeAttribute("hidden");
-                document.getElementById("ULogLink").style.display = "none";
-                document.getElementById("NLogLink").style.display = "none";
-                document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
-                alert("Signed up!");
-            })
+                    email = user.email;
+                    username = document.getElementById('UsernameSign').value;
+                    type = "User";
+                    uid = user.uid;
+                    globalID = uid;
+                    //function writeUserData(uid, username, email, type) {
+                    firebase.database().ref().child("User").child(uid).set({
+                        username: username,
+                        email: email,
+                        type: type,
+                        About: "addYourAbout",
+                        EventsAttended: 0,
+                        NGOsFollowing: 0,
+                        location: "addYourLocation"
+                    });
+                    // ...
+                    document.getElementById("SignInLI").style.display = "none";
+                    document.getElementById("PartnerLI").style.display = "none";
+                    document.getElementById("DashLI").removeAttribute("hidden");
+                    document.getElementById("LogLI").removeAttribute("hidden");
+                    document.getElementById("logOut").removeAttribute("hidden");
+                    document.getElementById("Dashboard").removeAttribute("hidden");
+                    document.getElementById("ULogLink").style.display = "none";
+                    document.getElementById("NLogLink").style.display = "none";
+                    document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
+                    alert("Signed up!");
+                })
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
@@ -200,8 +232,13 @@ function SignOut() {
         // Sign-out successful.
         document.getElementById("logOut").style.display = "none";
         document.getElementById("Dashboard").style.display = "none";
+        document.getElementById("SignInLI").style.display = "inline";
+        document.getElementById("PartnerLI").style.display = "inline";
+        document.getElementById("DashLI").style.display = "none";
+        document.getElementById("LogLI").style.display = "none";
         document.getElementById("ULogLink").style.display = "inline";
         document.getElementById("NLogLink").style.display = "inline";
+
         alert("Signed Out");
 
     }).catch((error) => {
@@ -209,6 +246,7 @@ function SignOut() {
         alert(error.message);
     });
 }
+
 function NSignUp() {
     var NName = document.getElementById('NGOName').value;
     var NEmID = document.getElementById('NGOUsername').value;
@@ -231,54 +269,73 @@ function NSignUp() {
             //alert(cboxes[i].value);
             goals = goals + "\n" + cboxes[i].value;
             //alert("Goals"+goals);
-        }
-        else { continue; }
+        } else { continue; }
     }
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
         .then(() => {
             firebase.auth().createUserWithEmailAndPassword(NEmID, NPass).then((userCredential) => {
-                // Signed in 
-                alert("Signed up!");
-                var user = firebase.auth().currentUser;
+                    // Signed in 
+                    alert("Signed up!");
+                    var user = firebase.auth().currentUser;
 
-                var username, email, type, uid;
+                    var username, email, type, uid;
 
 
-                email = user.email;
+                    email = user.email;
 
-                type = "NGO";
-                uid = user.uid;
-                //function writeUserData(uid, username, email, type) {
+                    type = "NGO";
+                    uid = user.uid;
+                    //function writeUserData(uid, username, email, type) {
 
-                // this will create a collection with ngo's name for storing events
-                firebaseRef.child(NName).set({
-                    id: uid
-                });
+                    // this will create a collection with ngo's name for storing events
+                    firebaseRef.child(NName).set({
+                        id: uid
+                    });
 
-                firebase.database().ref().child("User").child(uid).set({
-                    username: NName,
-                    email: NEmID,
-                    type: type,
-                    Name: NName,
-                    Location: NLoc,
-                    URL: NLink,
-                    OtherLinks: NOLinks,
-                    ProfilePic: ProPic,
-                    ContactName: CPName,
-                    Contacts: CPContact,
-                    NGOID: NID,
-                    Descr: NDescr
-                });
+                    firebase.database().ref().child("User").child(uid).set({
+                        username: NName,
+                        email: NEmID,
+                        type: type,
+                        Name: NName,
+                        Location: NLoc,
+                        URL: NLink,
+                        OtherLinks: NOLinks,
+                        ProfilePic: ProPic,
+                        ContactName: CPName,
+                        Contacts: CPContact,
+                        NGOID: NID,
+                        Descr: NDescr,
+                        goals: goals
+                    });
+                    firebase.database().ref().child("NGO").child(NName).set({
+                        username: NName,
+                        email: NEmID,
+                        type: type,
+                        Name: NName,
+                        Location: NLoc,
+                        URL: NLink,
+                        OtherLinks: NOLinks,
+                        ProfilePic: ProPic,
+                        ContactName: CPName,
+                        Contacts: CPContact,
+                        NGOID: NID,
+                        Descr: NDescr,
+                        goals: goals
+                    });
 
-                // ...
-                document.getElementById("logOut").removeAttribute("hidden");
-                document.getElementById("Dashboard").removeAttribute("hidden");
-                document.getElementById("ULogLink").style.display = "none";
-                document.getElementById("NLogLink").style.display = "none";
-                document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
-                alert("Signed up!");
-                //alert("Set");
-            })
+                    // ...
+                    document.getElementById("SignInLI").style.display = "none";
+                    document.getElementById("PartnerLI").style.display = "none";
+                    document.getElementById("DashLI").removeAttribute("hidden");
+                    document.getElementById("LogLI").removeAttribute("hidden");
+                    document.getElementById("logOut").removeAttribute("hidden");
+                    document.getElementById("Dashboard").removeAttribute("hidden");
+                    document.getElementById("ULogLink").style.display = "none";
+                    document.getElementById("NLogLink").style.display = "none";
+                    document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
+                    alert("Signed up!");
+                    //alert("Set");
+                })
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
@@ -286,4 +343,19 @@ function NSignUp() {
                     alert(errorMessage);
                 });
         });
+}
+
+
+function ContactQuery() {
+    var name = document.getElementById('ConatctQueryName').value;
+    var email = document.getElementById('ContactQueryEmail').value;
+    //var subject = document.getElementById('ContactQuerySubject');
+    var message = document.getElementById('ConatctQueryMessage').value;
+
+    firebase.database().ref().child("Query").child(name).set({
+        name: name,
+        email: email,
+        message: message
+    });
+    alert("data added");
 }

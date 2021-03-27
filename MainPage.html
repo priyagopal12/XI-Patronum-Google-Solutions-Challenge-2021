@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="css/MainPageStyle.css">
     <link rel="stylesheet" href="css/MainPageResponsive.css">
+    <link rel="stylesheet" href="css/NGODashboardStyle.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Fontawesome CSS -->
@@ -25,17 +27,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-</script>
-<script src="jquery-3.5.1.min.js"></script>
-<script src="Registration.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    </script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="Registration.js"></script>
+    <script src="mega_menu.js"></script>
+
     <script type="text/javascript">
         $(function() {
             $('#ULogLink').on('click', function(e) {
@@ -141,61 +145,43 @@
                             <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
 
                             <div class="dropdown-divider"></div>
-                            <div class="megamenubox d-md-flex align-items-start justify-content-start">
-                                <div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                                <div class="menuheaderpadding0">
                                     <div class="megamenuplaces dropdown-header">
-                                        <text>PUNE</text></div>
-                                    <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                    <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                    <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                    <a class="dropdown-item" href="#">Children’s Future India</a>
-                                    <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                        <text>PUNE</text>
+                                    </div>
+                                    <table id="table_body_pune" style="margin-left: 14px"></table>
                                 </div>
                                 <br>
-                                <div>
+                                <div class="menuheaderpadding1">
                                     <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
-                                    <a class="dropdown-item" href="#">Helpage India</a>
-                                    <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
-                                    <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                    <table id="table_body_pimpri" style="margin-left: 14px"></table>
                                 </div>
                                 <br>
-                                <div>
+                                <div class="menuheaderpadding2">
                                     <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
-                                    <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
-                                    <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
-                                    <a class="dropdown-item" href="#">Initiatives in Development and Education for All</a>
+                                    <table id="table_body_thane" style="margin-left: 14px"></table>
                                 </div>
                                 <br>
 
 
                             </div>
                             <div class="d-md-flex align-items-start justify-content-start">
-                                <div>
+                                <div class="menuheaderpadding0">
                                     <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
-                                    <a class="dropdown-item" href="#">Amulya Jyoti</a>
-                                    <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
-                                    <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
-                                    <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
-                                    <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
-                                    <a class="dropdown-item" href="#">National Human Rights Association</a>
-                                    <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                    <table id="table_body_nagar" style="margin-left: 14px"></table>
                                 </div>
                                 <br>
-                                <div>
+                                <div class="menuheaderpadding3">
                                     <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
-                                    <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
-                                    <a class="dropdown-item" href="#">United World Against Diabetes</a>
-                                    <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                    <table id="table_body_amravati" style="margin-left: 14px"></table>
                                 </div>
                                 <br>
-                                <div>
+                                <div class="menuheaderpadding4">
                                     <div class="megamenuplaces dropdown-header">
-                                        <text>SOLAPUR</text></div>
-                                    <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                    <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                    <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                    <a class="dropdown-item" href="#">Children’s Future India</a>
-                                    <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                        <text>SOLAPUR</text>
+                                    </div>
+                                    <table id="table_body_solapur" style="margin-left: 14px"></table>
                                 </div>
                             </div>
                             <br>
@@ -207,13 +193,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Contacts</a>
                     </li>
-                    <li class=" nav-item ">
-                        <a class="nav-link " id="NLogLink" href="NGORegisteration.html">Partner with us</a>
+                    <li class="nav-item log" id="PartnerLI">
+                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
                     </li>
-                    <li class="nav-item log">
+
+                    <li class="nav-item log" id="DashLI" hidden>
                         <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                     </li>
-                    <li class="nav-item log">
+                    <li class="nav-item log" id="LogLI" hidden>
                         <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
                     </li>
                 </ul>
@@ -1107,38 +1094,39 @@
         </div>
     </section> -->
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row justify-content-between foot">
-                <div class="about-us col-4">
-                    <a class="navbar-brand" href="#">NGO Connect</a>
-                    <h5></h5>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
-                    </p>
-                    <div class="loc-ema-pho">
-                        <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
-                        <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
-                    </div>
+
+</body>
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row justify-content-between foot">
+            <div class="about-us col-4">
+                <h3>NGO Connect</h3>
+                <h5></h5>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
+                </p>
+                <div class="loc-ema-pho">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
                 </div>
-                <div class="contact-us col-4">
-                    <div class="contact-form">
-                        <h3>Contact Us</h3>
-                        <h5></h5>
-                        <form action="">
-                            <input type="text" placeholder="Enter your name" required>
-                            <input type="text" placeholder="Enter your email" required>
-                            <input type="text" placeholder="Subject">
-                            <textarea name="message" id="" placeholder="Message"></textarea>
-                            <input class="contact-form-submit btn" type="submit" value="Submit">
-                        </form>
-                    </div>
+            </div>
+            <div class="contact-us col-4">
+                <div class="contact-form">
+                    <h3>Contact Us</h3>
+                    <h5></h5>
+                    <form action="">
+                        <input type="text" id="ConatctQueryName" placeholder="Enter your name" required>
+                        <input type="text" id="ContactQueryEmail" placeholder="Enter your email" required>
+                        <textarea name="message" id="ConatctQueryMessage" placeholder="Message"></textarea>
+                        <input class="contact-form-submit btn" id="ContactQuerySubmit" type="button" value="Submit" onclick="ContactQuery()">
+                    </form>
                 </div>
             </div>
         </div>
-    </footer>
-</body>
+    </div>
+</footer>
+<!--footer end-->
 
 </html>

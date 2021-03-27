@@ -11,18 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/NGODashboardStyle.css">
     <link rel="stylesheet" href="css\MainPageResponsive.css">
     <link rel="stylesheet" href="css/NGORegisterationStyle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/UserDashboardStyle.css">
 
     <!-- Google fonts -->
@@ -38,11 +34,12 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
     <script src="Registration.js"></script>
+    <script src="mega_menu.js"></script>
 
     <!-- modal jquery-->
     <script type="text/javascript">
-        $(function () {
-            $('#ULogLink').on('click', function (e) {
+        $(function() {
+            $('#ULogLink').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -56,8 +53,8 @@
             });
         });
 
-        $(function () {
-            $('#LoginUser').on('click', function (e) {
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -70,8 +67,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#ULog').on('click', function (e) {
+        $(function() {
+            $('#ULog').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -84,8 +81,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#SignUpUser').on('click', function (e) {
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
                 e.preventDefault();
                 $('#form-sign').css('display', 'inline');
                 $('.SignUpForm').css('display', 'flex');
@@ -98,8 +95,8 @@
                 $('.SignUpForm').css('border', 'none');
             });
         });
-        $(function () {
-            $('#NLog').on('click', function (e) {
+        $(function() {
+            $('#NLog').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'inline');
@@ -112,8 +109,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#NSignIn').on('click', function (e) {
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'inline');
@@ -142,79 +139,59 @@
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#023e8a">
             <div class="container-fluid navi">
                 <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item lst">
-                            <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
+                            <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
                             <div class="dropdown-menu" aria-labelledby="servicesDropdown">
                                 <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
 
                                 <div class="dropdown-divider"></div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header">
                                             <text>PUNE</text>
                                         </div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                        <table id="table_body_pune" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding1">
                                         <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
-                                        <a class="dropdown-item" href="#">Helpage India</a>
-                                        <a class="dropdown-item" href="#">Jai Bhoomiputra Gramin Vikas Pratishthan</a>
-                                        <a class="dropdown-item" href="#">Seva Sahayog Foundation</a>
+                                        <table id="table_body_pimpri" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding2">
                                         <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
-                                        <a class="dropdown-item" href="#">Bhagini Niveditha Pratisthan</a>
-                                        <a class="dropdown-item" href="#">Community Aid & Sponsorship Programme</a>
-                                        <a class="dropdown-item" href="#">Initiatives in Development and Education for
-                                            All</a>
+                                        <table id="table_body_thane" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
 
 
                                 </div>
                                 <div class="d-md-flex align-items-start justify-content-start">
-                                    <div>
+                                    <div class="menuheaderpadding0">
                                         <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
-                                        <a class="dropdown-item" href="#">Amulya Jyoti</a>
-                                        <a class="dropdown-item" href="#">Dhyandip Mahila Pratishtan</a>
-                                        <a class="dropdown-item" href="#">Bosco Samajik Sanstha</a>
-                                        <a class="dropdown-item" href="#">Center For Sociolegal Development</a>
-                                        <a class="dropdown-item" href="#">Manjil Welfare Foundation</a>
-                                        <a class="dropdown-item" href="#">National Human Rights Association</a>
-                                        <a class="dropdown-item" href="#">Reva Samajik Vikas Sanstha</a>
+                                        <table id="table_body_nagar" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding3">
                                         <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
-                                        <a class="dropdown-item" href="#">Sadguru Seva Vikas Pratishtan</a>
-                                        <a class="dropdown-item" href="#">United World Against Diabetes</a>
-                                        <a class="dropdown-item" href="#">Vanarai Foundation</a>
+                                        <table id="table_body_amravati" style="margin-left: 14px"></table>
                                     </div>
                                     <br>
-                                    <div>
+                                    <div class="menuheaderpadding4">
                                         <div class="megamenuplaces dropdown-header">
                                             <text>SOLAPUR</text>
                                         </div>
-                                        <a class="dropdown-item" href="NGODashboard.html">Akanksha Organization</a>
-                                        <a class="dropdown-item" href="#">Bharatiya Samaj Seva Kendra</a>
-                                        <a class="dropdown-item" href="#">Chetana Mahila Vikas Kendra</a>
-                                        <a class="dropdown-item" href="#">Children’s Future India</a>
-                                        <a class="dropdown-item" href="#">Global Vision NGO</a>
+                                        <table id="table_body_solapur" style="margin-left: 14px"></table>
+
                                     </div>
+
                                 </div>
+
                                 <br>
                             </div>
 
@@ -229,18 +206,16 @@
                     </form>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                        <li class="nav-item log">
-                            <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner
-                                With Us</a>
+                        <li class="nav-item log" id="PartnerLI">
+                            <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
                         </li>
-                        <li class="nav-item log">
-                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page"
-                                data-target="#loginform" data-toggle="modal">Sign In</a>
+                        <li class="nav-item log" id="SignInLI">
+                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
                         </li>
-                        <li class="nav-item log">
+                        <li class="nav-item log" id="DashLI" hidden>
                             <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                         </li>
-                        <li class="nav-item log">
+                        <li class="nav-item log" id="LogLI" hidden>
                             <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
                         </li>
                     </ul>
@@ -370,20 +345,17 @@
 
             <div class="ngo-name-btns">
                 <div id="ngo_profile_name">
-                    <h3>NGO Example</h3>
+                    <h3 id="ngo_dashboard_name">NGO Example</h3>
                 </div>
                 <div class="edit-create-btns">
-                    <button id="create_event_button" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#CreateEventModal" hidden>Create Event</button>
-                    <button id="edit_profile_button" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#EditProfileModal" hidden>Edit Profile</button>
+                    <button id="create_event_button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreateEventModal" hidden>Create Event</button>
+                    <button id="edit_profile_button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditProfileModal" hidden>Edit Profile</button>
                 </div>
             </div>
         </div>
 
         <!-- create event modal -->
-        <div class="modal fade" id="CreateEventModal" tabindex="-1" aria-labelledby="CreateEventModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="CreateEventModal" tabindex="-1" aria-labelledby="CreateEventModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -421,7 +393,7 @@
                             <input type="text" name="eventTime" placeholder="hh:mm" required />
 
                             <label for="eventPoster" style="display: block;">Add Poster:</label>
-                            <input id="poster" type="file" name="eventPoster" style="display:inline-block;"/>
+                            <input id="poster" type="file" name="eventPoster" style="display:inline-block;" />
                             <p id="UpProgress" style="display:inline;"></p>
 
                             <input class="btn btn-primary" type="submit" value="Submit" />
@@ -432,8 +404,7 @@
         </div>
 
         <!-- edit profile modal -->
-        <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -466,8 +437,7 @@
                     <div class="event1 ">
                         <a class="events " href="#event1 ">
 
-                            <img src="images/event1.jpg " alt="Events " style="max-width:100%;cursor:pointer"
-                                onclick="onClick(this)" class="modal-hover-opacity">
+                            <img src="images/event1.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
 
                             <p class="time ">SAT, FEB 28, 11:00 AM</p>
                             <p class="location ">Mg Road, Opp. Ranka, Pune</p>
@@ -482,8 +452,7 @@
 
                     <div class="event2 ">
                         <a class="events " href="#event2 ">
-                            <img src="images/event2.png " alt="Events " style="max-width:100%;cursor:pointer"
-                                onclick="onClick(this)" class="modal-hover-opacity">
+                            <img src="images/event2.png " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
 
                             <p class="time ">TUE, MAR 02, 5:00 PM</p>
                             <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
@@ -498,8 +467,7 @@
                     <div class="event3 ">
 
                         <a class="events " href="#event3 ">
-                            <img src="images/event3.jpg " alt="Events " style="max-width:100%;cursor:pointer"
-                                onclick="onClick(this)" class="modal-hover-opacity">
+                            <img src="images/event3.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
 
                             <p class="time ">FRI, MAR 05, 9:00 AM</p>
                             <p class="location ">YCM Hospital, Pimri</p>
@@ -514,8 +482,7 @@
 
                     <div class="event4 ">
                         <a class="events " href="#event4 ">
-                            <img src="images/event4.jpg " alt="Events " style="max-width:100%;cursor:pointer"
-                                onclick="onClick(this)" class="modal-hover-opacity">
+                            <img src="images/event4.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
 
                             <p class="time ">SUN, MAR 07, 12:00 PM</p>
                             <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
@@ -543,18 +510,46 @@
 
 
             <div class="About_Section ">
-                <p id="NGO_Member_Name ">Geeta Phogat</p>
-                <p id="NGO_ID ">AHBDT7382452</p>
-                <p id="NGO_Bio ">NGOs exist for a variety of purposes, usually to further the political or social goals
-                    of their members. Examples include improving the state of the natural environment, encouraging the
-                    observance of human rights, improving the welfare
-                    of the disadvantaged, or representing a corporate agenda.</p>
-                <p id="NGO_Goals ">No Poverty , Clean Waters , Women Empowerment</p>
-                <p id="NGO_Links ">
-                    https://www.giveindia.org/?utm_source=Sem&utm_campaign=DCNad2&utm_medium=Google&utm_term=DCNad2&utm_content=ad2&gclid=CjwKCAiAhbeCBhBcEiwAkv2cY43bbysIz5tKn2I_Psnuddp1i8PCLcrfIDskQLtGydeMNFTqU8qY_BoClMkQAvD_BwE
+                <p id="NGO_Owner_Name" class="NGO_Owner_Name">
+                    NAME:
+                    <text id="NGO_Owner_IS"></text>
                 </p>
-                <p id="NGO_Location ">Pune</p>
-                <p id="NGO_Email ">geetaPhoghat12@gmail.com</p>
+
+
+                <p id="NGO_ID">NGO ID:
+                    <text id="NGO_ID_IS"></text>
+                </p>
+
+
+
+                <p id="NGO_Bio">ABOUT:
+                    <p id="NGO_Bio_IS" class="NGO_Bio_IS">
+                    </p>
+                </p>
+
+                <p id="NGO_Goals">NGO's GOALS:
+                    <text id="NGO_Goals_Are" class=" NGO_Goals_Are"></text>
+                </p>
+
+                <p id="NGO_Contact">CONTACT INFORMATION:-</p>
+
+                <p id="NGO_Links">LINKS:
+                    <text id="NGO_Links_Are" class="NGO_Links_Are"></text>
+                </p>
+
+                <p id="NGO_Email">Contact:
+                    <text id="NGO_Email_IS" class="NGO_Email_IS"></text>
+                </p>
+
+                <p id="NGO_Location" class="NGO_Location">NGO LOCATION:
+                    <text id="NGO_Location_IS" class="NGO_Location_IS"></text>
+                </p>
+
+
+
+
+
+
 
             </div>
         </div>
@@ -694,14 +689,10 @@
                     <h3>NGO Connect</h3>
                     <h5></h5>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit
-                        tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi!
-                        Quasi pariatur repudiandae exercitationem culpa!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
                     </p>
                     <div class="loc-ema-pho">
-                        <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipisicing elit.</span></p>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
                         <p><i class="fa fa-envelope" aria-hidden="true"></i><span>connect@email.com</span></p>
                         <p><i class="fa fa-phone" aria-hidden="true"></i><span>+91 1234567890</span></p>
                     </div>
@@ -711,11 +702,10 @@
                         <h3>Contact Us</h3>
                         <h5></h5>
                         <form action="">
-                            <input type="text" placeholder="Enter your name" required>
-                            <input type="text" placeholder="Enter your email" required>
-                            <input type="text" placeholder="Subject">
-                            <textarea name="message" id="" placeholder="Message"></textarea>
-                            <input class="contact-form-submit btn" type="submit" value="Submit">
+                            <input type="text" id="ConatctQueryName" placeholder="Enter your name" required>
+                            <input type="text" id="ContactQueryEmail" placeholder="Enter your email" required>
+                            <textarea name="message" id="ConatctQueryMessage" placeholder="Message"></textarea>
+                            <input class="contact-form-submit btn" id="ContactQuerySubmit" type="button" value="Submit" onclick="ContactQuery()">
                         </form>
                     </div>
                 </div>
