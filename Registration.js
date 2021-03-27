@@ -48,6 +48,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                     document.getElementById("ngos").innerHTML = snapshot.val().NGOsFollowing;
                     document.getElementById("location").innerHTML = snapshot.val().location;
                     document.getElementById("about").innerHTML = snapshot.val().About;
+                    img= document.getElementById("defaultPic");
+                    img.src=snapshot.val().ProfilePic;
+
+                    
                 } else if (type == "NGO") {
                     document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
 
@@ -187,7 +191,8 @@ function signUp() {
                         About: "addYourAbout",
                         EventsAttended: 0,
                         NGOsFollowing: 0,
-                        location: "addYourLocation"
+                        location: "addYourLocation",
+                        ProfilePic: "https://static8.depositphotos.com/1009634/988/v/600/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg"
                     });
                     // ...
                     document.getElementById("SignInLI").style.display = "none";
