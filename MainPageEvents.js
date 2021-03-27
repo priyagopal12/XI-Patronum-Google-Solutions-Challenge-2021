@@ -7,7 +7,8 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
 
     var poster = document.createElement('img');
     poster.setAttribute("src", ImgSrc); 
-    poster.setAttribute("class", "card-img-top");
+    poster.setAttribute("onclick", "onClick(this)");
+    poster.setAttribute("class", "card-img-top modal-hover-opacity");
 
     var cardBody = document.createElement('div');
     cardBody.setAttribute("class", "card-body");
@@ -63,7 +64,7 @@ query.on('value', snap => {
         createEventCard("no_poverty", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Zero Hunger
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Zero Hunger");
@@ -73,7 +74,7 @@ query.on('value', snap => {
         createEventCard("zero_hunger", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Good Health & Wellbeing
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Good Health & Wellbeing");
@@ -83,7 +84,7 @@ query.on('value', snap => {
         createEventCard("health_wellbeing", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Quality Education
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Quality Education");
@@ -93,7 +94,7 @@ query.on('value', snap => {
         createEventCard("quality_education", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Gender Equality & Women's Empowerment
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Gender Equality & Women's Empowerment");
@@ -103,7 +104,7 @@ query.on('value', snap => {
         createEventCard("gender_equality", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Clean Water & Sanitization
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Clean Water & Sanitization");
@@ -113,7 +114,7 @@ query.on('value', snap => {
         createEventCard("clean_water_sanitization", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Reduced Inequalities
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Reduced Inequalities");
@@ -123,7 +124,7 @@ query.on('value', snap => {
         createEventCard("reduced_inequalities", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Responsible Consumption & Production
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Responsible Consumption & Production");
@@ -133,7 +134,7 @@ query.on('value', snap => {
         createEventCard("responsible_consumption_production", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Climate Action
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Climate Action");
@@ -143,7 +144,7 @@ query.on('value', snap => {
         createEventCard("climate_action", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Life Below Water
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Life Below Water");
@@ -153,7 +154,7 @@ query.on('value', snap => {
         createEventCard("life_below_water", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
 
 // Events for Life On Land
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Life On Land");
@@ -163,4 +164,10 @@ query.on('value', snap => {
         createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
     });
     // console.log(snap.val());
-})
+});
+
+
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+}

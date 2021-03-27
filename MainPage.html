@@ -142,7 +142,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button"
@@ -199,23 +199,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Contacts</a>
                     </li>
-                    <li class="nav-item log" id="PartnerLI">
-                        <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With
+                    <li class="nav-item" id="PartnerLI">
+                        <a class="nav-link" id="NLogLink" href="NGORegisteration.html">Partner With
                             Us</a>
                     </li>
 
-                    <li class="nav-item log" id="DashLI" hidden>
-                        <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
+                    <li class="nav-item" id="DashLI" hidden>
+                        <a class="nav-link" id="Dashboard" href="#" hidden>Dashboard</a>
                     </li>
-                    <li class="nav-item log" id="LogLI" hidden>
+                    <!-- <li class="nav-item log" id="LogLI" hidden>
                         <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign
                             Out</a>
-                    </li>
+                    </li> -->
                 </ul>
-                <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page"
-                    data-target="#loginform" data-toggle="modal">
-                    Sign in
-                </button>
+                <div id="SignInLI">
+                    <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page"
+                        data-target="#loginform" data-toggle="modal">
+                        Sign in
+                    </button>
+                </div>
+                <div id="LogLI">
+                    <button class="ms-auto sign-in border rounded-pill " id="logOut" onclick="SignOut()" hidden>
+                        Sign Out
+                    </button>
+                </div>
 
                 <!-- <form class="d-flex ">
                     <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
@@ -517,7 +524,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="zero_hunger" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -534,7 +541,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="health_wellbeing" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -550,7 +557,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="quality_education" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -566,7 +573,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="gender_equality" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -582,7 +589,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="clean_water_sanitization" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -598,7 +605,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="reduced_inequalities" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -614,7 +621,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="responsible_consumption_production" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -630,7 +637,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="climate_action" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -646,7 +653,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="life_below_water" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -662,7 +669,7 @@
             <div class="event-slider">
                 <!-- First Row will be as it is for display -->
                 <div id="life_on_land" class="row">
-                    
+
                 </div>
 
                 <div class="card-see-more">
@@ -710,6 +717,13 @@
     </footer>
     <!--footer end-->
 
+
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+    </script>
 
     <script src="MainPageEvents.js"></script>
 </body>

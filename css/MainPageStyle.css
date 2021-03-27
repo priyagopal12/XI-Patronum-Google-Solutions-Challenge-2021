@@ -386,6 +386,10 @@ input[type="file"]:focus,
     transform: translateY(5px);
 }
 
+.card-img-top{
+    width: 16.4rem;
+    height: 24rem;
+}
 
 /* Event Cards End */
 
