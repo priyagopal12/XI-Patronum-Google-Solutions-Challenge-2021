@@ -52,6 +52,15 @@ createEventFuntion = (ngoName) => {
                         Poster: ImgUrl
                     });
 
+                    firebase.database().ref("Events").push().set({
+                        Category: eCategory,
+                        Date: eDate,
+                        Location: eLocation,
+                        Name: eName,
+                        Time: eTime,
+                        Poster: ImgUrl
+                    });
+
                     alert("Event created succesfully!");
                 });
             }
