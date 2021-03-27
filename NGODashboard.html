@@ -131,6 +131,10 @@
             document.getElementById("modal01").style.display = "block";
         }
     </script>
+
+<script language="javascript" src="editProfile.js">
+
+</script>
 </head>
 
 <body>
@@ -404,23 +408,54 @@
         </div>
 
         <!-- edit profile modal -->
-        <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="EditProfileModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+    
+            <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="EditProfileModalLabel">Edit Profile</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body create-event-body">
+                            <form id="create-event" action="" name="newEvent">
+                                <label for="ngoName">NGO Name:</label>
+                                <input type="text" name="ngoName" id="ngoName" />
+    
+                                <label for="ngoLocation">Location:</label>
+                                <input type="text" name="ngoLocation" id="ngoLocation" />
+    
+    
+                                <label for="ngoWebsite">Website:</label>
+                                <input type="text" name="ngoWebsite" id="ngoWebsite" />
+    
+                                <label for="ngoLinks">Other Links:</label>
+                                <input type="text" name="ngoLinks" id="ngoLinks" />
+    
+                                <label for="ngoImage">Profile Image URL:</label>
+                                <input type="text" name="ngoImage" id="ngoImage" />
+    
+                                <label for="ngoPerson">Contact Person:</label>
+                                <input type="text" name="ngoPerson" id="ngoPerson" />
+    
+                                <label for="ngoContact">Contact Info:</label>
+                                <input type="text" name="ngoContact" id="ngoContact" />
+    
+                                <label for="ngoId">NGO ID:</label>
+                                <input type="text" name="ngoId" id="ngoId" />
+    
+                                <label for="ngoDescription">NGO Description:</label>
+                                <input type="text" name="ngoDescription" id="ngoDescription" />
+
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="NProfileEdit()">Save changes</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    
 
 
         <!-- Displaying ngo events and information -->
