@@ -259,12 +259,12 @@ input[type="file"]:focus,
         text-decoration: none;
         font-size: 16px;
     }
-    .location {
+    /* .location {
         font-size: 16px;
         padding-left: 10px;
         color: #79c4c4;
         text-decoration: none;
-    }
+    } */
     .topic {
         padding-left: 2px;
         color: black;
@@ -507,13 +507,13 @@ input[type="file"]:focus,
         color: #85e5e5;
         text-decoration: none;
     }
-    .location {
+    /* .location {
         position: absolute;
         padding-left: 220px;
         margin-top: -285px;
         color: #85e5e5;
         text-decoration: none;
-    }
+    } */
     .topic {
         position: absolute;
         padding-left: 220px;
@@ -540,13 +540,13 @@ input[type="file"]:focus,
         width: 120px;
         height: 30px;
     }
-    .events p {
+    /* .events p {
         margin-left: 170px;
     }
     .events button {
         margin-top: -80px;
         margin-left: 226px;
-    }
+    } */
     .SecondPartChild a:hover {
         text-decoration: none;
     }

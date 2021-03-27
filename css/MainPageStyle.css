@@ -45,16 +45,13 @@
 }
 
 .navbar-nav {
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 
 .navbar .navbar-brand {
     font-size: 1.5em !important;
 }
 
-.navbar ul {
-    padding-left: 70px;
-}
 
 
 /* Sign-in */
@@ -360,10 +357,6 @@ input[type="file"]:focus,
 
 .event-slider .card-text h5 {
     color: #5e5e5e;
-}
-
-.date-time-completed {
-    color: #ff0000;
 }
 
 .card-see-more {
