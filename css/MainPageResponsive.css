@@ -73,6 +73,12 @@
     }
     /* navbar end */
 
+    /* event cards */
+    .row {
+        justify-content: center;
+    }
+    /* event cards end */
+
     /* search bar */
     .search-bar input{
         width: 85% !important;
