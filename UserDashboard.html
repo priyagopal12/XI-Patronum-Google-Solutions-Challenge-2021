@@ -139,6 +139,9 @@
         }
     </style>
 
+<script language="javascript" src="editProfile.js">
+
+</script>
 
 
     <link rel="stylesheet" href="css\MainPageResponsive.css">
@@ -346,6 +349,41 @@
     </div>
     <!--modal end-->
 
+
+     <!------edit profile modal-->
+     <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="EditProfileModalLabel"><b>Edit Profile</b></h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <form id="create-event" action="" name="EditProfile">
+
+                 <label for="userName">Username:</label><br>
+                  <input type="text" id="userName" name="userName" width="200px" maxlength="200"/><br><br>
+
+                  <label for="userEmail">Email:</label><br>
+                  <input type="text" id="userEmail" name="userEmail"/><br><br>
+
+                  <label for="userLocation">Location:</label><br>
+                  <input type="text" id="userLocation"  name="userLocation"/><br><br>
+
+                  <label for="userAbout">About:</label><br>
+                  <input type="text" id="userAbout" name="userAbout"/><br><br>
+
+                  <label for="userImage">Profile Pic URL:</label><br>
+                  <input type="text" id="userImage" name="userImage"/><br><br>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary" onclick="UProfileEdit()">Save changes</button>
+             </div>
+         </div>
+     </div>
+ </div>
     <!---profile-->
     <div class="row py-5 px-4">
         <div class="col-md-5 mx-auto" style="width: 100%;">
@@ -353,8 +391,10 @@
             <div class="bg-white shadow rounded overflow-hidden" style="width: 100%;" style="background-color: aliceblue;">
                 <div class="px-4 pt-0 pb-4 cover">
                     <div class="media align-items-end profile-head">
-                        <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail">&nbsp; &nbsp;<a href="#"
-                                class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+                        <div class="profile mr-3"><img src="" id="defaultPic" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                            &nbsp; &nbsp;<a href="#" class="btn btn-sm btn-block">
+                                <button id="edit_profile_button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditProfileModal" onclick="profileEdit()">Edit Profile</button>
+                            </a></div>
                         <div class="media-body mb-5 ">
                             <h4 class="mt-0 mb-0" id="nameOfUser">Mark Williams</h4>
                             <p class="small mb-4" id="location"> <i class="fas fa-map-marker-alt mr-2"></i>New York</p>
