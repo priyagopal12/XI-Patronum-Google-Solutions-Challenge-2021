@@ -57,6 +57,7 @@ createEventFuntion = (ngoName) => {
                         Date: eDate,
                         Location: eLocation,
                         Name: eName,
+                        NGO: ngoName,
                         Time: eTime,
                         Poster: ImgUrl
                     });
