@@ -93,6 +93,9 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
             document.getElementById("Dashboard").setAttribute("hidden", true);
             document.getElementById("ULogLink").style.display = "inline";
             document.getElementById("NLogLink").style.display = "inline";
+
+            
+            
         }
     })
     //}*/

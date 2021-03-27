@@ -24,7 +24,7 @@ createEventFuntion = (ngoName) => {
 
 
         var newEvent = firebase.database().ref(ngoName).push();
-        
+
 
         // for event poster
         // uploading to firebase storage
@@ -80,14 +80,17 @@ createEventFuntion = (ngoName) => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         // If ngo is logged in, than show them edit buttons on profile
-        document.getElementById("create_event_button").removeAttribute("hidden");
-        document.getElementById("edit_profile_button").removeAttribute("hidden");
+
 
         const uid = userID;
 
         firebaseRef.child('User').child(uid).on('value', snap => {
             // this will read the name of the ngo and pass it to createEventFunction
-            createEventFuntion(snap.val().Name);
+            if (snap.val().type == "NGO") {
+                document.getElementById("create_event_button").removeAttribute("hidden");
+                document.getElementById("edit_profile_button").removeAttribute("hidden");
+                createEventFuntion(snap.val().Name);
+            }
         });
 
     }
