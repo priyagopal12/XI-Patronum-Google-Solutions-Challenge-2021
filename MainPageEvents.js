@@ -3,7 +3,7 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var row = document.getElementById(rowId);
 
     var card = document.createElement('div');
-    card.setAttribute("class", "card mx-3 my-4");
+    card.setAttribute("class", "card mx-3 my-4 eventBody");
     card.style.width = '18rem';
 
     var poster = document.createElement('img');
@@ -42,7 +42,7 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     register.setAttribute("class", "d-grid gap-2");
     var btn = document.createElement('button');
     var btnText = document.createTextNode("Register");
-    btn.setAttribute("class", "btn btn-primary");
+    btn.setAttribute("class", "btn btn-primary RegisterForNgo");
     btn.setAttribute("type", "button");
     btn.setAttribute("id", title);
     btn.setAttribute("onclick", "registerEvent(this.id)");
@@ -165,11 +165,11 @@ query.on('value', snap => {
 query = firebaseRef.child("Events").orderByChild("Category").equalTo("Life On Land");
 query.on('value', snap => {
     snap.forEach(childsnap => {
-        var value = childsnap.val();
-        createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
+            var value = childsnap.val();
+            createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
 
-    })
-    // console.log(snap.val());
+        })
+        // console.log(snap.val());
 });
 
 
@@ -197,16 +197,15 @@ registerEvent = (id) => {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             var regEvent = firebaseRef.child('User').child(userID).child("Registered");
-            
+
             regEvent.push().set({
                 id: id
             });
 
             document.getElementById(id).setAttribute("disabled", true);
-            
+
             alert("Successfully Registered!");
-        }
-        else {
+        } else {
             alert("You are not signed in as User!");
         }
     });
@@ -215,10 +214,10 @@ registerEvent = (id) => {
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-        firebaseRef.child('User/' + userID + '/Registered').on('value', snap =>{
+        firebaseRef.child('User/' + userID + '/Registered').on('value', snap => {
             snap.forEach(childsnap => {
                 var rid = childsnap.val().id;
-                
+
                 document.getElementById(rid).setAttribute("disabled", true);
 
                 // firebaseRef.child('Events').orderByChild("Name").equalTo(rid).on('value', snap => {
@@ -228,6 +227,6 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                 //     })
                 // });
             });
-        }); 
+        });
     }
 });

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,20 +9,25 @@
 
 /* Navbar */
 
+
+/* .nameNGO {
+    font-family: 'Lobster Two', cursive;
+    font-weight: 200 !important;
+    font-size: 34px !important;
+} */
+
+.navbarimg {
+    width: 70px;
+    height: 70px;
+    margin-left: -30px;
+}
+
 .navbar {
     background-color: #023e8a !important;
 }
 
 .navbar ul li {
     margin: 0 20px;
-}
-
-#PartnerLI {
-    margin-left: -460px;
-}
-
-#DashLI {
-    margin-left: -510px;
 }
 
 .navbar-nav .nav-link {
@@ -47,8 +53,9 @@
     border-bottom: 1px solid #fff;
 }
 
-.navbar-brand {
-    font-size: 28px !important;
+.container .navbar-brand {
+    font-family: 'Lobster Two', cursive;
+    font-size: 18px !important;
     color: #fff !important;
 }
 
@@ -57,7 +64,7 @@
 }
 
 .navbar .navbar-brand {
-    font-size: 1.5em !important;
+    font-size: 1.8em !important;
 }
 
 
@@ -76,22 +83,23 @@
 
 /* Modal */
 
-
-/*
-.social_login{
+.social_login {
     text-align: center;
 }
-.social_login ul{
+
+.social_login ul {
     display: flex;
     padding: 0;
     justify-content: center;
 }
-.social_log li{
+
+.social_log li {
     list-style: none;
     margin: 0 4px;
 }
-.social_log li i{
-    color:#fff;
+
+.social_log li i {
+    color: #fff;
     font-size: 1.3em;
     text-align: center;
     padding: 18%;
@@ -100,24 +108,28 @@
     border: 0;
     border-radius: 50%;
 }
-.social_log li .fa-facebook{
+
+.social_log li .fa-facebook {
     background-color: #0066ff;
 }
-.social_log li .fa-google{
+
+.social_log li .fa-google {
     background-color: #ec0303;
 }
-.social_login p{
+
+.social_login p {
     color: #8c8c8c;
 }
-.signin_modal .nav-tabs .nav-link{
+
+.signin_modal .nav-tabs .nav-link {
     background-color: #e5e5e5;
     border-radius: 0;
 }
-.signin_modal .nav-tabs .nav-items{
+
+.signin_modal .nav-tabs .nav-items {
     width: 50%;
     margin-bottom: 2rem;
 }
-*/
 
 
 /* Modal End */
@@ -165,9 +177,8 @@
 }
 
 .close {
-    background: none !important;
+    width: 20%;
     color: white;
-    box-shadow: none !important;
 }
 
 .buttons {
@@ -362,7 +373,7 @@ input[type="file"]:focus,
     margin-bottom: 30px;
 }
 
-.event-slider .card-text h4{
+.event-slider .card-text h4 {
     font-weight: 700;
 }
 
@@ -370,7 +381,7 @@ input[type="file"]:focus,
     color: #5e5e5e;
 }
 
-.event-slider .card-text a{
+.event-slider .card-text a {
     text-decoration: none;
 }
 
@@ -405,6 +416,20 @@ input[type="file"]:focus,
 .card-img-top {
     width: 16.4rem;
     height: 24rem;
+}
+
+.eventBody {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.RegisterForNgo {
+    position: absolute;
+    bottom: 5px;
+    margin-top: 10px;
+    margin-top: 50px !important;
+    width: 170px;
+    left: 60px;
 }
 
 

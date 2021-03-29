@@ -1,136 +1,10 @@
         * {
             margin: 0;
             padding: 0;
+            font-family: 'Nanum Gothic', sans-serif;
         }
-        /* 
-
-#nav-bar{
-    position: sticky;
-    top:0;
-    z-index: 10;
-   
-}
-
-
-.navbar-nav li a input{
-    float: right;
-    border: none;
-
-    margin-right: 16px;
-    font-size: 17px;
-    border-style: line;
-}
-
-.navbar-nav li{
-    padding: 0 10px;
-    
-}
-
-
-
-.navbar-nav li a{
-    float: right;
-    text-align: left;
-    color:aqua;
-}
-
-.navbar-nav li a:hover{
-    color: #007bff!important;
-    background-color: rgb(7, 26, 26);
-}
-
-.navbar{
-    background:rgb(211, 95, 95);
-    
-}
-
-.navbar-toggler{
-    border: none!important;
-}
-
-.nav-link{
-    color: #555!important;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.nav-item{
-
-}
-
-.navbar-brand{
-
-}
-
-.nav-link{
-    color:aqua;
-}    */
-        /* .navbar{
-    background-color: rgba(2, 62, 138) !important;
-}
-.navbar ul li{
-    margin: 0 20px;
-}
-.navbar-nav .nav-link{
-    font-size: 1em !important ;
-    padding: 3px;
-    color: #fff !important;
-    font-weight: 500;
-}
-/* .navbar-nav{
-    text-align: right;
-    margin-right: 20px;
-} 
-.navbar-toggler{
-    color: #fff !important;
-    outline: none !important;
-    border: none !important;
-}
-.navbar-nav .nav-link:hover{
-    border-bottom: 1px solid #fff;
-}
-.navbar-brand{
-    font-size: 28px !important;
-    color: #fff !important;
-}
-.navbar-nav{
-    margin: 0 auto;
-}
-
-
-.navbar .navbar-brand{
-    font-size: 1.5em !important;
-}
-
-.navbar ul{
-    padding-left: 70px;
-} */
         
         @media (min-width: 992px) {
-            /* Navbar */
-            .navbar {
-                background-color: rgba(2, 62, 138) !important;
-                font-family: 'Nanum Gothic', sans-serif;
-            }
-            .navbar ul li {
-                margin: 0 20px;
-            }
-            #PartnerLI {
-                margin-left: -460px;
-            }
-            #DashLI {
-                margin-left: -510px;
-            }
-            .navbar-nav .nav-link {
-                font-size: 1em !important;
-                padding: 3px;
-                color: #fff !important;
-                font-weight: 500;
-            }
-            /* .navbar-nav{
-    text-align: right;
-    margin-right: 20px;
-} */
             .navbar-toggler {
                 color: #fff !important;
                 outline: none !important;
@@ -153,11 +27,13 @@
             /*HEADERS MEGA MENU*/
             .meagamenuheader {
                 font-size: 20px;
+                font-family: sans-serif;
             }
             .megamenuplaces text {
                 color: rgb(41, 40, 40);
                 font-weight: bold;
                 font-size: 16px;
+                font-family: sans-serif;
             }
             .dropdown-menu {
                 width: 100%;
@@ -201,9 +77,8 @@
         }
         
         .close {
-            width: 10%;
+            width: 20%;
             color: white;
-            box-shadow: none !important;
         }
         
         .buttons {

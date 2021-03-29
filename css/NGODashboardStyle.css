@@ -166,12 +166,6 @@ input[type="file"]:focus,
     .navbar ul li {
         margin: 0 20px;
     }
-    #PartnerLI {
-        margin-left: -530px;
-    }
-    #DashLI {
-        margin-left: -510px;
-    }
     .navbar-nav .nav-link {
         font-size: 1em !important;
         padding: 3px;
@@ -198,7 +192,7 @@ input[type="file"]:focus,
         margin: 0 auto !important;
     }
     .navbar .navbar-brand {
-        font-size: 1.5em !important;
+        font-size: 1.8em !important;
     }
     /*navbar end*/
     /*HEADERS MEGA MENU*/
@@ -218,17 +212,17 @@ input[type="file"]:focus,
         margin-left: 0px;
     }
     .menuheaderpadding1 {
-        padding-left: 400px;
+        padding-left: 300px;
         padding-bottom: 70px;
     }
     .menuheaderpadding3 {
-        padding-left: 450px;
+        padding-left: 470px;
     }
     .menuheaderpadding2 {
         padding-left: 350px;
     }
     .menuheaderpadding4 {
-        padding-left: 418px;
+        padding-left: 400px;
     }
     /* Events */
     .SecondPart {
@@ -332,7 +326,7 @@ input[type="file"]:focus,
         display: block;
         position: absolute;
         width: 540px;
-        height: 600px;
+        height: 620px;
         margin-top: 90px;
         margin-left: 500px;
         background-color: rgba(46, 44, 44, 0.9);
@@ -350,8 +344,8 @@ input[type="file"]:focus,
     .close {
         z-index: 1;
         position: absolute;
-        margin-top: 90px;
-        margin-left: 1014px;
+        margin-top: 0px;
+        margin-left: 0px;
         text-decoration: none;
         float: right;
         font-size: 24px;
@@ -565,8 +559,8 @@ input[type="file"]:focus,
     }
     /*IMAGE POP UP*/
     #img01 {
-        width: 220px;
-        height: 320px;
+        width: 420px;
+        height: 520px;
         padding-top: 20px;
         padding-left: 20px;
     }
@@ -586,10 +580,10 @@ input[type="file"]:focus,
     #modal-content {
         display: block;
         position: absolute;
-        width: 240px;
-        height: 340px;
-        margin-top: 150px;
-        margin-left: 125px;
+        width: 440px;
+        height: 540px;
+        margin-top: 50px;
+        margin-left: 25px;
         background-color: rgba(46, 44, 44, 0.9);
     }
     .modal-hover-opacity {
@@ -605,8 +599,8 @@ input[type="file"]:focus,
     .close {
         z-index: 1;
         position: absolute;
-        margin-top: 145px;
-        margin-left: 345px;
+        margin-top: 53px;
+        margin-left: 445px;
         text-decoration: none;
         float: right;
         font-size: 24px;

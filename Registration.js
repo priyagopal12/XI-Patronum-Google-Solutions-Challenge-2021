@@ -44,14 +44,12 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                 if (type == "User") {
                     document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
                     document.getElementById("nameOfUser").innerHTML = snapshot.val().username;
-                    document.getElementById("events").innerHTML = snapshot.val().EventsAttended;
-                    document.getElementById("ngos").innerHTML = snapshot.val().NGOsFollowing;
                     document.getElementById("location").innerHTML = snapshot.val().location;
                     document.getElementById("about").innerHTML = snapshot.val().About;
-                    img= document.getElementById("defaultPic");
-                    img.src=snapshot.val().ProfilePic;
+                    img = document.getElementById("defaultPic");
+                    img.src = snapshot.val().ProfilePic;
 
-                    
+
                 } else if (type == "NGO") {
                     document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
 
@@ -94,8 +92,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
             document.getElementById("ULogLink").removeAttribute("hidden");
             document.getElementById("NLogLink").removeAttribute("hidden");
 
-            
-            
+
+
         }
     })
     //}*/

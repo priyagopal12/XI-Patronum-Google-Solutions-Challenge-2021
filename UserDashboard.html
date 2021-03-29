@@ -153,8 +153,9 @@
     <!----navbar-->
     <section id="navbar">
         <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a">
-            <div class="container-fluid navi">
-                <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
+            <div class="container navi">
+                <img class="navbarimg" src="images/22.png">
+                <a class="navbar-brand nameNGO" href="#"> &nbsp; XI Patronum</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
@@ -212,23 +213,35 @@
                         <li class="nav-item lst">
                             <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
                         </li>
-                    </ul>
+                        <!-- </ul>
 
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact Us</a>
+                        </li>
 
                         <li class="nav-item log" id="PartnerLI">
                             <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
                         </li>
-                        <li class="nav-item log" id="SignInLI">
-                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
-                        </li>
+
                         <li class="nav-item log" id="DashLI" hidden>
                             <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
                         </li>
+                        <!--
                         <li class="nav-item log" id="LogLI" hidden>
                             <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
-                        </li>
+                        </li>-->
                     </ul>
+                    <div id="SignInLI">
+                        <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page" data-target="#loginform" data-toggle="modal">
+                                Sign in
+                            </button>
+                    </div>
+                    <div id="LogLI">
+                        <button class="ms-auto sign-in border rounded-pill " id="logOut" onclick="SignOut()" hidden>
+                                Sign Out
+                            </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -240,9 +253,9 @@
             <div class="modal-content Cont">
                 <div class="modal-header modhead">
                     <div class="buttons">
-                        <button type="button" id="ULog" class="login1 btn" style="color:white">User</button>
+                        <button type="button" id="ULog" class="login1 btn" style="color:white">USER</button>
                         <button type="button" id="NLog" class="login2 btn" style="color:white">NGO</button>
-                        <button type="button" id="close" class="close" data-dismiss="modal" style="background:none !important;box-shadow: none !important;"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <button type="button" id="close" class="close" data-dismiss="modal">x</button>
                     </div>
                 </div>
                 <div class="form1">
@@ -399,17 +412,8 @@
                     </div>
                 </div>
 
+                <br>
 
-                <div class="bg-light p-4 d-flex justify-content-center text-center" style="align-items: center;">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
-                            <h5 class="font-weight-bold mb-0 d-block" id="events">215</h5><small class="text-muted"> Events Attended</small>
-                        </li>
-                        <li class="list-inline-item">
-                            <h5 class="font-weight-bold mb-0 d-block" id="ngos">340</h5><small class="text-muted">NGOs Following</small>
-                        </li>
-                    </ul>
-                </div>
                 <div class="px-4 py-3">
                     <h5 class="mb-0">About</h5>
                     <div class="p-4 rounded shadow-sm bg-light" id="about">
@@ -441,7 +445,7 @@
                                     <img id="img01">
                                 </div>
                             </div>
-                            
+
                         </div>
 
 
