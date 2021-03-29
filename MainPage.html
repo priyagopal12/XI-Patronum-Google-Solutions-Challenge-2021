@@ -18,18 +18,14 @@
     <link rel="stylesheet" href="css/NGODashboardStyle.css">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
@@ -45,8 +41,8 @@
     <script src="mega_menu.js"></script>
 
     <script type="text/javascript">
-        $(function () {
-            $('#ULogLink').on('click', function (e) {
+        $(function() {
+            $('#ULogLink').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -60,8 +56,8 @@
             });
         });
 
-        $(function () {
-            $('#LoginUser').on('click', function (e) {
+        $(function() {
+            $('#LoginUser').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -74,8 +70,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#ULog').on('click', function (e) {
+        $(function() {
+            $('#ULog').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'none');
@@ -88,8 +84,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#SignUpUser').on('click', function (e) {
+        $(function() {
+            $('#SignUpUser').on('click', function(e) {
                 e.preventDefault();
                 $('#form-sign').css('display', 'inline');
                 $('.SignUpForm').css('display', 'flex');
@@ -102,8 +98,8 @@
                 $('.SignUpForm').css('border', 'none');
             });
         });
-        $(function () {
-            $('#NLog').on('click', function (e) {
+        $(function() {
+            $('#NLog').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'inline');
@@ -116,8 +112,8 @@
                 e.preventDefault();
             });
         });
-        $(function () {
-            $('#NSignIn').on('click', function (e) {
+        $(function() {
+            $('#NSignIn').on('click', function(e) {
                 $('#form-sign').css('display', 'none');
                 $('.SignUpForm').css('display', 'none');
                 $('#form-logN').css('display', 'inline');
@@ -134,105 +130,91 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">NGO Connect</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+    <!--nav bar-->
+    <section id="navbar">
+        <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a;">
+            <div class="container-fluid navi">
+                <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item lst">
+                            <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
+                            <div class="dropdown-menu " aria-labelledby="servicesDropdown">
+                                <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
 
-                            <div class="dropdown-divider"></div>
-                            <div class="d-md-flex align-items-start justify-content-start">
-                                <div class="menuheaderpadding0">
-                                    <div class="megamenuplaces dropdown-header">
-                                        <text>PUNE</text>
+                                <div class="dropdown-divider"></div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div class="menuheaderpadding0">
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>PUNE</text>
+                                        </div>
+                                        <table id="table_body_pune" style="margin-left: 14px"></table>
                                     </div>
-                                    <table id="table_body_pune" style="margin-left: 14px"></table>
-                                </div>
-                                <br>
-                                <div class="menuheaderpadding1">
-                                    <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
-                                    <table id="table_body_pimpri" style="margin-left: 14px"></table>
-                                </div>
-                                <br>
-                                <div class="menuheaderpadding2">
-                                    <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
-                                    <table id="table_body_thane" style="margin-left: 14px"></table>
-                                </div>
-                                <br>
-
-
-                            </div>
-                            <div class="d-md-flex align-items-start justify-content-start">
-                                <div class="menuheaderpadding0">
-                                    <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
-                                    <table id="table_body_nagar" style="margin-left: 14px"></table>
-                                </div>
-                                <br>
-                                <div class="menuheaderpadding3">
-                                    <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
-                                    <table id="table_body_amravati" style="margin-left: 14px"></table>
-                                </div>
-                                <br>
-                                <div class="menuheaderpadding4">
-                                    <div class="megamenuplaces dropdown-header">
-                                        <text>SOLAPUR</text>
+                                    <br>
+                                    <div class="menuheaderpadding1">
+                                        <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
+                                        <table id="table_body_pimpri" style="margin-left: 14px"></table>
                                     </div>
-                                    <table id="table_body_solapur" style="margin-left: 14px"></table>
+                                    <br>
+                                    <div class="menuheaderpadding2">
+                                        <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
+                                        <table id="table_body_thane" style="margin-left: 14px"></table>
+                                    </div>
+                                    <br>
+
+
                                 </div>
+                                <div class="d-md-flex align-items-start justify-content-start">
+                                    <div class="menuheaderpadding0">
+                                        <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
+                                        <table id="table_body_nagar" style="margin-left: 14px"></table>
+                                    </div>
+                                    <br>
+                                    <div class="menuheaderpadding3">
+                                        <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
+                                        <table id="table_body_amravati" style="margin-left: 14px"></table>
+                                    </div>
+                                    <br>
+                                    <div class="menuheaderpadding4">
+                                        <div class="megamenuplaces dropdown-header">
+                                            <text>SOLAPUR</text>
+                                        </div>
+                                        <table id="table_body_solapur" style="margin-left: 14px"></table>
+                                    </div>
+                                </div>
+                                <br>
                             </div>
-                            <br>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#events_section-title">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contacts</a>
-                    </li>
-                    <li class="nav-item" id="PartnerLI">
-                        <a class="nav-link" id="NLogLink" href="NGORegisteration.html">Partner With
-                            Us</a>
-                    </li>
+                        </li>
+                        <li class="nav-item lst">
+                            <a class="nav-link active lstlink" href="MainPage.html#events_section-title">Events</a>
+                        </li>
+                    </ul>
 
-                    <li class="nav-item" id="DashLI" hidden>
-                        <a class="nav-link" id="Dashboard" href="#" hidden>Dashboard</a>
-                    </li>
-                    <!-- <li class="nav-item log" id="LogLI" hidden>
-                        <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign
-                            Out</a>
-                    </li> -->
-                </ul>
-                <div id="SignInLI">
-                    <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page"
-                        data-target="#loginform" data-toggle="modal">
-                        Sign in
-                    </button>
-                </div>
-                <div id="LogLI">
-                    <button class="ms-auto sign-in border rounded-pill " id="logOut" onclick="SignOut()" hidden>
-                        Sign Out
-                    </button>
-                </div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                <!-- <form class="d-flex ">
-                    <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
-                    <button class="btn btn-outline-success " type="submit ">Search</button>
-                </form> -->
+                        <li class="nav-item log" id="PartnerLI">
+                            <a class="nav-link active loglink l22" id="NLogLink" href="NGORegisteration.html">Partner With Us</a>
+                        </li>
+                        <li class="nav-item log" id="SignInLI">
+                            <a class="nav-link active loglink l21" id="ULogLink" href="#" aria-current="page" data-target="#loginform" data-toggle="modal">Sign In</a>
+                        </li>
+                        <li class="nav-item log" id="DashLI" hidden>
+                            <a class="nav-link active loglink l24" id="Dashboard" href="#" hidden>Dashboard</a>
+                        </li>
+                        <li class="nav-item log" id="LogLI" hidden>
+                            <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign Out</a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Sign-in Modal -->
+        </nav>
+    </section>
+    <!--nav bar end-->
+    <!--modal start-->
     <div class="modal fade" id="loginform">
         <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content Cont">
@@ -248,35 +230,25 @@
                         <form id="form-sign">
                             <div class="form-group">
                                 <label for="SUName">Email ID: </label>
-                                <input type="text" name="UName" id="EmailSign" class="form-control form-control-lg"
-                                    placeholder="Eg. reysinghania321@gmail.com" required="required" />
+                                <input type="text" name="UName" id="EmailSign" class="form-control form-control-lg" placeholder="Eg. reysinghania321@gmail.com" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="SUserName">Username: </label>
-                                <input type="text" name="UserName" id="UsernameSign"
-                                    class="form-control form-control-lg" placeholder="Eg. Reyansh"
-                                    required="required" />
+                                <input type="text" name="UserName" id="UsernameSign" class="form-control form-control-lg" placeholder="Eg. Reyansh" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassSign">Password: </label>
-                                <input type="password" name="PassSign" id="PassSign1"
-                                    class="form-control form-control-lg" placeholder="Enter your password"
-                                    required="required" />
+                                <input type="password" name="PassSign" id="PassSign1" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassSign2"> Reenter Password: </label>
-                                <input type="password" name="PassSign2" id="PassSign2"
-                                    class="form-control form-control-lg" placeholder="Enter your password"
-                                    required="required" />
+                                <input type="password" name="PassSign2" id="PassSign2" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="button" name="LoginBtn" id="SignUp" form="form-log1" onclick="signUp()"
-                                    value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block"
-                                    required="required"></input>
+                                <input type="button" name="LoginBtn" id="SignUp" form="form-log1" onclick="signUp()" value="Sign Up" data-dismiss="modal" class="btn-primary btn btn-block" required="required"></input>
                             </div>
                             <div class="form-group">
-                                <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn"
-                                        aria-current="page">Sign In</a></p>
+                                <p class="Member">Already a member?<a href="#" id="LoginUser" class="MemberBtn" aria-current="page">Sign In</a></p>
                             </div>
                         </form>
                     </div>
@@ -285,22 +257,17 @@
                         <form id="form-logU">
                             <div class="form-group">
                                 <label for="LUName">Email ID: </label>
-                                <input type="text" name="UName" id="EmailLog" class="form-control form-control-lg"
-                                    placeholder="Eg. ReySingh" required="required" />
+                                <input type="text" name="UName" id="EmailLog" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassLog">Password: </label>
-                                <input type="password" name="PassLog" id="PassLog" class="form-control form-control-lg"
-                                    placeholder="Enter your password" required="required" />
+                                <input type="password" name="PassLog" id="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" id="SignIn" onclick="signInWithEmailPassword()"
-                                    form="form-log1" value="Sign In" data-dismiss="modal"
-                                    class="btn-primary btn btn-block" required="required" />
+                                <input type="submit" name="LoginBtn" id="SignIn" onclick="signInWithEmailPassword()" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                             <div class="form-group">
-                                <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser"
-                                        aria-current="page">Sign Up</a></p>
+                                <p class="Member">Not a member?<a href="#" class="MemberBtn" id="SignUpUser" aria-current="page">Sign Up</a></p>
                             </div>
                         </form>
                     </div>
@@ -308,22 +275,17 @@
                         <form id="form-logN">
                             <div class="form-group">
                                 <label for="NUName">Registered Email ID: </label>
-                                <input type="text" name="UName" id="NEmID" class="form-control form-control-lg"
-                                    placeholder="Eg. reysingh@gmail.com" required="required" />
+                                <input type="text" name="UName" id="NEmID" class="form-control form-control-lg" placeholder="Eg. reysingh@gmail.com" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassLog">Password: </label>
-                                <input type="password" name="NPassLog" id="NPass" class="form-control form-control-lg"
-                                    placeholder="Enter your password" required="required" />
+                                <input type="password" name="NPassLog" id="NPass" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" onclick="NSignIn()" form="form-log1" id="NSignIn"
-                                    value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block"
-                                    required="required" />
+                                <input type="submit" name="LoginBtn" onclick="NSignIn()" form="form-log1" id="NSignIn" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                             <div class="form-group">
-                                <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html"
-                                        id="SignUpUser">Partner With Us</a></p>
+                                <p class="Member">Not a member?<a class="MemberBtn" href="NGORegisteration.html" id="SignUpUser">Partner With Us</a></p>
                             </div>
                         </form>
                     </div>
@@ -347,17 +309,14 @@
                         <form id="form-log3">
                             <div class="form-group">
                                 <label for="UName">Name of NGO: </label>
-                                <input type="text" name="UName" class="form-control form-control-lg"
-                                    placeholder="Eg. ReySingh" required="required" />
+                                <input type="text" name="UName" class="form-control form-control-lg" placeholder="Eg. ReySingh" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="PassLog">Password: </label>
-                                <input type="password" name="PassLog" class="form-control form-control-lg"
-                                    placeholder="Enter your password" required="required" />
+                                <input type="password" name="PassLog" class="form-control form-control-lg" placeholder="Enter your password" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In"
-                                    data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
+                                <input type="submit" name="LoginBtn" form="form-log1" value="Sign In" data-dismiss="modal" class="btn-primary btn btn-block" required="required" />
                             </div>
                         </form>
                     </div>
@@ -366,6 +325,7 @@
             </div>
         </div>
     </div>
+    <!--modal end-->
 
 
     <!-- Search -->
@@ -397,8 +357,7 @@
     <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item carousel-item-next carousel-item-start">
-                <img src="images/pexels-photo-grapher-1440388.jpg" class="bd-placeholder-img" width="100%" height="100%"
-                    alt="">
+                <img src="images/pexels-photo-grapher-1440388.jpg" class="bd-placeholder-img" width="100%" height="100%" alt="">
 
                 <div class="container">
                     <div class="carousel-caption text-start">
@@ -409,8 +368,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/pexels-roman-odintsov-4552178-02.jpg" class="bd-placeholder-img" width="100%"
-                    height="100%" alt="">
+                <img src="images/pexels-roman-odintsov-4552178-02.jpg" class="bd-placeholder-img" width="100%" height="100%" alt="">
 
                 <div class="container">
                     <div class="carousel-caption text-start">
@@ -421,8 +379,7 @@
                 </div>
             </div>
             <div class="carousel-item active carousel-item-start">
-                <img src="images/pexels-rodnae-productions-6647119.jpg" class="bd-placeholder-img" width="100%"
-                    height="100%" alt="">
+                <img src="images/pexels-rodnae-productions-6647119.jpg" class="bd-placeholder-img" width="100%" height="100%" alt="">
 
                 <div class="container">
                     <div class="carousel-caption text-start">
@@ -512,8 +469,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-1" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -528,8 +484,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-2" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-2" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -545,8 +500,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-3" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-3" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -561,8 +515,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-4" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-4" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -577,8 +530,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-5" role="button"
-                        aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-5" role="button" aria-expanded="false" aria-controls="collapseExample-5" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -593,8 +545,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-6" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-6" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -609,8 +560,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-7" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-7" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -625,8 +575,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-8" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-8" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -641,8 +590,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-9" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-9" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -657,8 +605,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-10" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-10" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -673,8 +620,7 @@
                 </div>
 
                 <div class="card-see-more">
-                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-11" role="button"
-                        aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#collapseExample-11" role="button" aria-expanded="false" aria-controls="collapseExample" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -697,9 +643,7 @@
                     <h3>NGO Connect</h3>
                     <h5></h5>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit
-                        tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi!
-                        Quasi pariatur repudiandae exercitationem culpa!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum libero ipsam delectus! Impedit tenetur sit, facilis esse itaque accusantium placeat expedita, ratione commodi aspernatur sequi! Quasi pariatur repudiandae exercitationem culpa!
                     </p>
                     <div class="loc-ema-pho">
                         <p><i class="fa fa-map-marker" aria-hidden="true"></i><span>Lorem ipsum dolor sit amet,
@@ -716,8 +660,7 @@
                             <input type="text" id="ConatctQueryName" placeholder="Enter your name" required>
                             <input type="text" id="ContactQueryEmail" placeholder="Enter your email" required>
                             <textarea name="message" id="ConatctQueryMessage" placeholder="Message"></textarea>
-                            <input class="contact-form-submit btn" id="ContactQuerySubmit" type="button" value="Submit"
-                                onclick="ContactQuery()">
+                            <input class="contact-form-submit btn" id="ContactQuerySubmit" type="button" value="Submit" onclick="ContactQuery()">
                         </form>
                     </div>
                 </div>

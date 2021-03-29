@@ -227,59 +227,57 @@
         font-family: 'Poppins';
         font-size: 20px;
     }
-    /*navbar*/
+    /* Navbar */
     
-    .lst {
-        margin-right: 10px;
-        margin-top: -30px;
-    }
-    
-    .lstlink {
-        font-size: 20px;
-        color: white;
+    .navbar {
+        background-color: rgba(2, 62, 138) !important;
+        font-family: 'Nanum Gothic', sans-serif;
     }
     
-    .nameNGO {
-        font-size: 50px;
-        color: white;
+    .navbar ul li {
+        margin: 0 20px;
     }
     
-   
-    .loglink {
-        font-size: 20px;
-        color: white;
+    #PartnerLI {
+        margin-left: -460px;
     }
     
-    .navi {
-        padding: 10px;
+    #DashLI {
+        margin-left: -510px;
     }
     
-    .searchclass {
-        margin-left: 90px;
+    .navbar-nav .nav-link {
+        font-size: 1em !important;
+        padding: 3px;
+        color: #fff !important;
+        font-weight: 500;
+    }
+    /* .navbar-nav{
+    text-align: right;
+    margin-right: 20px;
+} */
+    
+    .navbar-toggler {
+        color: #fff !important;
+        outline: none !important;
+        border: none !important;
     }
     
-    .l11 {
-        margin-left: -70px;
+    .navbar-nav .nav-link:hover {
+        border-bottom: 1px solid #fff;
     }
     
-    .l21 {
-        margin-left: -2%;
-        background: none !important;
-        border: none;
-        padding: 0 !important;
+    .navbar-brand {
+        font-size: 28px !important;
+        color: #fff !important;
     }
     
-    .l22 {
-        margin-left: -40%;
-        background: none !important;
-        border: none;
-        padding: 0 !important;
+    .navbar-nav {
+        margin: 0 auto !important;
     }
-    .l23 {
-        margin-left: -40%;
-    }
-    .l24{
-        margin-left: -30%;
+    
+    .navbar .navbar-brand {
+        font-size: 1.5em !important;
     }
     /*navbar end*/
     /*modal*/

@@ -1,3 +1,4 @@
+// MAIN PAGE EVENTS
 createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var row = document.getElementById(rowId);
 
@@ -40,9 +41,10 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var register = document.createElement('div');
     register.setAttribute("class", "d-grid gap-2");
     var btn = document.createElement('button');
-    var btnText = document.createTextNode("Take Part");
+    var btnText = document.createTextNode("Register");
     btn.setAttribute("class", "btn btn-primary");
     btn.setAttribute("type", "button");
+    btn.setAttribute("id", "register");
     btn.appendChild(btnText);
     register.appendChild(btn);
 
@@ -164,11 +166,16 @@ query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
         createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
+
     })
+
+    });
+
     // console.log(snap.val());
 });
 
 console.log(params.get('name'));
+
 
 if (params.get('name') != null) {
     firebaseRef.child(params.get('name')).on('value', snap => {
@@ -179,3 +186,13 @@ if (params.get('name') != null) {
         })
     });
 }
+
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+}
+
+
+
+// Main page events end
+
