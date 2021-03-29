@@ -196,14 +196,38 @@ function onClick(element) {
 registerEvent = (id) => {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
-            console.log(userID);
-            firebaseRef.child('User').child(userID).child("Registered").push().set({
+            var regEvent = firebaseRef.child('User').child(userID).child("Registered");
+            
+            regEvent.push().set({
                 id: id
             });
-            alert("akdjflaskdfj");
+
+            document.getElementById(id).setAttribute("disabled", true);
+            
+            alert("Successfully Registered!");
         }
         else {
             alert("You are not signed in as User!");
         }
     });
 }
+
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        firebaseRef.child('User/' + userID + '/Registered').on('value', snap =>{
+            snap.forEach(childsnap => {
+                var rid = childsnap.val().id;
+                
+                document.getElementById(rid).setAttribute("disabled", true);
+
+                // firebaseRef.child('Events').orderByChild("Name").equalTo(rid).on('value', snap => {
+                //     snap.forEach(childsnap => {
+                //         // alert(childsnap.val().Name + ' ' + childsnap.val().NGO);
+                //         createEventCard("profile1", childsnap.val().Poster, childsnap.val().Date, childsnap.val().Time, childsnap.val().Location, childsnap.val().Name, childsnap.val().NGO);
+                //     })
+                // });
+            });
+        }); 
+    }
+});
