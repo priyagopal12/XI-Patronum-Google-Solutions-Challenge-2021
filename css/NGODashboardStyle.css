@@ -146,6 +146,11 @@ input[type="file"]:focus,
     font-size: 14px;
 }
 
+#navEvent .container {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* form extra end*/
 

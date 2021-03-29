@@ -29,11 +29,14 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var eventTitle = document.createElement('h4');
     var eventTitleText = document.createTextNode(title);
     eventTitle.appendChild(eventTitleText);
+    var ngoNameProfile = document.createElement('a');
+    ngoNameProfile.setAttribute("href", "NGODashboard.html?name=" + ngo);
     var ngoName = document.createElement('h5');
     var ngoNameText = document.createTextNode(ngo);
     ngoName.appendChild(ngoNameText);
+    ngoNameProfile.appendChild(ngoName);
     cardText.appendChild(eventTitle);
-    cardText.appendChild(ngoName);
+    cardText.appendChild(ngoNameProfile);
 
     var register = document.createElement('div');
     register.setAttribute("class", "d-grid gap-2");
@@ -56,7 +59,6 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     row.appendChild(card);
 }
 
-createEventCard("no_poverty", "images/event1.jpg", "01/04/2021", "11:00", "Pune", "No Poverty", "NGO Example");
 
 // Events for No Poverty
 var query = firebaseRef.child("Events").orderByChild("Category").equalTo("No Poverty");
@@ -164,10 +166,26 @@ query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
         createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
+
+    })
+
     });
+
     // console.log(snap.val());
 });
 
+console.log(params.get('name'));
+
+
+if (params.get('name') != null) {
+    firebaseRef.child(params.get('name')).on('value', snap => {
+        snap.forEach(childsnap => {
+            if (childsnap.key != "id") {
+                createEventCard("dashboardEvents", childsnap.val().Poster, childsnap.val().Date, childsnap.val().Time, childsnap.val().Location, childsnap.val().Name, params.get('name'));
+            }
+        })
+    });
+}
 
 function onClick(element) {
     document.getElementById("img01").src = element.src;
@@ -177,3 +195,4 @@ function onClick(element) {
 
 
 // Main page events end
+
