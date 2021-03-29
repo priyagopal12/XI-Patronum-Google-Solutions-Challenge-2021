@@ -6,21 +6,21 @@ createEventFuntion = (ngoName) => {
 
     const form = document.querySelector("#create-event");
 
-    document.newEvent.eventPoster.onchange = e => {
+    form.eventPoster.onchange = e => {
 
         files = e.target.files;
         pathname = e.target.value;
         ImgName = pathname.split('\\').pop().split('/').pop();
-        // console.log('works ' + files[0] + ' ' + ImgName);
+        console.log('works ' + files[0] + ' ' + ImgName);
     };
 
 
     form.addEventListener('submit', (e) => {
-        const eName = document.newEvent.eventName.value;
-        const eCategory = document.newEvent.eventCategory.value;
-        const eLocation = document.newEvent.eventLocation.value;
-        const eDate = document.newEvent.eventDate.value;
-        const eTime = document.newEvent.eventTime.value;
+        const eName = form.eventName.value;
+        const eCategory = form.eventCategory.value;
+        const eLocation = form.eventLocation.value;
+        const eDate = form.eventDate.value;
+        const eTime = form.eventTime.value;
 
 
         var newEvent = firebase.database().ref(ngoName).push();
@@ -87,9 +87,18 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         firebaseRef.child('User').child(uid).on('value', snap => {
             // this will read the name of the ngo and pass it to createEventFunction
             if (snap.val().type == "NGO") {
+                var nName = snap.val().Name;
                 document.getElementById("create_event_button").removeAttribute("hidden");
                 document.getElementById("edit_profile_button").removeAttribute("hidden");
-                createEventFuntion(snap.val().Name);
+                createEventFuntion(nName);
+
+                firebaseRef.child(nName).on('value', snap => {
+                    snap.forEach(childsnap => {
+                        if (childsnap.key != "id") {
+                            createEventCard("dashboardEvents", childsnap.val().Poster, childsnap.val().Date, childsnap.val().Time, childsnap.val().Location, childsnap.val().Name, nName);
+                        }
+                    })
+                });
             }
         });
 

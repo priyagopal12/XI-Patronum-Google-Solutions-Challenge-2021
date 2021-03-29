@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/NGORegisterationStyle.css">
+    <link rel="stylesheet" href="css/MainPageStyle.css">
     <link rel="stylesheet" href="css\MainPageResponsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
@@ -128,7 +129,7 @@
 
 <body>
     <!--nav bar-->
-    <section id="navbar">
+    <!-- <section id="navbar">
         <nav class="navbar navbar-expand-lg  sticky-top " style="background-color:#023e8a;">
             <div class="container-fluid navi">
                 <a class="navbar-brand nameNGO" href="#"> &nbsp; Name of User</a>
@@ -212,7 +213,105 @@
                 </div>
             </div>
         </nav>
-    </section>
+    </section> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NGO Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active lstlink" href="#" id="servicesDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NGO</a>
+                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <a class=" meagamenuheader dropdown-item" href="#">NGO's PARTNERED WITH US</a>
+
+                            <div class="dropdown-divider"></div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                                <div class="menuheaderpadding0">
+                                    <div class="megamenuplaces dropdown-header">
+                                        <text>PUNE</text>
+                                    </div>
+                                    <table id="table_body_pune" style="margin-left: 14px"></table>
+                                </div>
+                                <br>
+                                <div class="menuheaderpadding1">
+                                    <div class="megamenuplaces dropdown-header"><text>PIMPRI-CHINCHWAD</text></div>
+                                    <table id="table_body_pimpri" style="margin-left: 14px"></table>
+                                </div>
+                                <br>
+                                <div class="menuheaderpadding2">
+                                    <div class="megamenuplaces dropdown-header"><text>THANE</text></div>
+                                    <table id="table_body_thane" style="margin-left: 14px"></table>
+                                </div>
+                                <br>
+
+
+                            </div>
+                            <div class="d-md-flex align-items-start justify-content-start">
+                                <div class="menuheaderpadding0">
+                                    <div class="megamenuplaces dropdown-header"><text>NAGAR</text></div>
+                                    <table id="table_body_nagar" style="margin-left: 14px"></table>
+                                </div>
+                                <br>
+                                <div class="menuheaderpadding3">
+                                    <div class="megamenuplaces dropdown-header"><text>AMRAVATI</text></div>
+                                    <table id="table_body_amravati" style="margin-left: 14px"></table>
+                                </div>
+                                <br>
+                                <div class="menuheaderpadding4">
+                                    <div class="megamenuplaces dropdown-header">
+                                        <text>SOLAPUR</text>
+                                    </div>
+                                    <table id="table_body_solapur" style="margin-left: 14px"></table>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events_section-title">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contacts</a>
+                    </li>
+                    <li class="nav-item" id="PartnerLI">
+                        <a class="nav-link" id="NLogLink" href="NGORegisteration.html">Partner With
+                            Us</a>
+                    </li>
+
+                    <li class="nav-item" id="DashLI" hidden>
+                        <a class="nav-link" id="Dashboard" href="#" hidden>Dashboard</a>
+                    </li>
+                    <!-- <li class="nav-item log" id="LogLI" hidden>
+                        <a class="nav-link active loglink l23" id="logOut" href="#" onclick="SignOut()" hidden>Sign
+                            Out</a>
+                    </li> -->
+                </ul>
+                <div id="SignInLI">
+                    <button class="ms-auto sign-in border rounded-pill " id="ULogLink" aria-current="page"
+                        data-target="#loginform" data-toggle="modal">
+                        Sign in
+                    </button>
+                </div>
+                <div id="LogLI">
+                    <button class="ms-auto sign-in border rounded-pill " id="logOut" onclick="SignOut()" hidden>
+                        Sign Out
+                    </button>
+                </div>
+
+                <!-- <form class="d-flex ">
+                    <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                    <button class="btn btn-outline-success " type="submit ">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
     <!--nav bar end-->
     <!--modal start-->
     <div class="modal fade" id="loginform">

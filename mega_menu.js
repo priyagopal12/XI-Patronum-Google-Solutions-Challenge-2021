@@ -1,5 +1,4 @@
 var rootRef = firebase.database().ref().child("NGO");
-var cc;
 
 rootRef.on("child_added", snap => {
 
@@ -40,8 +39,6 @@ rootRef.on("child_added", snap => {
 
 // for fetching data of respective NGO
 let params = new URLSearchParams(location.search);
-
-console.log(params.get('name'));
 
 firebaseRef.child("NGO").child(params.get('name')).on('value', snap => {
     document.getElementById("ngo_dashboard_name").innerHTML = snap.val().Name;

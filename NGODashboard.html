@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/NGODashboardStyle.css">
-    <link rel="stylesheet" href="css\MainPageResponsive.css">
+    <link rel="stylesheet" href="css/MainPageResponsive.css">
+    <link rel="stylesheet" href="css/MainPageStyle.css">
     <link rel="stylesheet" href="css/NGORegisterationStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -23,7 +24,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/UserDashboardStyle.css">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -443,7 +443,8 @@
         </div>
 
         <!-- edit profile modal -->
-        <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel" aria-hidden="true">
+        <div class="modal fade" id="EditProfileModal" tabindex="-1" aria-labelledby="EditProfileModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -500,7 +501,7 @@
         </div>
 
         <div id="navEvent" class="tabcontent">
-            <div class="SecondPart " id="SecondPart ">
+            <!-- <div class="SecondPart " id="SecondPart ">
                 <div class="SecondPartChild ">
                     <div class="event1 ">
                         <a class="events " href="#event1 ">
@@ -566,21 +567,30 @@
 
                     </div>
 
-                    <div id="modal01" class="modal" onclick="this.style.display='none'">
-                        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        <div class="modal-content" id="modal-content">
-                            <img id="img01">
+                    
+
+                </div>
+            </div> -->
+            <div class="container">
+                <div class="events mb-5">
+                    <div class="event-slider">
+                        <!-- First Row will be as it is for display -->
+                        <div id="dashboardEvents" class="row">
+
                         </div>
                     </div>
-
+                </div>
+            </div>
+            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="modal-content" id="modal-content">
+                    <img id="img01">
                 </div>
             </div>
 
         </div>
 
         <div id="navAbout" class="tabcontent">
-
-
             <div class="About_Section ">
                 <p id="NGO_Owner_Name" class="NGO_Owner_Name">
                     NAME:
@@ -617,12 +627,6 @@
                     <text id="NGO_Location_IS" class="NGO_Location_IS"></text>
                 </p>
 
-
-
-
-
-
-
             </div>
         </div>
 
@@ -645,111 +649,6 @@
 
             document.getElementById("defaultOpen").click();
         </script>
-        <!-- Displaying ngo events and information end -->
-
-
-
-        <!-- <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-event-tab" data-bs-toggle="tab" data-bs-target="#nav-event" type="button" role="tab" aria-controls="nav-event" aria-selected="true">Events</button>
-                <button class="nav-link" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about" aria-selected="false">About</button>
-
-            </div>
-        </nav>
-
-
-        <div class="tab-content " id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
-
-                <div class="SecondPart " id="SecondPart ">
-                    <div class="SecondPartChild ">
-                        <div class="event1 ">
-                            <a class="events " href="#event1 ">
-
-                                <img src="images/event1.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
-
-                                <p class="time ">SAT, FEB 28, 11:00 AM</p>
-                                <p class="location ">Mg Road, Opp. Ranka, Pune</p>
-                                <p class="topic ">Donation for Children</p>
-                                <p class="by">Charity House</p>
-                                <br>
-                                <button class="register">Register</button>
-
-                            </a>
-
-                        </div>
-
-                        <div class="event2 ">
-                            <a href="#event2 ">
-                                <img src="/images/event2.png " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
-
-                                <p class="time ">TUE, MAR 02, 5:00 PM</p>
-                                <p class="location ">ABC Road, Nr. Goodreads, Pune</p>
-                                <p class="topic ">Young Volunteers Needed</p>
-                                <p class="by">Room To Read</p>
-                                <br>
-                                <button class="register">Register</button>
-                            </a>
-
-                        </div>
-
-                        <div class="event3 ">
-
-                            <a href="#event3 ">
-                                <img src="/images/event3.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
-
-                                <p class="time ">FRI, MAR 05, 9:00 AM</p>
-                                <p class="location ">YCM Hospital, Pimri</p>
-                                <p class="topic ">Blood Donation Drive</p>
-                                <p class="by">Hope Country </p>
-                                <br>
-
-                                <button class="register">Register</button>
-                            </a>
-
-                        </div>
-
-                        <div class="event4 ">
-                            <a href="#event4 ">
-                                <img src="/images/event4.jpg " alt="Events " style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
-
-                                <p class="time ">SUN, MAR 07, 12:00 PM</p>
-                                <p class="location ">Camp, Nr. Kalyani Bakery, Pune</p>
-                                <p class="topic ">Covid-19 Relief Fund</p>
-                                <p class="by">Helpers Hand</p>
-                                <br>
-                                <button class="register">Register</button>
-                            </a>
-
-                        </div>
-
-                        <div id="modal01" class="modal" onclick="this.style.display='none'">
-                            <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <div class="modal-content">
-                                <img id="img01">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-                    <div class="About_Section ">
-                        <p id="NGO_Member_Name ">Geeta Phogat</p>
-                        <p id="NGO_ID ">AHBDT7382452</p>
-                        <p id="NGO_Bio ">NGOs exist for a variety of purposes, usually to further the political or social goals of their members. Examples include improving the state of the natural environment, encouraging the observance of human rights, improving the
-                            welfare of the disadvantaged, or representing a corporate agenda.</p>
-                        <p id="NGO_Goals ">No Poverty , Clean Waters , Women Empowerment</p>
-                        <p id="NGO_Links ">https://www.giveindia.org/?utm_source=Sem&utm_campaign=DCNad2&utm_medium=Google&utm_term=DCNad2&utm_content=ad2&gclid=CjwKCAiAhbeCBhBcEiwAkv2cY43bbysIz5tKn2I_Psnuddp1i8PCLcrfIDskQLtGydeMNFTqU8qY_BoClMkQAvD_BwE</p>
-                        <p id="NGO_Location ">Pune</p>
-                        <p id="NGO_Email ">geetaPhoghat12@gmail.com</p>
-
-                    </div>
-                </div>
-            </div> -->
-
     </main>
     <!--End of Main Body-->
 
@@ -790,6 +689,7 @@
     </footer>
     <!--footer end-->
 
+    <script src="MainPageEvents.js"></script>
     <script src="NGODash.js"></script>
 </body>
 

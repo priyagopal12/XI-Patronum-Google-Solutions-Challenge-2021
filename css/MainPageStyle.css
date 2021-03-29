@@ -9,7 +9,7 @@
 /* Navbar */
 
 .navbar {
-    background-color: rgba(2, 62, 138) !important;
+    background-color: #023e8a !important;
 }
 
 .navbar ul li {
@@ -355,8 +355,24 @@ input[type="file"]:focus,
     margin-bottom: 30px;
 }
 
+.event-slider .card-text h4{
+    font-weight: 700;
+}
+
 .event-slider .card-text h5 {
     color: #5e5e5e;
+}
+
+.event-slider .card-text a{
+    text-decoration: none;
+}
+
+.event-slider .card-text a:hover {
+    text-decoration: underline;
+}
+
+.event-slider .row img {
+    cursor: pointer;
 }
 
 .card-see-more {
