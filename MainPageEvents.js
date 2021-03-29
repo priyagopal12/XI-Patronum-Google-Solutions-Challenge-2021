@@ -1,12 +1,13 @@
+// MAIN PAGE EVENTS
 createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var row = document.getElementById(rowId);
-    
+
     var card = document.createElement('div');
     card.setAttribute("class", "card mx-3 my-4");
     card.style.width = '18rem';
 
     var poster = document.createElement('img');
-    poster.setAttribute("src", ImgSrc); 
+    poster.setAttribute("src", ImgSrc);
     poster.setAttribute("onclick", "onClick(this)");
     poster.setAttribute("class", "card-img-top modal-hover-opacity");
 
@@ -29,7 +30,7 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var eventTitleText = document.createTextNode(title);
     eventTitle.appendChild(eventTitleText);
     var ngoName = document.createElement('h5');
-    var ngoNameText = document.createTextNode(ngo); 
+    var ngoNameText = document.createTextNode(ngo);
     ngoName.appendChild(ngoNameText);
     cardText.appendChild(eventTitle);
     cardText.appendChild(ngoName);
@@ -37,9 +38,10 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var register = document.createElement('div');
     register.setAttribute("class", "d-grid gap-2");
     var btn = document.createElement('button');
-    var btnText = document.createTextNode("Take Part");
+    var btnText = document.createTextNode("Register");
     btn.setAttribute("class", "btn btn-primary");
     btn.setAttribute("type", "button");
+    btn.setAttribute("id", "register");
     btn.appendChild(btnText);
     register.appendChild(btn);
 
@@ -61,7 +63,7 @@ var query = firebaseRef.child("Events").orderByChild("Category").equalTo("No Pov
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("no_poverty", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("no_poverty", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -71,7 +73,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Zero Hunge
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("zero_hunger", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("zero_hunger", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -81,7 +83,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Good Healt
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("health_wellbeing", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("health_wellbeing", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -91,7 +93,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Quality Ed
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("quality_education", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("quality_education", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -101,7 +103,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Gender Equ
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("gender_equality", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("gender_equality", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -111,7 +113,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Clean Wate
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("clean_water_sanitization", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("clean_water_sanitization", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -121,7 +123,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Reduced In
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("reduced_inequalities", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("reduced_inequalities", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -131,7 +133,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Responsibl
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("responsible_consumption_production", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("responsible_consumption_production", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -141,7 +143,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Climate Ac
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("climate_action", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("climate_action", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -151,7 +153,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Life Below
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("life_below_water", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("life_below_water", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -161,7 +163,7 @@ query = firebaseRef.child("Events").orderByChild("Category").equalTo("Life On La
 query.on('value', snap => {
     snap.forEach(childsnap => {
         var value = childsnap.val();
-        createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO )
+        createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
     });
     // console.log(snap.val());
 });
@@ -171,3 +173,7 @@ function onClick(element) {
     document.getElementById("img01").src = element.src;
     document.getElementById("modal01").style.display = "block";
 }
+
+
+
+// Main page events end
