@@ -16,6 +16,14 @@
     margin: 0 20px;
 }
 
+#PartnerLI {
+    margin-left: -460px;
+}
+
+#DashLI {
+    margin-left: -510px;
+}
+
 .navbar-nav .nav-link {
     font-size: 1em !important;
     padding: 3px;
@@ -51,7 +59,6 @@
 .navbar .navbar-brand {
     font-size: 1.5em !important;
 }
-
 
 
 /* Sign-in */
@@ -379,10 +386,11 @@ input[type="file"]:focus,
     transform: translateY(5px);
 }
 
-.card-img-top{
+.card-img-top {
     width: 16.4rem;
     height: 24rem;
 }
+
 
 /* Event Cards End */
 
@@ -466,13 +474,14 @@ footer h5::after {
     .dropdown-menu {
         width: 100%;
         height: 100vh;
+        left: 0px;
     }
     .menuheaderpadding1 {
         padding-left: 400px;
         padding-bottom: 70px;
     }
     .menuheaderpadding3 {
-        padding-left: 470px;
+        padding-left: 450px;
     }
     .menuheaderpadding2 {
         padding-left: 350px;

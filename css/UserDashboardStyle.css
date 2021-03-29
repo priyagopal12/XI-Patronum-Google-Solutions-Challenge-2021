@@ -107,51 +107,47 @@
 } */
         
         @media (min-width: 992px) {
-            /*navbar*/
-            #navbarNav ul {
-                margin-left: 150px;
+            /* Navbar */
+            .navbar {
+                background-color: rgba(2, 62, 138) !important;
+                font-family: 'Nanum Gothic', sans-serif;
             }
-            .lst {
-                padding-right: 10px;
-                margin-top: -15px;
-                padding-left: 10px;
+            .navbar ul li {
+                margin: 0 20px;
             }
-            .lstlink {
-                font-size: 20px;
-                color: white;
+            #PartnerLI {
+                margin-left: -460px;
             }
-            .nameNGO {
-                font-size: 28px;
-                color: white;
+            #DashLI {
+                margin-left: -510px;
             }
-            .log {
-                margin-right: 10px;
-                margin-top: -15px;
+            .navbar-nav .nav-link {
+                font-size: 1em !important;
+                padding: 3px;
+                color: #fff !important;
+                font-weight: 500;
             }
-            .loglink {
-                font-size: 20px;
-                color: white;
+            /* .navbar-nav{
+    text-align: right;
+    margin-right: 20px;
+} */
+            .navbar-toggler {
+                color: #fff !important;
+                outline: none !important;
+                border: none !important;
             }
-            .navi {
-                padding: 10px;
+            .navbar-nav .nav-link:hover {
+                border-bottom: 1px solid #fff;
             }
-            .searchclass {
-                margin-left: 90px;
+            .navbar-brand {
+                font-size: 28px !important;
+                color: #fff !important;
             }
-            .l11 {
-                margin-left: -70px;
+            .navbar-nav {
+                margin: 0 auto !important;
             }
-            .l21 {
-                margin-left: -2%;
-                background: none !important;
-                border: none;
-                padding: 0 !important;
-            }
-            .l22 {
-                margin-left: -40%;
-                background: none !important;
-                border: none;
-                padding: 0 !important;
+            .navbar .navbar-brand {
+                font-size: 1.5em !important;
             }
             /*navbar end*/
             /*HEADERS MEGA MENU*/
@@ -162,6 +158,11 @@
                 color: rgb(41, 40, 40);
                 font-weight: bold;
                 font-size: 16px;
+            }
+            .dropdown-menu {
+                width: 100%;
+                height: 100vh;
+                left: 0px;
             }
         }
         /*modal*/
