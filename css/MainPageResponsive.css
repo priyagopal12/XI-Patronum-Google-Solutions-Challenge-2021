@@ -1,8 +1,10 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     /* navbar */
+    
     .navbar ul{
         padding: 0 !important;
+        
     }
     .navbar-nav{
         margin: 0 auto !important;
@@ -10,8 +12,9 @@
     .navbar-nav .nav-link{        
         border-bottom: none !important;
         font-size: 0.9em !important;
-        text-align: right;
+        text-align: right !important;
         font-weight: 600;
+        
     }
     .navbar-nav li{
         padding: 5px 10px;
@@ -20,7 +23,9 @@
         background-color: #0095c738;
         border-radius: 5px;
         border-bottom: 1px solid #888585;
+        
     }
+    
     .navbar-nav li:hover{
         background-color: #0095c7;
     }
@@ -68,6 +73,12 @@
     }
     /* navbar end */
 
+    /* event cards */
+    .row {
+        justify-content: center;
+    }
+    /* event cards end */
+
     /* search bar */
     .search-bar input{
         width: 85% !important;
@@ -88,6 +99,7 @@
     /* navbar */
     .navbar ul{
         padding: 0 !important;
+        justify-content: right !important;
     }
     .navbar-nav{
         margin: 0 auto !important;
@@ -95,7 +107,7 @@
     .navbar-nav .nav-link{        
         border-bottom: none !important;
         font-size: 0.9em !important;
-        text-align: right;
+        text-align: right !important;
         font-weight: 600;
     }
     .navbar-nav li{
@@ -105,6 +117,12 @@
         background-color: #0095c738;
         border-radius: 5px;
         border-bottom: 1px solid #888585;
+    }
+    .navbar #ULogLink{
+        margin-left: 92%;
+    }
+    .navbar #NLogLink{
+        margin-left: 78%;
     }
     .navbar-nav li:hover{
         background-color: #0095c7;
@@ -181,19 +199,13 @@
         display: inline-block;
         font-weight: 400;
         line-height: 1.5;
-        color: #212529;
         text-align: center;
         text-decoration: none;
-        vertical-align: middle;
         cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
         user-select: none;
         background-color: transparent;
-        border: 1px solid transparent;
         padding: .375rem .75rem;
         font-size: 1rem;
-        border-radius: .25rem;
         transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
     /* navbar end */
