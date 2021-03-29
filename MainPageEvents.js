@@ -44,7 +44,8 @@ createEventCard = (rowId, ImgSrc, date, time, loc, title, ngo) => {
     var btnText = document.createTextNode("Register");
     btn.setAttribute("class", "btn btn-primary");
     btn.setAttribute("type", "button");
-    btn.setAttribute("id", "register");
+    btn.setAttribute("id", title);
+    btn.setAttribute("onclick", "registerEvent(this.id)");
     btn.appendChild(btnText);
     register.appendChild(btn);
 
@@ -168,13 +169,10 @@ query.on('value', snap => {
         createEventCard("life_on_land", value.Poster, value.Date, value.Time, value.Location, value.Name, value.NGO)
 
     })
-
-    });
-
     // console.log(snap.val());
 });
 
-console.log(params.get('name'));
+
 
 
 if (params.get('name') != null) {
@@ -195,4 +193,17 @@ function onClick(element) {
 
 
 // Main page events end
-
+registerEvent = (id) => {
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            console.log(userID);
+            firebaseRef.child('User').child(userID).child("Registered").push().set({
+                id: id
+            });
+            alert("akdjflaskdfj");
+        }
+        else {
+            alert("You are not signed in as User!");
+        }
+    });
+}
