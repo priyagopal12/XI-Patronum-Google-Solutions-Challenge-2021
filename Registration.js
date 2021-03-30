@@ -52,6 +52,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
                 } else if (type == "NGO") {
 
+                    document.getElementById("servicesDropdown").setAttribute("hidden", true);
+
                     imgage = document.getElementById("Ngo-Profile-Image");
                     imgage.src = snapshot.val().ProfilePic;
 
