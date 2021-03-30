@@ -51,6 +51,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 
                 } else if (type == "NGO") {
+
+                    imgage = document.getElementById("Ngo-Profile-Image");
+                    imgage.src = snapshot.val().ProfilePic;
+
                     document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
 
 
@@ -190,8 +194,7 @@ function signUp() {
                         email: email,
                         type: type,
                         About: "addYourAbout",
-                        EventsAttended: 0,
-                        NGOsFollowing: 0,
+
                         location: "addYourLocation",
                         ProfilePic: "https://static8.depositphotos.com/1009634/988/v/600/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg"
                     });
