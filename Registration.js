@@ -65,28 +65,76 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                     document.getElementById("NGO_Bio_IS").innerHTML = snapshot.val().Descr;
                     //document.getElementById("NGO_Goals_Are").innerHTML = snapshot.val().goals;
                     document.getElementById("NGO_Links_Are").innerHTML = snapshot.val().URL;
-                    document.getElementById("NGO_Email_IS").innerHTML = snapshot.val().Contacts;
+                    //document.getElementById("NGO_URLinks_Are").innerHTML = snapshot.val().OtherLinks;
+                    // document.getElementById("NGO_Email_IS").innerHTML = snapshot.val().Contacts;
                     document.getElementById("NGO_Location_IS").innerHTML = snapshot.val().Location;
+
+
+
+
                     var g = snapshot.val().goals;
                     var gs = g.split("\n");
-                    var g1="";
+                    var g1 = "";
                     //alert("G!"+g1);
                     //var c = count(gs);
-                    gs.forEach(function(i){
+                    gs.forEach(function(i) {
                         //alert(i);
                         //alert(gs[i]);
-                        if(gs.indexOf(i)!==0){
+                        if (gs.indexOf(i) !== 0) {
                             g1 = g1 + i;
-                        //alert(g1);
-                        if(gs.indexOf(i)!==gs.length-1)
-                        {
-                            g1 = g1 + ", ";
+                            //alert(g1);
+                            if (gs.indexOf(i) !== gs.length - 1) {
+                                g1 = g1 + ", ";
+                            }
+                            //alert(g1);
                         }
-                        //alert(g1);
-                        }
-                        
+
                     });
                     document.getElementById("NGO_Goals_Are").innerHTML = g1;
+
+
+                    var l = snapshot.val().OtherLinks;
+                    var ls = l.split("\n");
+                    var l1 = "";
+                    //alert("G!"+g1);
+                    //var c = count(gs);
+                    ls.forEach(function(p) {
+                        //alert(i);
+                        //alert(gs[i]);
+                        if (ls.indexOf(p) !== 0) {
+                            l1 = l1 + p;
+                            //alert(g1);
+                            if (ls.indexOf(p) !== ls.length - 1) {
+                                l1 = l1 + ", ";
+                            }
+                            //alert(g1);
+                        }
+
+                    });
+                    document.getElementById("NGO_URLinks_Are").innerHTML = l1;
+
+
+
+
+                    var c = snapshot.val().Contacts;
+                    var cs = c.split("\n");
+                    var c1 = "";
+                    //alert("G!"+g1);
+                    //var c = count(gs);
+                    cs.forEach(function(j) {
+                        //alert(i);
+                        //alert(gs[i]);
+
+                        c1 = c1 + j;
+                        //alert(g1);
+                        if (cs.indexOf(j) !== cs.length - 1) {
+                            c1 = c1 + ",";
+                        }
+                        //alert(g1);
+
+
+                    });
+                    document.getElementById("NGO_Email_IS").innerHTML = c1;
 
                 }
 

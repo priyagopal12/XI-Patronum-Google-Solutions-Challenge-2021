@@ -433,7 +433,8 @@ input[type="file"]:focus,
         font-size: 22px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .NGO_Links_Are {
+    .NGO_Links_Are,
+    .NGO_URLinks_Are {
         font-size: 20px;
         font-family: 'Times New Roman', Times, serif;
     }
@@ -688,7 +689,8 @@ input[type="file"]:focus,
         font-size: 22px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .NGO_Links_Are {
+    .NGO_Links_Are,
+    .NGO_URLinks_Are {
         font-size: 20px;
         font-family: 'Times New Roman', Times, serif;
     }
