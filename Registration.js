@@ -128,7 +128,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                         c1 = c1 + j;
                         //alert(g1);
                         if (cs.indexOf(j) !== cs.length - 1) {
-                            c1 = c1 + ",";
+                            c1 = c1 + ", ";
                         }
                         //alert(g1);
 
