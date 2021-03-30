@@ -174,16 +174,15 @@ query.on('value', snap => {
 
 
 
-
-if (params.get('name') != null) {
-    firebaseRef.child(params.get('name')).on('value', snap => {
-        snap.forEach(childsnap => {
-            if (childsnap.key != "id") {
-                createEventCard("dashboardEvents", childsnap.val().Poster, childsnap.val().Date, childsnap.val().Time, childsnap.val().Location, childsnap.val().Name, params.get('name'));
-            }
-        })
-    });
-}
+// if (params.get('name') != null) {
+//     firebaseRef.child(params.get('name')).on('value', snap => {
+//         snap.forEach(childsnap => {
+//             if (childsnap.key != "id") {
+//                 createEventCard("dashboardEvents", childsnap.val().Poster, childsnap.val().Date, childsnap.val().Time, childsnap.val().Location, childsnap.val().Name, params.get('name'));
+//             }
+//         })
+//     });
+// }
 
 function onClick(element) {
     document.getElementById("img01").src = element.src;

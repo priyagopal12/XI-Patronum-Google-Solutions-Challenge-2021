@@ -1,4 +1,3 @@
-
 createEventFuntion = (ngoName) => {
     var ImgName, ImgUrl, pathname;
     var files = [];
@@ -30,17 +29,17 @@ createEventFuntion = (ngoName) => {
         // uploading to firebase storage
         var uploadTask = firebase.storage().ref(ngoName + '/Posters/' + ImgName).put(files[0]);
 
-        uploadTask.on('state_changed', function (snapshot) {
-            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            document.getElementById("UpProgress").innerHTML = 'Upload' + progress + '%';
-        },
+        uploadTask.on('state_changed', function(snapshot) {
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                document.getElementById("UpProgress").innerHTML = 'Upload' + progress + '%';
+            },
 
-            function (error) {
+            function(error) {
                 alert(error);
             },
 
             () => {
-                uploadTask.snapshot.ref.getDownloadURL().then(function (url) {
+                uploadTask.snapshot.ref.getDownloadURL().then(function(url) {
                     ImgUrl = url;
 
                     newEvent.set({
@@ -90,6 +89,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                 var nName = snap.val().Name;
                 document.getElementById("create_event_button").removeAttribute("hidden");
                 document.getElementById("edit_profile_button").removeAttribute("hidden");
+                document.getElementById("servicesDropdown").setAttribute("hidden", true);
                 createEventFuntion(nName);
 
                 firebaseRef.child(nName).on('value', snap => {
@@ -102,8 +102,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
             }
         });
 
-    }
-    else {
+    } else {
         document.getElementById("create_event_button").setAttribute("hidden", true);
         document.getElementById("edit_profile_button").setAttribute("hidden", true);
     }
