@@ -63,10 +63,30 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
                     document.getElementById("NGO_Owner_IS").innerHTML = snapshot.val().ContactName;
                     document.getElementById("NGO_ID_IS").innerHTML = snapshot.val().NGOID;
                     document.getElementById("NGO_Bio_IS").innerHTML = snapshot.val().Descr;
-                    document.getElementById("NGO_Goals_Are").innerHTML = snapshot.val().goals;
+                    //document.getElementById("NGO_Goals_Are").innerHTML = snapshot.val().goals;
                     document.getElementById("NGO_Links_Are").innerHTML = snapshot.val().URL;
                     document.getElementById("NGO_Email_IS").innerHTML = snapshot.val().Contacts;
                     document.getElementById("NGO_Location_IS").innerHTML = snapshot.val().Location;
+                    var g = snapshot.val().goals;
+                    var gs = g.split("\n");
+                    var g1="";
+                    //alert("G!"+g1);
+                    //var c = count(gs);
+                    gs.forEach(function(i){
+                        //alert(i);
+                        //alert(gs[i]);
+                        if(gs.indexOf(i)!==0){
+                            g1 = g1 + i;
+                        //alert(g1);
+                        if(gs.indexOf(i)!==gs.length-1)
+                        {
+                            g1 = g1 + ", ";
+                        }
+                        //alert(g1);
+                        }
+                        
+                    });
+                    document.getElementById("NGO_Goals_Are").innerHTML = g1;
 
                 }
 
