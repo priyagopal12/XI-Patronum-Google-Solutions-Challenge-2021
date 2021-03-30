@@ -179,6 +179,10 @@
 .close {
     width: 20%;
     color: white;
+    background: none !important;
+    box-shadow: none;
+    box-decoration-break: slice;
+    border:none;
 }
 
 .buttons {

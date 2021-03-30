@@ -91,6 +91,18 @@
         width: 100% !important; 
     }
     /* footer end */
+    /* Goals */
+    .centerList {
+        align-items: center;
+        margin-left: 17%;
+        margin-top: 3%;
+    }
+    .titleFigure figcaption {
+        margin-top: 40%;
+    }
+    .BenefitsList{
+        margin-left: 50px;
+    }
 }
 
 
