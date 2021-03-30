@@ -40,6 +40,19 @@
                 height: 100vh;
                 left: 0px;
             }
+            .menuheaderpadding10 {
+                padding-left: 300px;
+                padding-bottom: 70px;
+            }
+            .menuheaderpadding30 {
+                padding-left: 470px;
+            }
+            .menuheaderpadding20 {
+                padding-left: 350px;
+            }
+            .menuheaderpadding40 {
+                padding-left: 400px;
+            }
         }
         /*modal*/
         
@@ -82,7 +95,7 @@
             background: none !important;
             box-shadow: none;
             box-decoration-break: slice;
-            border:none;
+            border: none;
         }
         
         .buttons {
