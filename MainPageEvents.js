@@ -195,24 +195,33 @@ function onClick(element) {
 registerEvent = (id) => {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
-            var type = snapshot.val().type;
-            //alert(type);
-            if (type == "User") {
-                var regEvent = firebaseRef.child('User').child(userID).child("Registered");
+            var uid = firebaseUser.uid;
+            userID = uid;
+            //alert(uid);
+            var refKey = firebaseRef.child("User").child(uid);
+            refKey.once('value', function(snapshot) {
 
-                regEvent.push().set({
-                    id: id
-                });
+                var type = snapshot.val().type;
+                //alert(type);
+                if (type == "User") {
+                    var regEvent = firebaseRef.child('User').child(userID).child("Registered");
 
-                document.getElementById(id).setAttribute("disabled", true);
+                    regEvent.push().set({
+                        id: id
+                    });
 
-                alert("Successfully Registered!");
-            } else {
-                alert("You are not signed in as User!");
-            }
-        }
+                    document.getElementById(id).setAttribute("disabled", true);
+
+                    alert("Successfully Registered!");
+                } //if
+                else {
+                    alert("You are not signed in as User!");
+                } //else
+            }); //refkey
+        } //if
     });
 }
+
 
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
