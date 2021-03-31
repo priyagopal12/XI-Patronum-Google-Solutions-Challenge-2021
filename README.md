@@ -54,8 +54,8 @@ On the navbar, by clicking on NGO displays a mega menu consisting of all the org
     For editing profile, click of edit profile.<br/>
     <img src="images/ReadMe/dash3.jpg" width="80%"/><br/>
     In the about page they can see their information displayed on the website.<br/>
-    <img src="images/ReadMe/dash4.jpg" width="80%"/><br/>
-    <br/>
+    <img src="images/ReadMe/dash4.jpg" width="80%"/><br/><br/>
+    
     * User Dashboard - After signing in as a user, you can see your profile on this page.<br/>
     <img src="images/ReadMe/dash5.jpg" width="80%"/><br/>
     <img src="images/ReadMe/dash6.jpg" width="80%"/><br/>
