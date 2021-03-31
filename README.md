@@ -2,14 +2,14 @@
 
 ### Dated: 31st March 2021
 ## Contributors
----
+
 * <a href="https://github.com/Zulfa210">Zulfa Attar</a>
 * <a href="https://github.com/priyagopal12">Priyadarshini Gopal</a>
 * <a href="https://github.com/gautamik2030">Gautami Kumbhar</a>
 * <a href="https://github.com/rane-shubham">Shubham Rane</a>
 
 ## Description
----
+
 ### UN Goals achieved in our project
 * Goal 1 - No poverty
 * Goal 2 - Zero hunger
@@ -30,7 +30,7 @@ Today, there are a lot of people willing to donate their time and resources to c
 <img src="images/ReadMe/mainpage.jpg" width="80%" />
     
 ## Working
----
+
 Our webiste is divided into 3 different parts as follows:
 1. Events Page - This is the main page of our website and consists of all the events that have been posted by the registered organizations. A user can register for the events by clicking the "Register" button.<br/>
 Click on the events tab on the navbar and you will be redirected to this page.<br/>
@@ -70,6 +70,6 @@ Your queries provided through contact us form will be visible to us. We will try
 <img src="images/ReadMe/query1.jpg" width="80%"/><br/>
 
 ## Future Scope
----
+
 As of now our solution is adequate for a smaller audience size. Our next step for the project would be to modify it to accomodate a larger audience by adding various functionalities as required. We would also like to automate our verification of the users and organizations to make the project more reliable and fast. We would also like to enhance user experience based on the feedback that we receive from them.
 
