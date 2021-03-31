@@ -278,7 +278,7 @@ function signUp() {
                     document.getElementById("ULogLink").setAttribute("hidden", true);
                     document.getElementById("NLogLink").setAttribute("hidden", true);
                     document.getElementById("Dashboard").setAttribute("href", "UserDashboard.html");
-                    alert("Signed up!");
+                    // alert("Signed up!");
                 })
                 .catch((error) => {
                     var errorCode = error.code;
@@ -412,7 +412,7 @@ function NSignUp() {
                     document.getElementById("ULogLink").setAttribute("hidden", true);
                     document.getElementById("NLogLink").setAttribute("hidden", true);
                     document.getElementById("Dashboard").setAttribute("href", "NGODashboard.html");
-                    alert("Signed up!");
+                    // alert("Signed up!");
                     //alert("Set");
                 })
                 .catch((error) => {
