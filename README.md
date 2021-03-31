@@ -44,7 +44,7 @@ On the navbar, by clicking on NGO displays a mega menu consisting of all the org
 <img src="images/ReadMe/partner2.jpg" width="80%"/>
 <img src="images/ReadMe/partner3.jpg" width="80%"/>
 <img src="images/ReadMe/partner4.jpg" width="80%"/>
-<img src="images/ReadMe/2.jpg" width="80%"/>
+<img src="images/ReadMe/2.JPG" width="80%"/>
 
 3. Dashboard - There are two types of dashboard: 
     * NGO's Dashboard - After signing in as an NGO, they can either create a new event or edit their profile.<br/>
